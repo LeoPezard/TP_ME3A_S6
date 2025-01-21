@@ -248,25 +248,34 @@ Il est possible de remarquer que $t_{stab}$​ dépend fortement de $RC_{tot}$�
 ## Régime stationnaire - Exploitation des mesures 
 
 
-TODO numéroter les questions 
+### Calcul de $P_{0}$
 
 Les données suivantes ont été relevées : 
 - La tension _U_ et le courant _I_ aux bornes du collier chauffant : 65V et 171,8mA.
-- Le débit volumique d'eau dans la boîte à eau : 10 L/h
+- Le débit massique d'eau dans la boîte à eau : 10 _L/h_ = $2,78.10^{-6} m^{-3}/sec $ soit $2,78.10^{-3} kg/sec $
 - Les températures de l'eau à l'entrée et à la sortie de la boîte, via le logiciel : 11,6 °C en entrée et 12,1 °C en sortie.
 - La puissance $P_{0}$ = _U*I_ = 11,17 _Watts_ dissipés par la résistance chauffante en début de barre
-- La puissance thermique $P_{eau}$ perdue par la barre se calcule :
 
-TODO : exposant
+### Calcul de la puissance thermique $P_{eau}$  
 
-$P_{fluide}$ = $\dot{m}C_{p}$ ($T_{sortie}$ - $T_{entrée}$) = 2,78*10^(-6)x4185(12,1-11,6) = 4,7*10^-3 _Watts_
+La puissance thermique $P_{eau}$ perdue par la barre se calcule :
 
-TODO : trouver ca
 
-- Il y a une différence entre $P_{0}$ et $P_{eau}$ car 
-La puissance qui à réellement traversé la barre est donc 
+$P_{eau} = \dot{m}C_{p} \, (T_{sortie} - T_{entrée}) = 2,78 \times 10^{-3} \times 4185 \times (12,1 - 11,6) = 5,81 $  _Watts_
 
-Ensuite, les températures relevées par les 10 thermocouples positionnés entre le collier chauffant et la boîte à eau ont été enregistrées. 
+### Différence entre $P_{eau}$ et $P_{0}$
+
+Il y a une différence entre $P_{0}$ et $P_{eau}$ car il y a eu des pertes thermiques dans le système.
+La puissance qui traverse effectivement la barre pour chauffer l'eau est $P_{eau}$​. Elle correspond à l'énergie réellement transférée à l'eau via la barre.
+
+$P_{0}$​ inclut des pertes thermiques, tandis que $P_{eau}$​ reflète la puissance utile transférée par conduction et convection.
+
+La puissance réelle de la barre vaut $P_{0} - P_{eau}$ = 11,17-5,81 = 5,36 _Watts_
+
+### Tracé du profil de température 
+
+Les températures relevées par les 10 thermocouples positionnés entre le collier chauffant et la boîte à eau ont été enregistrées. 
+<center>
 
 |Thermocouple n°	|Température (°C)|	Distance (cm)|
 |--------|-------|--------|
@@ -281,13 +290,72 @@ Ensuite, les températures relevées par les 10 thermocouples positionnés entre
 |9	|18,8|	28,5|
 |10	|18|	31,5|
 
-![](graphe_1.png)
-TODO : légende
 
-Les valeurs des températures des jonctions valent dont 
 
-- L'absence de pertes latérales signifie que la chaleur se propage uniquement dans le sens longitudinal (le long de la barre) sans dissipation significative dans l'environnement. Si cette hypothèse est valide, on devrait observer une décroissance linéaire de la température en fonction de la distance, ce qui semble être notre cas , comme en témoignent les tendances linéaires des deux courbes.
+![Evolution de la température en fonction de la position](graphe_1.png)
+
+*Figure 8 - Evolution de la température en régime stationnaire*
+
+</center>
+
+### Valeurs des températures des jonctions
+
+Les températures de jonctions sont donc :
+- Entre le collier chauffant et la barre de Duralumin ~ 45,2°C
+- Entre le Cuivre et l'eau ~ 31,5 °C
+
+Il est possible de noter que les températures de jonction déterminent les pertes énergétiques, si une jonction a une forte  résistance thermique, une partie de la puissance sera perdue à cet endroit.
+
+### Analyse du profil de température
+
+L'absence de pertes latérales signifie que la chaleur se propage uniquement dans le sens longitudinal (le long de la barre) sans dissipation significative dans l'environnement. Si cette hypothèse est valide, on devrait observer une décroissance linéaire de la température en fonction de la distance, ce qui semble être notre cas , comme en témoignent les tendances linéaires des deux courbes.(Figure 8)
 
 - Le matériau le plus conducteur est le cuivre car sa pente de température en fonction de la distance est moins élevée. Cela signifie que le cuivre conduit mieux la chaleur que le duralumin car sa température reste plus élevée sur une plus grande distance.
 
-TODO a partir de la question 6 incluse
+### Calcul de la conductivité thermique
+
+Pour rappel le flux d'énergie interne en conduction thermique s'exprime par  :  $\Phi_{x}$ = -k S $\frac{dT}{dx}$
+
+Avec :
+- $\Phi_{x}$ : flux (W).
+- $k$ : conductivité thermique (W/m·K).
+- $S$ : section (m²).
+- $\phi_{x} = \frac{\Phi_{x}}{S}$ : densité de flux (W/m²).
+
+**Puissance traversant la barre** (Φx​) $P_{eau}$ =5,81 W.
+
+**Section de la barre** (S) : m²
+
+**Gradient de température :** 
+
+- Pour le Duralumin : $$\frac{dt}{dx}= \frac{30,5-45,2}{0,195-0,085} = -133,64 °C/m$$
+
+
+- Pour le Cuivre : $$\frac{dt}{dx}= \frac{18-30,5}{0,315-0,195} = -104,17 °C/m$$ 
+
+
+**Conductivité thermique _k_ :** 
+
+$k_{Duralumin} = \frac{\Phi}{S.\frac{dt}{dx}}$ avec $\frac{dt}{dx}$ = -54,62 °C/m
+
+$k_{Cuivre} = \frac{\Phi}{S.\frac{dt}{dx}}$ avec $\frac{dt}{dx}$ = -26,67 °C/m
+
+$\frac{k_{Duralumin}}{k_{Cuivre}}$ = -54,62 °C/m
+
+**Calcul de la résistance thermique de contact $R_{c}$ :** 
+
+$R_{c}$ = $\frac{\Delta T}{\Phi}$ 
+
+Avec  :
+- ${\Delta T}$ la différence de température à l'interface entre le Duralumin et le cuivre (40,9-20,4) = 20,5 °C
+
+- ${\Phi}$ = $P_{eau}$
+
+
+
+# Conclusion
+
+Au cours de ce TP, nous avons approfondi nos connaissances sur le transfert de chaleur par conduction. Selon le processus industriel (conversion d'énergie, refroidissement de composants chauds, isolation thermique, etc.), la conduction thermique doit être soit renforcée, soit minimisée.
+
+Nous avons observé qu’en régime stationnaire, le flux entrant est égal au flux sortant, à condition que la puissance électrique reste constante. Si cette puissance est modifiée, la température évoluera différemment, tout en conservant un profil similaire.
+Il est également possibel de dire que après une période instationnaire, le régime redevient stationnaire.
