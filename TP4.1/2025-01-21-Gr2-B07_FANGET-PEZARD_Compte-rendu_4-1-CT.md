@@ -26,8 +26,8 @@ En régime stationnaire, il s'agit de mesurer la conductivité thermique de deux
   - _V_ : volume (m³).
 
 - Puissance stockée dans un fluide en écoulement :  
-   $P_{fluide}$ = $\dot{m}C_{p}$ ($T_{sortie}$ - $T_{entrée}$)  
-  où $\dot{m}$ = $\rho q$ (kg/s).
+   $P_{fluide}$ = $mC_{p}$ ($T_{sortie}$ - $T_{entrée}$)  
+  où ${m}$ = $\rho q$ (kg/s).
 
 ---
 
@@ -261,7 +261,9 @@ Les données suivantes ont été relevées :
 La puissance thermique $P_{eau}$ perdue par la barre se calcule :
 
 
-$P_{eau} = \dot{m}C_{p} \, (T_{sortie} - T_{entrée}) = 2,78 \times 10^{-3} \times 4185 \times (12,1 - 11,6) = 5,81 $  _Watts_
+$$
+P_{\text{eau}} = m C_{p} \, (T_{\text{sortie}} - T_{\text{entrée}}) = 2,78 \times 10^{-3} \times 4185 \times (12,1 - 11,6) = 5,81\text{Watts}$$
+
 
 ### Différence entre $P_{eau}$ et $P_{0}$
 
@@ -322,40 +324,78 @@ Avec :
 - $S$ : section (m²).
 - $\phi_{x} = \frac{\Phi_{x}}{S}$ : densité de flux (W/m²).
 
-**Puissance traversant la barre** (Φx​) $P_{eau}$ =5,81 W.
+**Puissance traversant la barre** ${\Phi}$ =  $P_{eau} = 5,81W$
 
-**Section de la barre** (S) : m²
+**Section de la barre** S = $\pi R^2 = 7,10 \times 10^{-4} \, \text{m}^2$
 
 **Gradient de température :** 
 
-- Pour le Duralumin : $$\frac{dt}{dx}= \frac{30,5-45,2}{0,195-0,085} = -133,64 °C/m$$
+- Pour le Duralumin : $$\frac{dt}{dx}= -54,62 °C/m$$
 
 
-- Pour le Cuivre : $$\frac{dt}{dx}= \frac{18-30,5}{0,315-0,195} = -104,17 °C/m$$ 
+- Pour le Cuivre : $$\frac{dt}{dx}= -26,67 °C/m$$ 
 
 
 **Conductivité thermique _k_ :** 
+
+
+
+
+On obtient donc :
 
 $k_{Duralumin} = \frac{\Phi}{S.\frac{dt}{dx}}$ avec $\frac{dt}{dx}$ = -54,62 °C/m
 
 $k_{Cuivre} = \frac{\Phi}{S.\frac{dt}{dx}}$ avec $\frac{dt}{dx}$ = -26,67 °C/m
 
-$\frac{k_{Duralumin}}{k_{Cuivre}}$ = -54,62 °C/m
+${\Phi}$ = 5,81 _Watts_
+
+<center>
+
+$k_{Duralumin} = 151,53 W/m.K$
+
+$k_{Cuivre} = 314 W/m.K$
+
+</center>
 
 **Calcul de la résistance thermique de contact $R_{c}$ :** 
 
 $R_{c}$ = $\frac{\Delta T}{\Phi}$ 
 
 Avec  :
-- ${\Delta T}$ la différence de température à l'interface entre le Duralumin et le cuivre (40,9-20,4) = 20,5 °C
+- ${\Delta T}$ la différence de température à l'interface entre le Duralumin et le cuivre (45,2-31,5) = 13,7 °C
 
 - ${\Phi}$ = $P_{eau}$
 
+<center>
+
+$R_{c}$ = $\frac{\Delta T}{\Phi}$ = 2,35 °C/W
+</center>
+
+Comparaison avec les résistances théoriques grâce à la relation $R_{th}$ = $\frac{e}{kS}$
+
+Pour le Duralumin, e = 0,195, pour le Cuivre, e = 0,21.
+
+On a donc :
+
+- $R_{thDuralumin}$ = 1,81 °C/W
+- $R_{thCuivre}$ = 0,94 °C/W
+
+### Comparaison des deux régimes stationnaires
+
+Nous comparons maintenant le régime stationnaire avec une puissance de chauffe supérieure à la précédente (110V). 
+
+<center>
+
+![Température en fonction du temps](Graphe_3.png)
+
+*Figure 9 - Comparaison des températures en fonction du temps pour les deux tensions*
+</center>
+
+Les nouvelles droites son nettement au dessus des premières, cela s'explique car les températudes sont plus élevées? De plus les pentes des droites sont plus marquées, cela s'explique par la relation entre le gradient de température et la puissance, dans le deuxième cas plus grande car la tension a augmenté ${(P= UI)}$.
 
 
 # Conclusion
 
-Au cours de ce TP, nous avons approfondi nos connaissances sur le transfert de chaleur par conduction. Selon le processus industriel (conversion d'énergie, refroidissement de composants chauds, isolation thermique, etc.), la conduction thermique doit être soit renforcée, soit minimisée.
+Durant ce TP, nous avons abordé les de transfert de chaleur par conduction. Nous avons étudié comment se propage la chaleur dans un/des matériaux.
 
-Nous avons observé qu’en régime stationnaire, le flux entrant est égal au flux sortant, à condition que la puissance électrique reste constante. Si cette puissance est modifiée, la température évoluera différemment, tout en conservant un profil similaire.
-Il est également possibel de dire que après une période instationnaire, le régime redevient stationnaire.
+Il est également possible de dire que après une période instationnaire, le régime redevient stationnaire, c'est à dire une variation linéaire de température en fonction de la position.
