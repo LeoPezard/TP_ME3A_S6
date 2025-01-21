@@ -80,12 +80,12 @@ Une fois la phase instationnaire initiée la tension d'alimentation du collier c
 
 ## Régime instationnaire - Simulations
 
-Pour passer en régime instationnaire, la tension de l'alimentation du collier chauffant est augmentée, cela va donc produire une variation de température du collier. 
+Pour passer en régime instationnaire, la tension de l'alimentation du collier 
+chauffant est augmentée, cela va donc produire une variation de température
+du collier qui va chauffer les barres des deux matériaux. 
 
-Les mesures sont donc effectuées à partir de cet instant pour voir l'évolution de la température dans les matériaux en fonction du temps.
-
-TODO : phrase pour parler de conductivité
-On parle de conductivité thermique
+Les mesures sont donc effectuées à partir de cet instant pour voir l'évolution 
+de la température dans les matériaux en fonction du temps.
 
 Les données suivantes ont été relevées :
 - Instant initial de la phase instationnaire : 14h44
@@ -94,60 +94,80 @@ Les données suivantes ont été relevées :
 - Le débit volumique d'eau dans la boîte à eau : 10 L/h
 - Les températures de l'eau à l'entrée et à la sortie de la boîte, via le logiciel : 11,6 °C en entrée et 12,1 °C en sortie.
 
-
-
-
-Proportionnalité apparente :
-tstab​ semble proportionnel à (RC)tot(RC)tot​. Par exemple :
+_NB : Les mesures de chaque simulation sont disponibles à la fin du compte rendu_
 
 ### Simulations 1 et 2
 
 
-
 _Etude de l'influence de la longueur sur le temps de diffusion_
 
+<center>
 
-![](Simulation_1_2.png)
+![Simulations 1 et 2 - Variation de la longueur d'un même matériau](Simulation_1_2.png)
 
-$T_{diff}$ = $RC_{tot}$ donc la capacité du circuit et la résistance est équivalente à un circuit RC électrique.
+*Figure 1 : Simulations 1 et 2 - Variation de la longueur d'un même matériau.*
+</center>
 
-Dans ces simulations, la relation entre longueur de la barre et le temps de stabilisation est liée, en effet, plus la barre est longue, plus le temps de stabilisation est long. 
 
-Cela est lié au fait que la longueur a doublé et que la diffusivité thermique s'exprime par la dérivée seconde de la distance (donc x²) d'où le facteur 4 =2² car la longueur est doublée ici.
+Dans ce cas $T_{diff}$ = $RC_{tot}$ donc la capacité du circuit et la résistance est 
+équivalente à un circuit RC électrique.
 
-De plus, la longueur de la barre influe sur sa capacité à stocker l'énergie car plus le temps de stabilisation est long, plus la barre a la possibilité de stocker de l'énergie.
+Dans ces simulations, la relation entre longueur de la barre et le temps de 
+stabilisation est liée, en effet, plus la barre est longue, plus le temps de 
+stabilisation est long. 
 
-TODO : relire au dessus ?
+Cela s'explique par le fait que la longueur a doublé et que la diffusivité thermique 
+s'exprime par la dérivée seconde de la distance (donc x²) d'où le facteur 4 =2² car la longueur est doublée ici.
+
+De plus, la longueur de la barre influe sur sa capacité à stocker
+l'énergie car plus le temps de stabilisation est long, plus la barre a 
+la possibilité de stocker de l'énergie.
+
 
 ### Simulations 3 et 4
 
 
-
 _Influence des contacts imparfaits :_
 
+<center>
 
-![](Simulation_3_4.png)
+![Simulation de l'influence des contacts non parfaits](Simulation_3_4.png)
 
-Les cas 3 et 4 montrent l'effet d'un contact imparfait sur $t_{stab}$​. Quand le contact imparfait est proche de la source (cas 3), $t_{stab}$​ est légèrement plus court que dans le cas où le contact est éloigné (cas 4). Cela montre que la position du contact influence la dynamique thermique.
+*Figure 2 : Représentation des contacts non parfaits entre deux parties par une résistance de contact $R_{c}$*
+</center>
 
-La résistance de contact influence donc le temps de stabilisation car cette résistance représente le gap de température entre les deux parties du matériau.
+Les cas 3 et 4 montrent l'effet d'un contact imparfait sur $t_{stab}$​. 
+Quand le contact imparfait est proche de la source (cas 3), $t_{stab}$​ est légèrement 
+plus court que dans le cas où le contact est éloigné (cas 4).
+_(Rappel : les données des simulations sont disponibles en fin de compte rendu)_
 
+Cela montre que la position du contact influence la dynamique thermique.
 
-![](Graphe1_Simu_3.png)
+La résistance de contact influence donc le temps de stabilisation car cette
+résistance représente le gap de température entre les deux parties du matériau.
+
+Ce gap peut s'observer lors du tracé de _T(x)_, température en fonction de la position.
 
 <center>
 
-TODO : légende
+![Duralumin séparé en deux parties non égales avec un contact imparfait ](Graphe1_Simu_3.png)
+
+*Figure 3 : Duralumin séparé en deux parties non égales avec un contact imparfait (simulation 3)*
+
+
+![Duralumin séparé en deux parties non égales avec un contact imparfait](Graphe_Simu4.png)
+
+*Figure 4 : Duralumin séparé en deux parties non égales avec un contact imparfait (simulation 4)*
+
+
 </center>
 
-![](Graphe_Simu4.png)
-<center>
 
-TODO : légende
-</center>
+Dans la simulation 4, il est observable que la température est plus élevée plus 
+longtemps donc le matériau stocke plus d'énergie et le temps de stabilisation 
+est plus long.
 
-
-Dans la simulation 4, il est observable que la température est plus élevée plus longtemps donc le matériau stocke plus d'énergie et le temps de stabilisation est plus long.
+$T_{stab3}$ = 5480 secondes et $T_{stab4}$ = 8000 secondes
 
 ### Simulations 5 et 6
 
@@ -155,26 +175,69 @@ Dans la simulation 4, il est observable que la température est plus élevée pl
 _Configuration des matériaux :_
 
 
-Les cas 5 et 6 (position de différents matériaux) montrent une réduction significative de $t_{stab}$​ par rapport à $RC_{tot}$​. Cela pourrait être dû à une amélioration de la conduction thermique lorsque les matériaux sont bien positionnés.
+Les cas 5 et 6 (position de différents matériaux) montrent une réduction 
+significative de $t_{stab}$​ par rapport à $RC_{tot}$​. 
+Cela pourrait être dû à une amélioration de la conduction thermique 
+lorsque les matériaux sont bien positionnés.
+
+<center>
 
 
-![](Graphe_Simu5.png)
-TODO légende et expliquer disposition de chaque matériau
+*Simulation 5 : Le duralumin est placé en premier*
+
+![Contact parfait entre les deux matériaux ](Graphe_Simu5.png)
+
+*Figure 5 - Simulation 5 : Contact parfait entre les deux matériaux, $R_{c}$ = 0*
+
+*Simulation 6 : Le cuivre est placé en premier*
+
 ![](Graphe_Simu6.png)
 
+*Figure 6 - Simulation 6 : Contact parfait entre les deux matériaux, $R_{c}$ = 0*
+</center>
 
-Cette différence s'explique car le cuivre est plus conducteur que le dularumin, donc la température entre le gap est plus élevée avant donc permet un meilleur stock d'énergie.
+Cette réduction significative de $t_{stab}$​ par rapport à $RC_{tot}$ s'explique
+par le fait que le cuivre est plus conducteur que le dularumin.
+
+La pente lorsque le cuivre est placé en premier est donc plus faible, la chaleur reste 
+importante plus longtemps et la barre stocke plus d'énergie que lorsque le 
+duralumin est placé en premier.
+
+$E_{stock5}$ = 7,43 _KJ_ contre $E_{stock6}$ = 13,41 _KJ_
 
 ### Simulation du TP (Simulation 7)
 
-Dans la configuration du TP, avec une résistance convective en bout de barre, $RC_{tot}$​ est augmentée, et $t_{stab}$​ est également plus long par rapport aux configurations sans convection (comme cas 5).
+<center>
 
-$RC_{tot}$ est plus élevée que dans la simulation 5 car il y a la résistance de contact qui s'ajoute entre les deux matériaux. Le temps de stabilisation est donc plus long et l'énergie stockée supérieure par rapport à la simulation 5 sans résistance de contact.
+![Schéma de la simulation du TP](Simu_TP.png)
+
+*Figure 7 - Schéma du dispositif expérimental*
+</center>
+
+Dans la configuration du TP, il y a une résistance convective en bout de barre.
+Cette résistance est associée au transfert de chaleur entre le cuivre 
+et l'environnement (eau). Il y a donc un échange de chaleur par convection à 
+ce point.
+
+De plus $RC_{tot}$​ est augmentée par l'influence d'un mauvais contact entrainant 
+l'apparition de $R_{c}$, résistance de contact.
+$t_{stab}$ va donc être également plus long par rapport aux configurations sans 
+convection ni résistance de contact (comme lors du cas 5).
+
+$t_{stab}$ étant plus long, l'énergie stockée sera supérieure par rapport à 
+la simulation 5 sans résistance de contact.
 
 #### Comparaison avec les résultats expérimentaux
 
-Nous avons un temps de stabilisation d'environ 7560 secondes lors de notre expérience, différent des 7200 secondes théoriques de la simulation 7. Cette différence peut s'expliquer par les pertes thermiques avec l'environnement bien que la barre soit isolée avec de l'isolant fibreux.
-De plus, l'incertitude de lecture sur le logiciel est en partie responsable de ce décalage.
+Une fois les températures des thermocouples stabilisés, nous notons que 2 heures et 6 minutes environ
+se sont écoulées soit un total d'environ 7560 secondes = $t_{stab}$
+
+Ce temps de stabilisation expérimental est différent des 7200 secondes théoriques 
+de la simulation 7 _(voir tableau à la fin du compte rendu)_. Cette différence 
+peut s'expliquer par les pertes thermiques avec l'environnement bien que la barre
+soit isolée avec de l'isolant fibreux.
+De plus, l'incertitude de lecture sur le logiciel est en partie responsable de 
+ce décalage.
 
 
 ### Résumé des simulations
