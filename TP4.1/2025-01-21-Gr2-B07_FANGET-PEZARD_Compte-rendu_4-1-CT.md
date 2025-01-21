@@ -44,7 +44,6 @@ En régime stationnaire, il s'agit de mesurer la conductivité thermique de deux
 ## Travail préparatoire
 Réalisé sur Amétice
 
-Notions importantes abordées :
 
 # Travail à effectuer 
 
@@ -53,12 +52,15 @@ Notions importantes abordées :
 Lors de cette séance, nous avons tout d'abord vérifié que le régime était stationnaire, en nous assurant que les températures et les puissances mesurées étaient constantes.
 
 Les données suivantes ont été relevées : 
+
 - La tension _U_ et le courant _I_ aux bornes du collier chauffant : 65V et 171,8mA.
-- La puissance _P_ = _U*I_ = 11,17 _Watts_
+- La puissance $P$ = ${U*I}$ = 11,17 _Watts_
 - Le débit volumique d'eau dans la boîte à eau : 10 L/h
 - Les températures de l'eau à l'entrée et à la sortie de la boîte, via le logiciel : 11,6 °C en entrée et 12,1 °C en sortie.
 
 Ensuite, les températures relevées par les 10 thermocouples positionnés entre le collier chauffant et la boîte à eau ont été enregistrées. 
+
+<center>
 
 |Thermocouple n°	|Température (°C)|	Distance (cm)|
 |--------|-------|--------|
@@ -73,7 +75,10 @@ Ensuite, les températures relevées par les 10 thermocouples positionnés entre
 |9	|18,8|	28,5|
 |10	|18|	31,5|
 
-![](graphe_1.png)
+![Température en fonction de la distance](graphe_1.png)
+
+</center>
+
 
 Une fois la phase instationnaire initiée la tension d'alimentation du collier chauffant est augmentée de 65V à 110V, tout en prenant note de l'heure de ce changement, ce moment est l'instant initial de la phase instationnaire.
 
@@ -88,6 +93,7 @@ Les mesures sont donc effectuées à partir de cet instant pour voir l'évolutio
 de la température dans les matériaux en fonction du temps.
 
 Les données suivantes ont été relevées :
+
 - Instant initial de la phase instationnaire : 14h44
 - La tension _U_ et le courant _I_ aux bornes du collier chauffant : 110V et 290,2 mA
 - La puissance _P_ =_UI_ = 31,9 _Watts_
@@ -98,14 +104,12 @@ _NB : Les mesures de chaque simulation sont disponibles à la fin du compte rend
 
 ### Simulations 1 et 2
 
-
-_Etude de l'influence de la longueur sur le temps de diffusion_
+__Etude de l'influence de la longueur sur le temps de diffusion__
 
 <center>
 
-![Simulations 1 et 2 - Variation de la longueur d'un même matériau](Simulation_1_2.png)
+![Simulations 1 et 2 - Variation de la longueur d'un même matériau.](Simulation_1_2.png)
 
-*Figure 1 : Simulations 1 et 2 - Variation de la longueur d'un même matériau.*
 </center>
 
 
@@ -126,14 +130,13 @@ la possibilité de stocker de l'énergie.
 
 ### Simulations 3 et 4
 
-
-_Influence des contacts imparfaits :_
+__Influence des contacts imparfaits :__
 
 <center>
 
 ![Simulation de l'influence des contacts non parfaits](Simulation_3_4.png)
 
-*Figure 2 : Représentation des contacts non parfaits entre deux parties par une résistance de contact $R_{c}$*
+*Représentation des contacts non parfaits entre deux parties par une résistance de contact $R_{c}$*
 </center>
 
 Les cas 3 et 4 montrent l'effet d'un contact imparfait sur $t_{stab}$​. 
@@ -151,14 +154,11 @@ Ce gap peut s'observer lors du tracé de _T(x)_, température en fonction de la 
 <center>
 
 ![Duralumin séparé en deux parties non égales avec un contact imparfait ](Graphe1_Simu_3.png)
+</center>
 
-*Figure 3 : Duralumin séparé en deux parties non égales avec un contact imparfait (simulation 3)*
-
+<center>
 
 ![Duralumin séparé en deux parties non égales avec un contact imparfait](Graphe_Simu4.png)
-
-*Figure 4 : Duralumin séparé en deux parties non égales avec un contact imparfait (simulation 4)*
-
 
 </center>
 
@@ -187,19 +187,18 @@ lorsque les matériaux sont bien positionnés.
 
 ![Contact parfait entre les deux matériaux ](Graphe_Simu5.png)
 
-*Figure 5 - Simulation 5 : Contact parfait entre les deux matériaux, $R_{c}$ = 0*
 
 *Simulation 6 : Le cuivre est placé en premier*
 
 ![](Graphe_Simu6.png)
 
-*Figure 6 - Simulation 6 : Contact parfait entre les deux matériaux, $R_{c}$ = 0*
+*Simulation 6 : Contact parfait entre les deux matériaux, $R_{c}$ = 0*
 </center>
 
 Cette réduction significative de $t_{stab}$​ par rapport à $RC_{tot}$ s'explique
 par le fait que le cuivre est plus conducteur que le dularumin.
 
-La pente lorsque le cuivre est placé en premier est donc plus faible, la chaleur reste 
+La pente, lorsque le cuivre est placé en premier est donc plus faible, la chaleur reste 
 importante plus longtemps et la barre stocke plus d'énergie que lorsque le 
 duralumin est placé en premier.
 
@@ -211,7 +210,6 @@ $E_{stock5}$ = 7,43 _KJ_ contre $E_{stock6}$ = 13,41 _KJ_
 
 ![Schéma de la simulation du TP](Simu_TP.png)
 
-*Figure 7 - Schéma du dispositif expérimental*
 </center>
 
 Dans la configuration du TP, il y a une résistance convective en bout de barre.
@@ -251,6 +249,7 @@ Il est possible de remarquer que $t_{stab}$​ dépend fortement de $RC_{tot}$�
 ### Calcul de $P_{0}$
 
 Les données suivantes ont été relevées : 
+
 - La tension _U_ et le courant _I_ aux bornes du collier chauffant : 65V et 171,8mA.
 - Le débit massique d'eau dans la boîte à eau : 10 _L/h_ = $2,78.10^{-6} m^{-3}/sec $ soit $2,78.10^{-3} kg/sec $
 - Les températures de l'eau à l'entrée et à la sortie de la boîte, via le logiciel : 11,6 °C en entrée et 12,1 °C en sortie.
@@ -296,13 +295,14 @@ Les températures relevées par les 10 thermocouples positionnés entre le colli
 
 ![Evolution de la température en fonction de la position](graphe_1.png)
 
-*Figure 8 - Evolution de la température en régime stationnaire*
+
 
 </center>
 
 ### Valeurs des températures des jonctions
 
 Les températures de jonctions sont donc :
+
 - Entre le collier chauffant et la barre de Duralumin ~ 45,2°C
 - Entre le Cuivre et l'eau ~ 31,5 °C
 
@@ -310,7 +310,8 @@ Il est possible de noter que les températures de jonction déterminent les pert
 
 ### Analyse du profil de température
 
-L'absence de pertes latérales signifie que la chaleur se propage uniquement dans le sens longitudinal (le long de la barre) sans dissipation significative dans l'environnement. Si cette hypothèse est valide, on devrait observer une décroissance linéaire de la température en fonction de la distance, ce qui semble être notre cas , comme en témoignent les tendances linéaires des deux courbes.(Figure 8)
+L'absence de pertes latérales signifie que la chaleur se propage uniquement dans le sens longitudinal (le long de la barre) sans dissipation significative dans l'environnement. Si cette hypothèse est valide, on devrait observer une décroissance linéaire de la température en fonction de la distance, ce qui semble être notre cas , comme en témoignent les tendances linéaires des deux courbes.
+
 
 - Le matériau le plus conducteur est le cuivre car sa pente de température en fonction de la distance est moins élevée. Cela signifie que le cuivre conduit mieux la chaleur que le duralumin car sa température reste plus élevée sur une plus grande distance.
 
@@ -319,6 +320,7 @@ L'absence de pertes latérales signifie que la chaleur se propage uniquement dan
 Pour rappel le flux d'énergie interne en conduction thermique s'exprime par  :  $\Phi_{x}$ = -k S $\frac{dT}{dx}$
 
 Avec :
+
 - $\Phi_{x}$ : flux (W).
 - $k$ : conductivité thermique (W/m·K).
 - $S$ : section (m²).
@@ -342,6 +344,7 @@ Avec :
 
 
 On obtient donc :
+
 
 $k_{Duralumin} = \frac{\Phi}{S.\frac{dt}{dx}}$ avec $\frac{dt}{dx}$ = -54,62 °C/m
 
@@ -388,7 +391,7 @@ Nous comparons maintenant le régime stationnaire avec une puissance de chauffe 
 
 ![Température en fonction du temps](Graphe_3.png)
 
-*Figure 9 - Comparaison des températures en fonction du temps pour les deux tensions*
+*Comparaison des températures en fonction du temps pour les deux tensions*
 </center>
 
 Les nouvelles droites son nettement au dessus des premières, cela s'explique car les températudes sont plus élevées? De plus les pentes des droites sont plus marquées, cela s'explique par la relation entre le gradient de température et la puissance, dans le deuxième cas plus grande car la tension a augmenté ${(P= UI)}$.
