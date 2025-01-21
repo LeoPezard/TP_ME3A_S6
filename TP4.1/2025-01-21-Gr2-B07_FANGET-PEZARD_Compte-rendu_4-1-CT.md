@@ -6,7 +6,7 @@ author : >
 
 # Préambule
 
-## Introduction
+## coucou
 
 Ce TP a pour objectif d'explorer les mécanismes de conduction thermique dans une configuration monodimensionnelle, à travers l'étude expérimentale de barres métalliques en contact. 
 
