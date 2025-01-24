@@ -47,6 +47,8 @@ Ce TP s'appuie sur les dispositifs suivants :
 ![Schéma du cube multi-faces aux quatre faces latérales différentes chauffées par une ampoule centrale](dispositif.png)
 
 
+\
+
 
 - __Lampe à filament de tungstène__ : permettant d’atteindre des températures élevées, avec T déduit de la résistance R via :
 
@@ -67,6 +69,9 @@ $U = s \cdot \Phi_\text{net} \quad \text{avec} \quad \Phi_\text{net} = \Phi_\tex
 
 
 ![Fonctionnement schématique de la thermopile](thermopile.png)
+
+
+\
 
 ---
 
