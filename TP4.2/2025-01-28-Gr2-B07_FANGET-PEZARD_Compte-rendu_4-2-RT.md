@@ -98,3 +98,17 @@ Notions principales abordées
 L’objectif est ici de se familiariser avec la notion d’émetteur et de récepteur de rayonnement ainsi
 que de dégager qualitativement des tendances de comportement de différentes surfaces.
 
+### Sensibilisation au pouvoir émissif
+
+En plaçant la main devant chaque face du cube, avec notre ressenti, nous avons pu établir un classement du "pouvoir émissif". (faire le classement de chaque face du cube)
+
+### Thermopile
+
+La thermopile délivre des tensions différentes lorsqu'on la place devant des surfaces de températures différentes (étudier le signe de cette tension, évoquer la comparaison avec les sensations au dessus)
+
+### Analyse
+
+
+## Approche quantitative
+
+
