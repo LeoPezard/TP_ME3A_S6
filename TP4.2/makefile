@@ -1,5 +1,5 @@
 # Nom du fichier Markdown et PDF
-FILE=test
+FILE=2025-01-28-Gr2-B07_FANGET-PEZARD_Compte-rendu_4-2-RT
 
 # Commande pour générer le PDF
 rapport: $(FILE).md
