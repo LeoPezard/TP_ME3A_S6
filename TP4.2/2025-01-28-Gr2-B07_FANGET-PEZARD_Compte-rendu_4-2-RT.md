@@ -28,7 +28,7 @@ convection, le transfert radiatif ne nécessite pas de support matériel et se
 propage en ligne droite.
 
 Loi de Planck (puissance spectrale):
-:   TODO : revoir l'unité de cette formule
+:   
 
    $$M_\lambda^0(T) = \frac{C_1 \lambda^{-5} }{ e^{C_2 / (\lambda T)} - 1 }$$
 
@@ -70,9 +70,6 @@ Cube multi-faces chauffé:
 aluminium poli et non poli) pour étudier l’influence de l’émissivité (voir
 Figure \ref{fig:cube})
 
-![Schéma du cube multi-faces aux quatre faces latérales différentes chauffées
-par une ampoule centrale](dispositif.png){#fig:cube width=50%}
-
 Lampe à filament de tungstène: 
 :   permettant d’atteindre des températures élevées, avec T déduit de la résistance R via :
 
@@ -80,12 +77,14 @@ Lampe à filament de tungstène:
 $$T = -0,053 \cdot \left(\frac{\rho_a R}{R_a}\right)^2 + 36.1 \cdot \left(\frac{\rho_a R}{R_a}\right) + 125$$
 
 Thermopile: 
-:   pour mesurer le flux radiatif net ${\Phi_{net}}$​ à partir de la tension générée:
-
+:   pour mesurer le flux radiatif net ${\Phi_{net}}$​ à partir de la tension générée (Voir Figure \ref{fig:thermopile}):
 
 $$U = s \cdot \Phi_\text{net} \quad \text{avec} \quad \Phi_\text{net} = \Phi_\text{émis} - \Phi_\text{absorbé}$$
 
-Voir Figure \ref{fig:thermopile}
+
+
+![Schéma du cube multi-faces aux quatre faces latérales différentes chauffées
+par une ampoule centrale](dispositif.png){#fig:cube width=50%}
 
 ![Fonctionnement schématique de la thermopile](thermopile.png){#fig:thermopile}
 
@@ -131,19 +130,52 @@ pu établir un classement du « pouvoir émissif ». TDODO (faire le classemen
 face du cube)
 
 
-| Face supérieure | Face latérale 1 | Face latérale 2 | Face latérale 3 | Face latérale 4 |
-|------------------|-----------------|-----------------|-----------------|-----------------|
-| Ressenti 1       | Ressenti 2      | Ressenti 3      | Ressenti 4      | Ressenti 5      |
+| Face noire | Face blanche | Face polie | Face non polie |
+|------------|---------------|---------------|-----------------|
+| Semble être la plus chaude de toutes les faces | Semble être la deuxième la plus chaude    | Semble être la face la moins chaude     | Est légèrement plus chaude que la face polie mais moins chaude que la face blanche   |
 
 
 :Sensibilisation au pouvoir émissif - Ressenti à l'approche de chaque face du cube.
 
+Le classement des faces en fonction de leur pouvoir émissif par ordre décroissant est donc : Face noire, face blanche, face pas polie puis face polie.
+
+Un pouvoir émissif élevé signifie que le flux de chaleur passe à travers la surface, il est donc peu absorbé par celle-ci, donc la chaleur est ressentie à l'extérieur du cube.
+
 ### Thermopile
 
-La thermopile délivre des tensions différentes lorsqu'on la place devant des surfaces de températures différentes TODO (étudier le signe de cette tension, évoquer la comparaison avec les sensations au dessus)
+La thermopile délivre des tensions différentes lorsqu'on la place devant des surfaces de températures différentes.
+
+Etude du signe de la tension de la thermopile :
+
+- Cas T = $T_{a}$, la tension mesurée est de 0 mV
+- Cas T < $T_{a}$ (température extérieure) : tension mesurée -1,4 mV
+- Cas T < $T_{a}$ (température du frigo) : tension mesurée -2.0 mV
+- Cas T > $T_{a}$ (température corporelle), la tension mesurée est de 0,7 mV
+
+Plage du spectre mesuré : 0,5 à  40 $\mu m$.
+
+On remarque que lorsque la température est inférieure à la température ambiante, la tension mesurée par la thermopile est négative.
 
 
 ### Analyse
+
+La thermopile est disposée face à une face du cube $T_{a}$, puis cette face est éclairée avec un flux issu de la face noir d'un autre cube à $T \approx$ 50 °C.
+
+Il est possible d'en déduire un classement des surfaces en terme de « pouvoir réfléchissant » de chaque face du cubre à $T_{a}$ :
+
+
+| | Face noire | Face blanche | Face polie | Face polie | 
+|--------| -------------|-----------------|-----------------|-----------------|
+| Tension mesurée (mV) | 0   |   0  |   0,8  |  1,2   |
+
+
+:Sensibilisation au pouvoir réfléchissant - Ressenti à l'approche de chaque face du cube.
+
+Le classement des faces en fonction de leur pouvoir réfléchissant par ordre croissant est donc : Face noire, face blanche, face pas polie puis face polie.
+
+Un pouvoir réfléchissant élevé signifie que le flux de chaleur ne passe pas à travers la surface, il est donc réfléchi apr celle-ci, donc la chaleur est renvoyée sur la thermopile.
+
+La loi du rayonnement thermique constatée est la loi de Kirchhoff exprimée par $\epsilon = 1 - \rho$ où $\epsilon$ est l'émissivité et $\rho$ est la réflectivité. (ici transmittivité $\tau = 0$ ).
 
 
 ## Approche quantitative
@@ -151,6 +183,7 @@ La thermopile délivre des tensions différentes lorsqu'on la place devant des s
 ### Influence de la nature de la surface et de sa température
 
 Détail de chaque composante de l'équation (15):
+ 
 
 $$U(V) = s [\phi^{incident}_{capteur} - \phi^{partant}_{capteur}] = -s \phi^{net}_{capteur} = s [\phi^{absorbé}_{capteur} - \phi^{émis}_{capteur}] = U(V)$$
 
@@ -176,10 +209,36 @@ Ce flux reste constant si $T_{capteur}$​ s'élève peu et reste proche de $T_{
 
 - $s$ est la sensibilité du capteur, exprimée en mV/mW. Elle quantifie la relation entre la variation de flux thermique (en milliwatts) et la tension mesurée (en millivolts).
 
-TODO : répondre aux questions
 
+Pour démontrer l'équation (16), nous partons de $U(V) = s [\phi^{absorbé}_{capteur} - \phi^{émis}_{capteur}]$
+
+$\phi^{émis}_{capteur} = \sigma \cdot \epsilon \cdot T^{4}_{a}$, or pour un corps noir, $\epsilon = 1$, donc $\phi^{émis}_{capteur} = \sigma \cdot T^{4}_{a}$
+
+Il faut déterminer $\phi^{absorbé}_{capteur} = \phi^{émis}_{cube} = \phi^{réfléchi}_{cube}$, avec $\phi^{émis}_{cube} = \epsilon_{cube} \cdot \sigma \cdot T^{4}$ 
+
+Avec : $\phi^{réfléchi}_{cube} = (1-\epsilon_{cube}) \cdot (\sigma - T^{4}_{cube})$
+
+Donc $U(V) = s \cdot [\epsilon_{cube} \cdot \sigma T^{4}_{cube}] + (1- \epsilon) \cdot \sigma T^{4}_{cube} - \sigma \cdot T^{4}_{a}$
+
+Finalement :
+ $$U(V) = \sigma \cdot \epsilon_{cube} \cdot s \cdot(T^{4}_{cube} - T^{4}_{a})$$
+
+Avec $\epsilon_{cube}$ l'émissivité du cube et s la sensibilité du capteur.
+
+Graphe de U(V) en fonction de $\sigma \cdot [T^{4} - T^{4}_{a}]$ :
+
+![Tension mesurée en fonction des différences de température](graphe1.png){#fig:graphe1}
+
+Les pentes nous donnent l'émissivité de chaque face.
+
+![Réflectivité en fonction de la longueur d'onde](graphe2.png){#fig:graphe2}
 
 ### Transmission du rayonnement
+
+
+Lors de l'expérience précédente, nous avons pu remarquer que la tension mesurée par la thermopile était nulle lorsque une plaque de verre était placée entre la face noire et la thermopile.
+
+Nous pouvons en déduire que le verre à une transmittivité nulle car nous sommes dans l'infrarouge.
 
 Transmissivité dans le visible :
 Le verre est transparent dans le visible $\lambda \approx 0.4 \, \text{à} \, 0.7 \mu m$, donc la transmissivité $\tau$ est proche de 1 dans cette plage.
@@ -187,10 +246,9 @@ Le verre est transparent dans le visible $\lambda \approx 0.4 \, \text{à} \, 0.
 Transmissivité dans l’infrarouge :
 Le verre est opaque aux longueurs d’onde infrarouges $\lambda \geq 0.7 \mu m$, donc $\tau$ chute brutalement vers 0. Cela explique l’effet de serre, car les rayonnements infrarouges émis par les objets chauffés ne traversent pas le verre.
 
-
-TODO compléter le graphique et répondre aux autres questions
-
 Graphique complété :
+
+![Transmissivité du verre en fonction de la lonueur d'onde](graphe3.png){#fig:graphe3 width=50%}
 
 Dans le visible : $\tau \approx 1$ (ligne horizontale haute).    Dans l’infrarouge : $\tau \approx 0$ (ligne horizontale basse après le visible).
 
@@ -205,4 +263,15 @@ Dans une voiture avec pare-brise, le tableau de bord chauffe davantage à cause 
 
 __$\rightarrow$__ Sans pare-brise, les flux infrarouges s’échapperaient et le tableau de bord serait moins chaud.
 
-### Influence de la température de la source
+Voir Figure \ref{fig:voiture}
+
+
+- 1) Flux émis par le soleil $\Phi_{solaire}$
+- 2) Flux réfléchi par le pare brise $\phi^{reflechi}_{pare-brise} = \phi^{transmis}_{pare-brise} - \Phi_{solaire}$ 
+- 3) Flux transmis par le pare brise $\phi^{transmis}_{pare-brise}$
+- 4) Flux absorbé par le tableau de bord
+- 5) Flux réfléchi par le tableau de bord
+- 6) Flux réfléchi par le pare-brise venant du tableau de bord.
+
+![Schéma de l'effet de serre dans une voiture](voiture.png){#fig:voiture}
+
