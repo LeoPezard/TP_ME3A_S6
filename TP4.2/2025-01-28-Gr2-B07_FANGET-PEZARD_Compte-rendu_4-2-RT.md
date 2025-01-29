@@ -34,9 +34,6 @@ Loi de Planck (puissance spectrale):
 
 Où $C_{1} = 3,741.10^{8}W.m^{-2}.\mu m^{4}$ et $C_{2} = 14388 \mu m.K$
 
-<!--
----
--->
 
 Loi de Stefan-Boltzmann (flux total):
 :  
@@ -44,26 +41,17 @@ Loi de Stefan-Boltzmann (flux total):
    \, \text{W} \cdot \text{m}^{-2} \cdot \text{K}^{-4}$$
 
 Cette loi correspond à l'intégrale de la fonciton de Planck sur tout le spectre mais également au flux émis par $1m^{2}$ de corps noir dans toutes les directions pour toutes les longueurs d'onde.
-<!--
----
--->
+
 
 Loi de Wien (longueur d'onde maximale):
 :  
 
    $$\lambda_m T = 2898 \, \mu \text{m} \cdot \text{K}$$
 
-<!--
---- 
--->
 
 ## Approche expérimentale 
 
 Ce TP s'appuie sur les dispositifs suivants :
-
-<!--
-- __Cube multi-faces chauffé__ : avec des surfaces ayant des états différents (noire mate, blanche mate, aluminium poli et non poli) pour étudier l’influence de l’émissivité.
--->
 
 Cube multi-faces chauffé: 
 :   avec des surfaces ayant des états différents (noire mate, blanche mate,
@@ -131,7 +119,7 @@ face du cube)
 
 
 | Face noire | Face blanche | Face polie | Face non polie |
-|------------|---------------|---------------|-----------------|
+|:------------:|:---------------:|:---------------:|:-----------------:|
 | Semble être la plus chaude de toutes les faces | Semble être la deuxième la plus chaude    | Semble être la face la moins chaude     | Est légèrement plus chaude que la face polie mais moins chaude que la face blanche   |
 
 
@@ -164,16 +152,16 @@ La thermopile est disposée face à une face du cube $T_{a}$, puis cette face es
 Il est possible d'en déduire un classement des surfaces en terme de « pouvoir réfléchissant » de chaque face du cubre à $T_{a}$ :
 
 
-| | Face noire | Face blanche | Face polie | Face polie | 
-|--------| -------------|-----------------|-----------------|-----------------|
+| | Face noire | Face blanche | Face non polie | Face polie | 
+|:--------:|:-------------:|:-----------------:|:-----------------:|:-----------------:|
 | Tension mesurée (mV) | 0   |   0  |   0,8  |  1,2   |
 
 
-:Sensibilisation au pouvoir réfléchissant - Ressenti à l'approche de chaque face du cube.
+:Sensibilisation au pouvoir réfléchissant - Mesure de tension à l'approche de chaque face du cube.
 
 Le classement des faces en fonction de leur pouvoir réfléchissant par ordre croissant est donc : Face noire, face blanche, face pas polie puis face polie.
 
-Un pouvoir réfléchissant élevé signifie que le flux de chaleur ne passe pas à travers la surface, il est donc réfléchi apr celle-ci, donc la chaleur est renvoyée sur la thermopile.
+Un pouvoir réfléchissant élevé signifie que le flux de chaleur ne passe pas à travers la surface, il est donc réfléchi par celle-ci, donc la chaleur est renvoyée sur la thermopile.
 
 La loi du rayonnement thermique constatée est la loi de Kirchhoff exprimée par $\epsilon = 1 - \rho$ où $\epsilon$ est l'émissivité et $\rho$ est la réflectivité. (ici transmittivité $\tau = 0$ ).
 
@@ -229,29 +217,49 @@ Graphe de U(V) en fonction de $\sigma \cdot [T^{4} - T^{4}_{a}]$ :
 
 ![Tension mesurée en fonction des différences de température](graphe1.png){#fig:graphe1}
 
-Les pentes nous donnent l'émissivité de chaque face.
+Les pentes nous permettent donc de calculer l'émissivité de chaque face il est donc intéréssant de comparer les pentes entre elles afin de déterminer l'émissivité de chaque surface du cube.
+
+Les relations sont données, pour chaque face par U(V) = $\sigma \cdot \epsilon_{face_{cube}} \cdot s \cdot(T^{4}_{cube} - T^{4}_{a})$
+
+Donc $Rapport_{pente} = \frac{\epsilon_{face_{1}}}{\epsilon_{face_{2}}}$
+
+Sachant que $\epsilon_{noire_{0.4 - 40 \mu m}} = 0,94$, il est possible de déterminer $\epsilon_{blanc}$ grâce à :
+
+$\epsilon_{blanc_{0.4 - 40 \mu m}} \, = \frac{epsilon_{noire}}{rapport_{pente}}$ Donc $\epsilon_{blanc_{0.4 - 40 \mu m}} \, = \frac{0,94}{\frac{2.04766}{2.02426}} \approx 0.92$
+
+De même avec la face polie et non polie :
+
+$\epsilon_{polie_{0.4 - 40 \mu m}} \, = \frac{epsilon_{noire}}{rapport_{pente}}$ Donc $\epsilon_{polie_{0.4 - 40 \mu m}} \, = \frac{0,94}{\frac{2.04766}{0.111334}} \approx 0.05$
+
+$\epsilon_{non polie_{0.4 - 40 \mu m}} \, = \frac{epsilon_{noire}}{rapport_{pente}}$ Donc $\epsilon_{non polie_{0.4 - 40 \mu m}} \, = \frac{0,94}{\frac{2.04766}{0.205029}} \approx 0.1$
+
+On remarque que cet ordre d'émissivité correspond avec nos ressentis de début de TP. (Voir tableau 1). L'émissivité de la face noire est supérieure aux autres, suivi de la face blanche, de la face non polie puis, de la face polie, possédant l'émissivité la plus faible.
+
+Voici le graphe complété de la réflectivité en fonction de la longueur d'onde pour la peinture blanche et la peinture noire :
 
 ![Réflectivité en fonction de la longueur d'onde](graphe2.png){#fig:graphe2}
 
-### Transmission du rayonnement
+\
 
+### Transmission du rayonnement
 
 Lors de l'expérience précédente, nous avons pu remarquer que la tension mesurée par la thermopile était nulle lorsque une plaque de verre était placée entre la face noire et la thermopile.
 
 Nous pouvons en déduire que le verre à une transmittivité nulle car nous sommes dans l'infrarouge.
 
-Transmissivité dans le visible :
+_Transmissivité dans le visible :_
 Le verre est transparent dans le visible $\lambda \approx 0.4 \, \text{à} \, 0.7 \mu m$, donc la transmissivité $\tau$ est proche de 1 dans cette plage.
 
-Transmissivité dans l’infrarouge :
+_Transmissivité dans l’infrarouge :_
 Le verre est opaque aux longueurs d’onde infrarouges $\lambda \geq 0.7 \mu m$, donc $\tau$ chute brutalement vers 0. Cela explique l’effet de serre, car les rayonnements infrarouges émis par les objets chauffés ne traversent pas le verre.
 
 Graphique complété :
 
-![Transmissivité du verre en fonction de la lonueur d'onde](graphe3.png){#fig:graphe3 width=50%}
+![Transmissivité du verre en fonction de la longueur d'onde](graphe3.png){#fig:graphe3 width=50%}
 
-Dans le visible : $\tau \approx 1$ (ligne horizontale haute).    Dans l’infrarouge : $\tau \approx 0$ (ligne horizontale basse après le visible).
+Dans le visible : $\tau \approx 1$ (ligne horizontale haute). Dans l’infrarouge : $\tau \approx 0$ (ligne horizontale basse après le visible).
 
+\
 
 __Application : __
 
@@ -270,7 +278,7 @@ Voir Figure \ref{fig:voiture}
 - 2) Flux réfléchi par le pare brise $\phi^{reflechi}_{pare-brise} = \phi^{transmis}_{pare-brise} - \Phi_{solaire}$ 
 - 3) Flux transmis par le pare brise $\phi^{transmis}_{pare-brise}$
 - 4) Flux absorbé par le tableau de bord
-- 5) Flux réfléchi par le tableau de bord
+- 5) Flux réfléchi par le tableau de bord (infrarouge)
 - 6) Flux réfléchi par le pare-brise venant du tableau de bord.
 
 ![Schéma de l'effet de serre dans une voiture](voiture.png){#fig:voiture}
