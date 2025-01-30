@@ -283,3 +283,17 @@ Voir Figure \ref{fig:voiture}
 
 ![Schéma de l'effet de serre dans une voiture](voiture.png){#fig:voiture}
 
+# Conclusion
+
+Ce TP nous a permis d’approfondir notre compréhension du rayonnement thermique 
+et des principes qui influencent ce comportement. Grâce aux différentes expériences, nous 
+avons pu mettre en évidence l’influence de la nature et de l’état de surface 
+des matériaux sur l’émissivité et la réflectivité. Les résultats obtenus, 
+notamment les valeurs d’émissivité des différentes faces du cube, sont 
+cohérents avec les modèles théoriques et nos observations qualitatives.
+
+L’expérience sur la transmission du rayonnement a également illustré 
+concrètement le phénomène de l’effet de serre, en mettant en évidence 
+l’opacité du verre aux infrarouges. Ce TP nous a donc permis de relier 
+théorie et pratique tout en nous sensibilisant aux limites des mesures 
+expérimentales et aux erreurs potentielles.
