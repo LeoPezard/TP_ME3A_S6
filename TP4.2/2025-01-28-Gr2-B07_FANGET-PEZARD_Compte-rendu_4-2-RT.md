@@ -1,11 +1,9 @@
 ---
-title : Compte rendu TP Mécanique Energétique - Rayonnement Thermique
-author : Baptiste Fanget - Pezard Léo - ME3A
+title : Compte rendu de TP - Rayonnement Thermique
+author : Baptiste Fanget - Pezard Léo - Mécanique Energétique 3A
+date : 28/01/2025
 papersize: a4
 lang: fr 
-toc: true # table of contents
-lof: true # list of figures
-lot: true # list of tables
 ---
 
 # Préambule
@@ -58,6 +56,10 @@ Cube multi-faces chauffé:
 aluminium poli et non poli) pour étudier l’influence de l’émissivité (voir
 Figure \ref{fig:cube})
 
+![Schéma du cube multi-faces aux quatre faces latérales différentes chauffées
+par une ampoule centrale](dispositif.png){#fig:cube width=50%}
+
+
 Lampe à filament de tungstène: 
 :   permettant d’atteindre des températures élevées, avec T déduit de la résistance R via :
 
@@ -71,14 +73,12 @@ $$U = s \cdot \Phi_\text{net} \quad \text{avec} \quad \Phi_\text{net} = \Phi_\te
 
 
 
-![Schéma du cube multi-faces aux quatre faces latérales différentes chauffées
-par une ampoule centrale](dispositif.png){#fig:cube width=50%}
+![Fonctionnement schématique de la thermopile](thermopile.png){#fig:thermopile width=70%}
 
-![Fonctionnement schématique de la thermopile](thermopile.png){#fig:thermopile}
+\
 
----
 
-### Objectif 
+## Objectif 
 
 En combinant théorie et expérimentation, cette séance vise à :
 
@@ -114,8 +114,7 @@ que de dégager qualitativement des tendances de comportement de différentes su
 ### Sensibilisation au pouvoir émissif
 
 En plaçant la main devant chaque face du cube, avec notre ressenti, nous avons
-pu établir un classement du « pouvoir émissif ». TDODO (faire le classement de chaque
-face du cube)
+pu établir un classement du « pouvoir émissif ».
 
 
 | Face noire | Face blanche | Face polie | Face non polie |
@@ -125,7 +124,7 @@ face du cube)
 
 :Sensibilisation au pouvoir émissif - Ressenti à l'approche de chaque face du cube.
 
-Le classement des faces en fonction de leur pouvoir émissif par ordre décroissant est donc : Face noire, face blanche, face pas polie puis face polie.
+Le classement des faces en fonction de leur pouvoir émissif par ordre décroissant est donc : Face noire, face blanche, face non polie puis face polie.
 
 Un pouvoir émissif élevé signifie que le flux de chaleur passe à travers la surface, il est donc peu absorbé par celle-ci, donc la chaleur est ressentie à l'extérieur du cube.
 
@@ -149,7 +148,7 @@ On remarque que lorsque la température est inférieure à la température ambia
 
 La thermopile est disposée face à une face du cube $T_{a}$, puis cette face est éclairée avec un flux issu de la face noir d'un autre cube à $T \approx$ 50 °C.
 
-Il est possible d'en déduire un classement des surfaces en terme de « pouvoir réfléchissant » de chaque face du cubre à $T_{a}$ :
+Il est possible d'en déduire un classement des surfaces en terme de « pouvoir réfléchissant » de chaque face du cube à $T_{a}$ :
 
 
 | | Face noire | Face blanche | Face non polie | Face polie | 
@@ -159,9 +158,9 @@ Il est possible d'en déduire un classement des surfaces en terme de « pouvoir
 
 :Sensibilisation au pouvoir réfléchissant - Mesure de tension à l'approche de chaque face du cube.
 
-Le classement des faces en fonction de leur pouvoir réfléchissant par ordre croissant est donc : Face noire, face blanche, face pas polie puis face polie.
+Le classement des faces en fonction de leur pouvoir réfléchissant par ordre croissant est donc : Face noire, face blanche, face non polie puis face polie.
 
-Un pouvoir réfléchissant élevé signifie que le flux de chaleur ne passe pas à travers la surface, il est donc réfléchi par celle-ci, donc la chaleur est renvoyée sur la thermopile.
+Un pouvoir réfléchissant élevé signifie que le flux de chaleur ne passe pas à travers la surface, il est donc réfléchi par celle-ci, ainsi la chaleur est renvoyée sur la thermopile.
 
 La loi du rayonnement thermique constatée est la loi de Kirchhoff exprimée par $\epsilon = 1 - \rho$ où $\epsilon$ est l'émissivité et $\rho$ est la réflectivité. (ici transmittivité $\tau = 0$ ).
 
@@ -197,6 +196,7 @@ Ce flux reste constant si $T_{capteur}$​ s'élève peu et reste proche de $T_{
 
 - $s$ est la sensibilité du capteur, exprimée en mV/mW. Elle quantifie la relation entre la variation de flux thermique (en milliwatts) et la tension mesurée (en millivolts).
 
+\
 
 Pour démontrer l'équation (16), nous partons de $U(V) = s [\phi^{absorbé}_{capteur} - \phi^{émis}_{capteur}]$
 
@@ -215,9 +215,11 @@ Avec $\epsilon_{cube}$ l'émissivité du cube et s la sensibilité du capteur.
 
 Graphe de U(V) en fonction de $\sigma \cdot [T^{4} - T^{4}_{a}]$ :
 
-![Tension mesurée en fonction des différences de température](graphe1.png){#fig:graphe1}
+![Tension mesurée en fonction des différences de température pour chaque face du cube](graphe1.png){#fig:graphe1}
 
-Les pentes nous permettent donc de calculer l'émissivité de chaque face il est donc intéréssant de comparer les pentes entre elles afin de déterminer l'émissivité de chaque surface du cube.
+Les tensions calculées par la thermopile ont été mesurées sur chaque face par palier de 10 degrés (de 20 à 100 degrés). Ces mesures ont donc permis d'établir la relation entre la tension mesurée et l'émissivité, notamment grâce à la formule démontrée auparavant :
+$$U(V) = \sigma \cdot \epsilon_{cube} \cdot s \cdot(T^{4}_{cube} - T^{4}_{a})$$
+Les pentes nous permettent donc de calculer l'émissivité de chaque face, il est donc intéréssant de comparer les pentes entre elles afin de déterminer l'émissivité de chaque surface du cube.
 
 Les relations sont données, pour chaque face par U(V) = $\sigma \cdot \epsilon_{face_{cube}} \cdot s \cdot(T^{4}_{cube} - T^{4}_{a})$
 
@@ -233,12 +235,17 @@ $\epsilon_{polie_{0.4 - 40 \mu m}} \, = \frac{epsilon_{noire}}{rapport_{pente}}$
 
 $\epsilon_{non polie_{0.4 - 40 \mu m}} \, = \frac{epsilon_{noire}}{rapport_{pente}}$ Donc $\epsilon_{non polie_{0.4 - 40 \mu m}} \, = \frac{0,94}{\frac{2.04766}{0.205029}} \approx 0.1$
 
-On remarque que cet ordre d'émissivité correspond avec nos ressentis de début de TP. (Voir tableau 1). L'émissivité de la face noire est supérieure aux autres, suivi de la face blanche, de la face non polie puis, de la face polie, possédant l'émissivité la plus faible.
+Il est possible de remarquer que entre les faces de couleur (noire et blanche) et la face polie, le rapport des émissivités est d'environ 19.
+
+Cet ordre d'émissivité correspond avec nos ressentis de début de TP. (Voir tableau 1). L'émissivité de la face noire est supérieure aux autres, suivi de la face blanche, de la face non polie puis, de la face polie, possédant l'émissivité la plus faible.
 
 Voici le graphe complété de la réflectivité en fonction de la longueur d'onde pour la peinture blanche et la peinture noire :
 
 ![Réflectivité en fonction de la longueur d'onde](graphe2.png){#fig:graphe2}
 
+Il est possible de remarquer que la réflectivité de la peinture blanche est élevée dans le domaine du visible, contrairement à la peinture noire. Cela explique pourquoi des couleurs sombres tiennent chaud en été, car elles ne reflètent pas la chaleur, donc l'absorbent, contrairement au blanc.
+
+On remarque une similitude entre les deux courbes dans l'infrarouge, car les deux couleurs ne permettent pas une réflectivité dans ce domaine de longueur d'onde.
 \
 
 ### Transmission du rayonnement
@@ -283,11 +290,13 @@ Voir Figure \ref{fig:voiture}
 
 ![Schéma de l'effet de serre dans une voiture](voiture.png){#fig:voiture}
 
+\
+
 # Conclusion
 
 Ce TP nous a permis d’approfondir notre compréhension du rayonnement thermique 
 et des principes qui influencent ce comportement. Grâce aux différentes expériences, nous 
-avons pu mettre en évidence l’influence de la nature et de l’état de surface 
+avons pu mettre l'accent sur l’influence de la nature et de l’état de surface 
 des matériaux sur l’émissivité et la réflectivité. Les résultats obtenus, 
 notamment les valeurs d’émissivité des différentes faces du cube, sont 
 cohérents avec les modèles théoriques et nos observations qualitatives.
