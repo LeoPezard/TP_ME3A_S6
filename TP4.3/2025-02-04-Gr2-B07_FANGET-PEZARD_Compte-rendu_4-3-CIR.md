@@ -42,10 +42,12 @@ délivrées, alors, par tous les détecteurs de la matrice sont lues puis numér
 
 ### Sources radiatives
 
-__1) Corps noir__
+#### Corps noir
+\
 
 La source radiative de référence (ou « référence thermorayonnante ») utilisée est un corps noir de
 laboratoire (Figure \ref{fig:corps_noir}).
+
 Il s’agit d’une cavité cylindrique à fond conique, revêtue d’un
 matériau très absorbant, à facteur de forme élevé (profondeur > diamètre), chauffée de façon isotherme
 par des résistances électriques. Il est équipé d’un disque percé de diaphragmes de tailles différentes
@@ -56,11 +58,10 @@ un disque (« fort » flux quittant la cavité) se détachant de son environneme
 
 ![Corps noir de laboratoire](corps_noir.png){#fig:corps_noir}
 
+#### Cube de Leslie
 \
 
-__2)  Cube de Leslie__
-
-Ce cube (Voir Figure \ref{fig:cube}) présente 4 facettes latéralles en aluminium chauffées par une ampoule de 100W placée au centre. La temérature de chaque face peut être supposée uniforme.  Les quatre faces présentent un état de surface différent : peinture noire, peinture blanche, aluminium non poli, aluminium poli.
+Ce cube (Voir Figure \ref{fig:cube}) présente 4 facettes latérales en aluminium chauffées par une ampoule de 100W placée au centre. La temérature de chaque face peut être supposée uniforme.  Les quatre faces présentent un état de surface différent : peinture noire, peinture blanche, aluminium non poli, aluminium poli.
 
 Lors du TP précédent, nous avons pu faire un classement des émissivités de chaque face:
 
@@ -82,12 +83,10 @@ nium poli est de type spéculaire (rayons concentrés dans 1 seule direction), a
 
 Un pouvoir réfléchissant élevé signifie que le flux de chaleur ne passe pas à travers la surface, il est donc réfléchi par celle-ci, ainsi la chaleur est renvoyée sur la thermopile.
 
-
 ![Cube de Leslie](cube.png){#fig:cube}
 
 
-
-__3) Plaque chauffante à différentes émissivités__
+#### Plaque chauffante à différentes émissivités
 
 Il s’agit d’une plaque en cuivre régulée en température dont la surface est peinte en noir. Locale
 ment, comme vous pouvez l’observer sur la Figure \ref{fig:plaque}, l’émissivité de la surface a été modifiée par
