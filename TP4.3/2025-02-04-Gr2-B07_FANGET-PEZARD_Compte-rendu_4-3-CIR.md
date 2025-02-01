@@ -42,7 +42,7 @@ délivrées, alors, par tous les détecteurs de la matrice sont lues puis numér
 
 ### Sources radiatives
 
-1) Corps noir 
+__1) Corps noir__
 
 La source radiative de référence (ou « référence thermorayonnante ») utilisée est un corps noir de
 laboratoire (Figure \ref{fig:corps_noir}).
@@ -58,9 +58,9 @@ un disque (« fort » flux quittant la cavité) se détachant de son environneme
 
 \
 
-2)  Cube de Leslie 
+__2)  Cube de Leslie__
 
-Ce cube présente 4 facettes latéralles en aluminium chauffées par une ampoule de 100W placée au centre. La temérature de chaque face peut être supposée uniforme.  Les quatre faces présentent un état de surface différent : peinture noire, peinture blanche, aluminium non poli, aluminium poli.
+Ce cube (Voir Figure \ref{fig:cube}) présente 4 facettes latéralles en aluminium chauffées par une ampoule de 100W placée au centre. La temérature de chaque face peut être supposée uniforme.  Les quatre faces présentent un état de surface différent : peinture noire, peinture blanche, aluminium non poli, aluminium poli.
 
 Lors du TP précédent, nous avons pu faire un classement des émissivités de chaque face:
 
@@ -84,3 +84,58 @@ Un pouvoir réfléchissant élevé signifie que le flux de chaleur ne passe pas 
 
 
 ![Cube de Leslie](cube.png){#fig:cube}
+
+
+
+__3) Plaque chauffante à différentes émissivités__
+
+Il s’agit d’une plaque en cuivre régulée en température dont la surface est peinte en noir. Locale
+ment, comme vous pouvez l’observer sur la Figure \ref{fig:plaque}, l’émissivité de la surface a été modifiée par
+l’ajout d’adhésifs en aluminium (de gauche à droite : adhésif seul, adhésif + scotch blanc, adhésif +
+vernis). 
+
+La visualisation de cette plaque par la caméra infrarouge permettra donc de s’intéresser aux
+conséquences de l’émissivité d’une surface sur son image infrarouge, pour une température identique
+(que l’on suppose non modifiée par l’ajout de l’adhésif).
+
+![Plaque chauffante à différentes émissivités](plaque.png){#fig:plaque}
+
+## Travail préparatoire
+
+Réalisé sur Amétice.
+
+Notions importantes abordées :
+
+TODO : notions importantes abordées
+
+# Expériences
+
+## Observation d'un corps noir et de surfaces non noires en environnement uniforme
+
+### Introduction
+
+L’étalonnage de la caméra infrarouge consiste à enregistrer la réponse (en V) de la caméra face à un corps noir de laboratoire à température variable $T^{0}$​. La tension mesurée $\Delta V_{0}(T_{0})$ est liée à la température $T^{0}$ par la formule suivante :
+
+$$\Delta V^0(T^0) = k \int_{\lambda} R(\lambda) L^{0}(\lambda, T^{0}) \, d\lambda$$
+
+Avec : 
+
+- $R(\lambda)$ la sensibilité spectrale relative du détecteur dans la bande $\Delta \lambda$.
+- k une constante dépendant de la sensibilité maximale (en V/W) du détecteur, du gain de la chaîne
+d’amplification et des grandeurs relatives à la géométrie de la détection.
+
+Lors de la mesure sur un corps réel, l'émissivité $\epsilon (\lambda)$ influence la tension mesurée $\Delta V_{mes}$​, qui peut être exprimée par :
+
+$$\Delta V_{mes} = k \int_{\lambda} R(\lambda) \varepsilon(\lambda) L^0_{\lambda} (\lambda, T) \, d\lambda + k \int_{\lambda} R(\lambda) \left[ 1 - \varepsilon(\lambda) \right] L^0_{\lambda} (\lambda, T_a)  d\lambda$$
+
+Soit  :
+
+$$\Delta V_{mes} = \epsilon_{\Delta \lambda} \Delta V^0(T) + (1 - \epsilon_{\Delta \lambda}) \Delta V^0(T_{a}) = \Delta V^0(T^0)$$
+
+Avec : 
+
+$$ \epsilon_{\Delta \lambda} = \frac{\int_{\lambda} \epsilon(\lambda)R(\lambda)L^0_{\lambda}(\lambda,T) d\lambda}{\int_{\lambda} R(\lambda)L^0_{\lambda}(\lambda,T) d\lambda}$$
+
+La température apparente du corps réel, $T^{0}_{mes}$​, est calculée en fonction de $\Delta V_{mes}$​, offrant ainsi une estimation de la température du matériau observé.
+
+$$(T^{0}_{mes})^{4} = \epsilon_{\Delta \lambda} T^4 + (1-\epsilon_{\Delta \lambda})T^4_{a}$$
