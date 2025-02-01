@@ -138,3 +138,40 @@ $$ \epsilon_{\Delta \lambda} = \frac{\int_{\lambda} \epsilon(\lambda)R(\lambda)L
 La température apparente du corps réel, $T^{0}_{mes}$​, est calculée en fonction de $\Delta V_{mes}$​, offrant ainsi une estimation de la température du matériau observé.
 
 $$(T^{0}_{mes})^{4} = \epsilon_{\Delta \lambda} T^4 + (1-\epsilon_{\Delta \lambda})T^4_{a}$$
+
+### Travail à réaliser
+
+TODO : Expérience de la figure 7 à gauche du TP (dans notre compte rendu mettre la figure et la numérotée)
+
+Cette expérience permet d'obtenir un étalonnage de la caméra, car elle doit mesurer une température similaire du corps noir à celle qui est affichée par le régulateur dans la condition où l'emmissivité de l'objet est égale à 1. Dans notre cas (TODO : faire la mesure et observé)
+
+TODO : Expérience de la figure 7 à droite du TP (dans notre compte rendu mettre la figure et la numérotée) 
+
+TODO : faire un tableau pour chaque température mesurées à l'aide des thermocouples pour chaque face différentes
+
+Pour obtenir les températures apparentes corps noires des différentes surfaces il faut utiliser la courbe d'étalonnage vu précédemment. TODO : Mettre la courbe d'étalonnage (ici ou plus haut). Pour chaque surface la tension (deltaV) est mesurée par la caméra infrarouge, on peut donc retouver (Tmesuré) en retrouvant l'abscisse de la courbe correspondant à (deltaV). TODO : Remettre peut-être la formule correspondante.
+
+Pour calculer les émissivités des différentes surfaces on peut utiliser (la formule correspondante TODO : remmetre la formule) ou ( on peut comparer la Tmes précédente avec la température réelle mesurée avec les thermocouples).
+
+Pour résumé : 
+
+Les surfaces qui sont peintes en noir ou qui ont des propriétés similaires à celles d'un corps noir auront une émissivité proche de 1. Cela signifie qu'elles émettent presque toute l'énergie qu'elles reçoivent.
+
+Les surfaces métalliques ou brillantes, en revanche, auront une émissivité plus faible, ce qui signifie qu'elles reflètent une grande partie de l'énergie incidente et émettent moins d'énergie.
+
+## Influence d’un environnement non uniforme sur l’observation d’objets non noirs : réflexions parasites
+
+TODO : Mettre la figure 9 du TP ( légendé (reprendre la légende du TP) et numérotés dans notre compte-rendu)
+
+TODO : Mettre la figure 10 du TP ("" "" "" "" ) 
+
+
+
+
+
+
+
+
+
+
+
