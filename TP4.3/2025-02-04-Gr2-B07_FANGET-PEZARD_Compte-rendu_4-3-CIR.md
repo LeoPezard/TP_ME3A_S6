@@ -2,8 +2,9 @@
 title : Compte rendu de TP - Caméra Infrarouge
 author : Baptiste Fanget - Pezard Léo - Mécanique Energétique 3A
 date : 04/02/2025
-papersize: a4
-lang: fr 
+papersize : a4
+lang : fr 
+secnumdepth : 3
 ---
 
 # Préambule
@@ -61,7 +62,7 @@ un disque (« fort » flux quittant la cavité) se détachant de son environneme
 #### Cube de Leslie
 \
 
-Ce cube (Voir Figure \ref{fig:cube}) présente 4 facettes latérales en aluminium chauffées par une ampoule de 100W placée au centre. La temérature de chaque face peut être supposée uniforme.  Les quatre faces présentent un état de surface différent : peinture noire, peinture blanche, aluminium non poli, aluminium poli.
+Ce cube (Voir Figure \ref{fig:cube}) présente 4 facettes latérales en aluminium chauffées par une ampoule de 100W placée au centre. La temérature de chaque face peut être supposée uniforme. Les quatre faces présentent un état de surface différent : peinture noire, peinture blanche, aluminium non poli, aluminium poli.
 
 Lors du TP précédent, nous avons pu faire un classement des émissivités de chaque face:
 
@@ -78,8 +79,7 @@ Lors du TP précédent, nous avons pu faire un classement des émissivités de c
 
 Nous avions également pu réaliser un classement des faces en fonction de leur pouvoir réfléchissant, par ordre croissant : Face noire, face blanche, face non polie puis face polie.
 
-La réflexion de rayonnement par la face en alumi
-nium poli est de type spéculaire (rayons concentrés dans 1 seule direction), alors que pour les autres faces, elle pourra être considérée diffuse (rayonnement réparti sur une plus grande surface).
+La réflexion de rayonnement par la face en aluminium poli est de type spéculaire (rayons concentrés dans 1 seule direction), alors que pour les autres faces, elle pourra être considérée diffuse (rayonnement réparti sur une plus grande surface).
 
 Un pouvoir réfléchissant élevé signifie que le flux de chaleur ne passe pas à travers la surface, il est donc réfléchi par celle-ci, ainsi la chaleur est renvoyée sur la thermopile.
 
