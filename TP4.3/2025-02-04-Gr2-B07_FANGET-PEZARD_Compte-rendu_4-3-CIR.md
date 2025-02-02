@@ -105,7 +105,20 @@ Réalisé sur Amétice.
 
 Notions importantes abordées :
 
-TODO : notions importantes abordées
+- Le signal électrique de la caméra infrarouge est proportionnel au flux total reçu par le détecteur. Ce flux comprend :
+    - Le rayonnement émis par la scène thermique (proportionnel à sa température et son émissivité).
+    - Le rayonnement réfléchi provenant de l’environnement.
+
+
+- L'expérience d'étalonnage d'une caméra infrarouge consiste à viser un corps noir à température connue et enregistrer la tension délivrée par le détecteur infrarouge de la caméra.
+    
+    Par exemple, si une caméra infrarouge vise une surface « réelle » (c'est à dire « non-noire ») de température réelle inconnue et placée dans un environnement de température inconnue et indique que sa température apparente corps noir de 57°C, cela signifie que 
+    cette surface envoie un flux infrarouge vers la caméra qui correspond à celui qu'émettrait le corps noir à 57°C
+
+
+- La caméra infrarouge mesure une température apparente corps noir, mais la température vraie de la surface dépend de son émissivité et du rayonnement réfléchi par l’environnement.
+
+
 
 # Expériences
 
@@ -115,7 +128,7 @@ TODO : notions importantes abordées
 
 L’étalonnage de la caméra infrarouge consiste à enregistrer la réponse (en V) de la caméra face à un corps noir de laboratoire à température variable $T^{0}$​. La tension mesurée $\Delta V_{0}(T_{0})$ est liée à la température $T^{0}$ par la formule suivante :
 
-$$\Delta V^0(T^0) = k \int_{\lambda} R(\lambda) L^{0}(\lambda, T^{0}) \, d\lambda$$
+$$\Delta V^0(T^0) = k \int_{\lambda} R(\lambda) L^{0}(\lambda, T^{0}) \, d\lambda \tag{1}$$
 
 Avec : 
 
@@ -125,39 +138,82 @@ d’amplification et des grandeurs relatives à la géométrie de la détection.
 
 Lors de la mesure sur un corps réel, l'émissivité $\epsilon (\lambda)$ influence la tension mesurée $\Delta V_{mes}$​, qui peut être exprimée par :
 
-$$\Delta V_{mes} = k \int_{\lambda} R(\lambda) \varepsilon(\lambda) L^0_{\lambda} (\lambda, T) \, d\lambda + k \int_{\lambda} R(\lambda) \left[ 1 - \varepsilon(\lambda) \right] L^0_{\lambda} (\lambda, T_a)  d\lambda$$
+$$\Delta V_{mes} = k \int_{\lambda} R(\lambda) \varepsilon(\lambda) L^0_{\lambda} (\lambda, T) \, d\lambda + k \int_{\lambda} R(\lambda) \left[ 1 - \varepsilon(\lambda) \right] L^0_{\lambda} (\lambda, T_a)  d\lambda \tag{2}$$
 
 Soit  :
 
-$$\Delta V_{mes} = \epsilon_{\Delta \lambda} \Delta V^0(T) + (1 - \epsilon_{\Delta \lambda}) \Delta V^0(T_{a}) = \Delta V^0(T^0)$$
+$$\Delta V_{mes} = \epsilon_{\Delta \lambda} \Delta V^0(T) + (1 - \epsilon_{\Delta \lambda}) \Delta V^0(T_{a}) = \Delta V^0(T^0) \tag{3}$$
 
 Avec : 
 
-$$ \epsilon_{\Delta \lambda} = \frac{\int_{\lambda} \epsilon(\lambda)R(\lambda)L^0_{\lambda}(\lambda,T) d\lambda}{\int_{\lambda} R(\lambda)L^0_{\lambda}(\lambda,T) d\lambda}$$
+$$ \epsilon_{\Delta \lambda} = \frac{\int_{\lambda} \epsilon(\lambda)R(\lambda)L^0_{\lambda}(\lambda,T) d\lambda}{\int_{\lambda} R(\lambda)L^0_{\lambda}(\lambda,T) d\lambda} \tag{4}$$
 
 La température apparente du corps réel, $T^{0}_{mes}$​, est calculée en fonction de $\Delta V_{mes}$​, offrant ainsi une estimation de la température du matériau observé.
 
-$$(T^{0}_{mes})^{4} = \epsilon_{\Delta \lambda} T^4 + (1-\epsilon_{\Delta \lambda})T^4_{a}$$
+$$(T^{0}_{mes})^{4} = \epsilon_{\Delta \lambda} T^4 + (1-\epsilon_{\Delta \lambda})T^4_{a} \tag{5}$$
+
+Avec : 
+
+- $T^{0}_{mes}$ la température apparente corps noir
+- $\epsilon_{\Delta \lambda}$ l’émissivité spectrale de la surface dans la bande spectrale de la caméra.
+- T la vraie température
+- $T_{a}$ la température de l'environnement
+
+Donc, plus l'émissivité de la surface est grande (proche de 1), plus la température mesurée sera proche de la température vraie.
+Inversement, si l'émissivité est faible (proche de 0), la température mesurée sera proche de la température ambiante.
 
 ### Travail à réaliser
 
-TODO : Expérience de la figure 7 à gauche du TP (dans notre compte rendu mettre la figure et la numérotée)
+Pour commencer, un étalonnage de la caméra est nécéssaire, pour cela il faut utiliser un corps noir à température connue (affichage sur un régulateur).
 
-Cette expérience permet d'obtenir un étalonnage de la caméra, car elle doit mesurer une température similaire du corps noir à celle qui est affichée par le régulateur dans la condition où l'emmissivité de l'objet est égale à 1. Dans notre cas (TODO : faire la mesure et observé)
+Cet étalonnage est réalisé en placant le corps noir devant la caméra (Voir Figure \ref{fig:exp1}) et en vérifiant que la température mesurée par la caméra correspond bien à la température mesurée sur le régulateur.
+
+![Schéma du montage pour l'étalonnage devant le corps noir de laboratoire ](exp1.png){#fig:exp1}
+
+
+Cette expérience permet d'obtenir la température du corps noir grâce à $T_{mes}$ ainsi que la vraie température donnée par les thermocouples. La température ambiante $T_{a}$ et l'équation (5) sont également nécéssaires.
+
+L'émissivité du corps noir est donc $\epsilon = \frac{T^{4}_{mes} - T^{4}_{a}}{T^{4} - T^{4}_{a}} = \frac{A-B}{C-D} \approx$
+
+Cette émissivité est proche de 1 (émissivité d'un corps noir), l'erreur relative est de $\frac{\epsilon_{mes}-1}{1} \approx %$
+
+
+Dans notre cas (TODO : faire la mesure et observer paragraphe d'avant)
+
 
 TODO : Expérience de la figure 7 à droite du TP (dans notre compte rendu mettre la figure et la numérotée) 
 
-TODO : faire un tableau pour chaque température mesurées à l'aide des thermocouples pour chaque face différentes
 
-Pour obtenir les températures apparentes corps noires des différentes surfaces il faut utiliser la courbe d'étalonnage vu précédemment. TODO : Mettre la courbe d'étalonnage (ici ou plus haut). Pour chaque surface la tension (deltaV) est mesurée par la caméra infrarouge, on peut donc retouver (Tmesuré) en retrouvant l'abscisse de la courbe correspondant à (deltaV). TODO : Remettre peut-être la formule correspondante.
+Maintenant que la caméra est étalonnée, il est possible de faire la mesure sur des corps réels comme indiqué sur la Figure \ref{fig:exp2}.
+Une plaque chauffante (Voir Figure \ref{fig:plaque}) sur laquelle sont placés différents matériaux, faisant donc varier les émissivités des parties de la plaque.
+
+![Schéma du montage pour la mesure sur un corps réel (plaque chauffante)](exp2.png){#fig:exp2}
+
+
+Pour obtenir les températures apparentes corps noires des différentes surfaces il faut utiliser la courbe d'étalonnage :
+
+![Courbe d'étalonnage](courbe.png){#fig:courbe}
+
+
+Pour chaque surface la tension $\Delta V$ est mesurée par la caméra infrarouge, on peut donc retouver $T_{mes}$ en retrouvant l'abscisse de la courbe correspondant à $\Delta V$. TODO : Remettre peut-être la formule correspondante.
 
 Pour calculer les émissivités des différentes surfaces on peut utiliser (la formule correspondante TODO : remmetre la formule) ou ( on peut comparer la Tmes précédente avec la température réelle mesurée avec les thermocouples).
 
-Pour résumé : 
+|Surface observée|Température T du thermocouple associé (°C)|Température $T_{mes} relevée par la caméra (°C)| Emissivité $\epsilon$|
+|:-----:|:-----:|:-----:|:-----:|
+|Noire|     |     |     |
+|Aluminium|     |     |     |
+|Aluminium + vernis|     |     |     |
+|Aluminium + scotch|     |     |     |
+
+
+: Tableau des mesures et des émissivités calculées
+
+Pour résumer : 
 
 Les surfaces qui sont peintes en noir ou qui ont des propriétés similaires à celles d'un corps noir auront une émissivité proche de 1. Cela signifie qu'elles émettent presque toute l'énergie qu'elles reçoivent.
 
-Les surfaces métalliques ou brillantes, en revanche, auront une émissivité plus faible, ce qui signifie qu'elles reflètent une grande partie de l'énergie incidente et émettent moins d'énergie.
+Les surfaces métalliques ou brillantes, en revanche, auront une émissivité plus faible, ce qui signifie qu'elles reflètent une grande partie de l'énergie incidente et émettent moins d'énergie, on remarque ici que le vernis est +/- émissif que l'adhésif.
 
 ## Influence d’un environnement non uniforme sur l’observation d’objets non noirs : réflexions parasites
 
