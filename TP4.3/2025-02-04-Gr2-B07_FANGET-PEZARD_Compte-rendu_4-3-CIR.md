@@ -220,6 +220,14 @@ Les surfaces métalliques ou brillantes, en revanche, auront une émissivité pl
 TODO : Mettre la figure 9 du TP ( légendé (reprendre la légende du TP) et numérotés dans notre compte-rendu)
 
 TODO : Mettre la figure 10 du TP ("" "" "" "" ) 
+TODO : (jsp où il faut mettre ces figure, avant ou après le texte explicatif)
+la température ambiante est de ...°C, elle est mésurée avec le thermocouple ambiant.
+
+On chauffe un premier cube à 30°C, où l'on va mesuré les températures des faces noires, métaliques et blanches. Puis dans un deuxième temps on chauffe un deuxiéme cube à 130°C, placé (perpendiculairement) au premier pour créer une zone pertubée devant le cube à 30°C. (Voir figure 9 et 10)
+
+TODO : Mettre figure 11 du TP et dessiner les courbe correspondante
+
+TODO : Faire les observations sur les températures et expliqué pourquoi
 
 
 
