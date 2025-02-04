@@ -171,7 +171,7 @@ Cet étalonnage est réalisé en placant le corps noir devant la caméra (Voir F
 ![Schéma du montage pour l'étalonnage devant le corps noir de laboratoire ](exp1.png){#fig:exp1}
 
 
-Cette expérience permet d'obtenir la température du corps noir grâce à $T_{mes}$ ainsi que la vraie température donnée par les thermocouples. La température ambiante $T_{a}$ et l'équation (5) sont également nécéssaires pour déternminer l'émissivité du corps noir.
+Cette expérience permet d'obtenir la température du corps noir grâce à $T_{mes}$ ainsi que la vraie température donnée par les thermocouples. La température ambiante $T_{a}$ et l'équation (5) sont également nécéssaires pour déterminer l'émissivité du corps noir.
 
 $$\epsilon = \frac{T^{4}_{mes} - T^{4}_{a}}{T^{4} - T^{4}_{a}} = \frac{352.05^{4}-294.15^{4}}{353,21^{4}-294.15^{4}} \approx 0.97$$
 
@@ -182,15 +182,25 @@ Il est intéressant de mettre différents objets devant la caméra pour observer
 ![Photo d'un camarade avec lunettes](adrien.jpeg){#fig:adrien width=60%}
 
 
-![Photo de Baptiste](baptiste.jpeg){#fig:baptiste width=60%}
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{baptiste.jpeg}
+        \caption{Photo de Baptiste à la caméra thermique}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{leo.jpeg}
+        \caption{Photo de Léo à la caméra thermique}
+    \end{minipage}
+\end{figure}
 
 
-![Photo de Léo](leo.jpeg){#fig:leo width=60%}
+Nous remarquons ainsi que les lunettes de notre camarade sont très foncées à la caméra, cela s'explique du fait que la 
+transmitivité du verre est quasiment nul dans l'infrarouge (Etudié au TP précédent - Rayonnement Thermique).
 
-\
-
-
-TODO : photos au dessus
 
 
 Maintenant que la caméra est étalonnée, il est possible de faire la mesure sur des corps réels comme indiqué sur la Figure \ref{fig:exp2}.
@@ -220,38 +230,69 @@ __Remarque :__
 
 Lorsque nous passons devant le dispositif (et derrière la caméra), la plaque réfléchissante renvoie le flux de chaleur de notre corps sur la caméra et une différence de température mesurée est remarquable. (Voir Figures \ref{fig:reflet1} et \ref{fig:reflet2})
 
-![Vue de la caméra sans reflet de chaleur de notre corps](reflet1.jpeg){#fig:reflet1 width=60%}
+\newpage
 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\linewidth]{reflet1.jpeg}
+        \caption{Vue de la caméra sans reflet de chaleur de notre corps}
+        \label{fig:reflet1}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\linewidth]{reflet2.jpeg}
+        \caption{Vue de la caméra avec reflet de chaleur de notre corps}
+        \label{fig:reflet2}
+    \end{minipage}
+\end{figure}
 
-![Vue de la caméra avec reflet de chaleur de notre corps](reflet2.jpeg){#fig:reflet2 width=60%}
+La zone mesurée est l'encadré bleu prenant toute la largeur en haut de l'image sur les deux photos.
 
-Nous remarquons une augmentation de la température moyenne mesurée sur la zone de reflet (voir encadrés sur les figures).
+Les températures comparées sont les températures encadrées en gras en bas de l'image (21,6°C et 25,6°C).
+
+Nous remarquons une augmentation de la température moyenne mesurée sur la zone de reflet de notre chaleur corporelle.
+
 
 
 ## Influence d’un environnement non uniforme sur l’observation d’objets non noirs : réflexions parasites
 
 
-On chauffe un premier cube à 30°C, où l'on va mesurer les températures des faces noires, métalliques et blanches. Puis dans un deuxième temps on chauffe un deuxième cube à 130°C, placé (perpendiculairement) au premier pour créer une zone pertubée devant le cube à 30°C. (Voir figures \ref{fig:exp3} et \ref{fig:exp3_bis}).
+On chauffe un premier cube à 30°C, où l'on va mesurer les températures des faces noire, métallique non polie puis blanche. Dans un second temps on chauffe un deuxième cube à 130°C, placé (perpendiculairement) au premier pour créer une zone pertubée devant le cube à 30°C. (Voir figures \ref{fig:exp3} et \ref{fig:exp3_bis}).
 
 
-![Surfaces de différentes émissivités (3 faces du cube multifaces) observées dans un envi
-ronnement uniforme (à gauche), puis perturbé par une source de rayonnement chaude et émissive (à
+![Surfaces de différentes émissivités (3 faces du cube multifaces) observées dans un environnement
+uniforme (à gauche), puis perturbé par une source de rayonnement chaude et émissive (à
 droite), qui est la face noire du second cube multifaces](exp3.png){#fig:exp3}
 
-
+\newpage
 
 ![Observation du cube multiface dans un environnement uniforme (en haut) et dans un environnement perturbé (en bas)](exp3_bis.png){#fig:exp3_bis}
 
 
-TODO: Excel courbes
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\linewidth]{courbe2.png}
+        \caption{Observation des variations de température pour chaque face du cube dans un environnement uniforme}
+        \label{fig:courbe2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\linewidth]{courbe1.png}
+        \caption{Observation des variations de température pour chaque face du cube dans un environnement perturbé}
+        \label{fig:courbe1}
+    \end{minipage}
+\end{figure}
 
-![Courbe des profils de température dans un environnement uniforme (a gauche), dans un environnement perturbé (à droite)](courbe1.png){#fig:courbe1}
+D'après le profil des températures de chaque face en environnement uniforme (Figure \ref{fig:courbe2}), on peut établir un classement d'émissivité des faces. Par ordre croissant cela donne : face non polie, face noire puis face blanche. La température est le critère de classement, on remarque que la température est plus élevée pour la face blanche, cela s'explique par la plage de longueur d'onde de la caméra (entre 7 et 13 $\mu m$). Dans cette zone l'émissivité de la face blanche est plus élevée que celle de la face noire.
 
 
-D'après le profil des températures de chaque face en environnement uniforme (Figure \ref{fig:courbe1}), on peut établir un classement d'émissivité des faces. Par ordre croissant cela donne : face non polie, face noire puis face blanche. La température est le critère de classement, on remarque que la température est plus élevée pour la face blanche, cela s'explique par la plage de longueur d'onde de la caméra (entre 7 et 13 $\mu m$). Dans cette zone l'émissivité de la face blanche est plus élevée que celle de la face noire.
-
-
-Il est possible de remarquer que les profils de température sont différents dans la deuxième situation. En effet, la température observée le long de la face du cube décroit en fonction de sa distance au cube chaud. 
+Il est possible de remarquer que les profils de température sont différents dans la deuxième situation (Figure \ref{fig:courbe1}). En effet, la température observée le long de la face du cube décroit en fonction de sa distance au cube chaud. 
 
 Pour la face non polie, la pente de décroissance est plus importante que pour les pentes des faces blanches et noires, c'est-à-dire que la température de la surface décroit plus rapidement en fonction de la distance. C'est à dire que plus nous prenons des mesures de températures loin du cube chaud, moins les températures mesurées sont élevées.
 
@@ -264,28 +305,40 @@ On peut donc faire un classement de chaque face en fonction de leur réflectivit
 
 TODO : Faire schéma des flux recueillis par la caméra dans les deux environnment + légender photos
 
-![Environnement uniforme - La température est quasi constante dans la totalité de la surface](env_unif.jpeg){#fig:env_unif}
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\linewidth]{env_unif.jpeg}
+        \caption{Environnement uniforme - La température est quasi constante dans la totalité de la surface}
+        \label{fig:env_unif}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=1.1\linewidth]{env_perturb.jpeg}
+        \caption{Environnement perturbé - La température varie par rapport à la distance de la source chaude}
+        \label{fig:env_perturb}
+    \end{minipage}
+\end{figure}
 
-![Environnement perturbé - La température varie par rapport à la distance de la source chaude](env_perturb.jpeg){#fig:env_perturb}
+
+Dans la figure \ref{fig:env_unif}, la couleur de la surface est uniforme, cela indique que la température est quasiment la même sur toute cette surface du cube.
 
 
-TODO légender les images au dessus
+Dans la figure \ref{fig:env_perturb},le flux de chaleur se propage dans la direction des flèches blanches.
+On peut observer différents niveaux de couleurs sur la face du cube observé.
 
 
-Nous pouvons ajouter que une image infrarouge ne donne pas directement une cartographie exacte de la température, mais plutôt une mesure du rayonnement thermique, qu'il faut corriger en fonction de l’émissivité pour obtenir la température réelle.
+Nous pouvons ajouter que une image infrarouge ne donne pas directement une cartographie exacte de la température, mais plutôt une mesure du rayonnement thermique, qu'il faut corriger en fonction de l'émissivité pour obtenir la température réelle.
 
-La caméra infrarouge mesure donc une température apparente corps noir, mais la température vraie de la surface dépend de son émissivité et du rayonnement réfléchi par l’environnement.
+La caméra infrarouge mesure donc une température apparente corps noir, mais la température vraie de la surface dépend de son émissivité et du rayonnement réfléchi par l'environnement.
 Il est ainsi possible de retrouver la vraie température en conaissant la température ambiante, la tempéraure mesurée et l'émissivité de la surface.
 
-TODO : conclusion
+# Conclusion
 
+Ce TP nous a permis de mieux comprendre le fonctionnement et l'interprétation des images obtenues avec une caméra infrarouge. Nous avons observé l'influence de l'émissivité des matériaux sur la température apparente mesurée, ainsi que l'importance des réflexions parasites dans un environnement non uniforme.
 
+Les expériences réalisées ont mis en évidence que les surfaces à haute émissivité, comme la peinture noire, permettent une mesure plus fiable de la température réelle, tandis que les surfaces réfléchissantes faussent la mesure en captant et en renvoyant le rayonnement de leur environnement. De plus, nous avons pu constater que des éléments comme le verre ou l'aluminium poli influencent fortement la captation du rayonnement infrarouge.
 
-
-
-
-
-
-
-
-
+Ces observations soulignent l'importance de bien comprendre les propriétés des matériaux lors de l'utilisation d'une caméra thermique, notamment dans des domaines comme l'industrie, le bâtiment ou la recherche. Ce TP nous a ainsi apporté une vision concrète des phénomènes thermiques liés au rayonnement infrarouge et de leur impact sur la mesure et l'analyse des températures.
