@@ -201,11 +201,11 @@ Une plaque chauffante (Voir Figure \ref{fig:plaque}) sur laquelle sont placés d
 
 Pour calculer les émissivités des différentes surfaces on peut utiliser la formule (5).
 
-|Surface observée|Température T du thermocouple associé (°C)|Température $T_{mes} relevée par la caméra (°C)| Emissivité $\epsilon$|
+|Surface observée|Température T du thermocouple associé (°C)|Température $T_{mes}$ relevée par la caméra (°C)| Emissivité $\epsilon$|
 |:-----:|:-----:|:-----:|:-----:|
-|Aluminium| 38,89 | 24,9    | 0,20    |
-|Aluminium + vernis|38,92 | 37,1 |0,89 |
-|Aluminium + scotch|38,93  | 33,7 | 0,69 |
+|Aluminium| 38,89 | 24,9    | 0,17    |
+|Aluminium + vernis|38,92 | 37,1 |0,87 |
+|Aluminium + scotch|38,93  | 33,7 | 0,68 |
 |Noire| 38,92 |38,5 | 0,97 | 
 
 : Tableau des mesures et des émissivités calculées
@@ -216,21 +216,68 @@ Les surfaces qui sont peintes en noir ou qui ont des propriétés similaires à 
 
 Les surfaces métalliques ou brillantes, en revanche, auront une émissivité plus faible, ce qui signifie qu'elles reflètent une grande partie du flux incident et émettent moins de chaleur, on remarque ici que le vernis est plus émissif que l'adhésif.
 
+__Remarque :__ 
+
+Lorsque nous passons devant le dispositif (et derrière la caméra), la plaque réfléchissante renvoie le flux de chaleur de notre corps sur la caméra et une différence de température mesurée est remarquable. (Voir Figures \ref{fig:reflet1} et \ref{fig:reflet2})
+
+![Vue de la caméra sans reflet de chaleur de notre corps](reflet1.jpeg){#fig:reflet1 width=60%}
+
+
+![Vue de la caméra avec reflet de chaleur de notre corps](reflet2.jpeg){#fig:reflet2 width=60%}
+
+Nous remarquons une augmentation de la température moyenne mesurée sur la zone de reflet (voir encadrés sur les figures).
+
+
 ## Influence d’un environnement non uniforme sur l’observation d’objets non noirs : réflexions parasites
 
-TODO : Mettre la figure 9 du TP ( légendé (reprendre la légende du TP) et numérotés dans notre compte-rendu)
 
-TODO : Mettre la figure 10 du TP ("" "" "" "" ) 
-TODO : (jsp où il faut mettre ces figure, avant ou après le texte explicatif)
-la température ambiante est de ...°C, elle est mésurée avec le thermocouple ambiant.
+On chauffe un premier cube à 30°C, où l'on va mesurer les températures des faces noires, métalliques et blanches. Puis dans un deuxième temps on chauffe un deuxième cube à 130°C, placé (perpendiculairement) au premier pour créer une zone pertubée devant le cube à 30°C. (Voir figures \ref{fig:exp3} et \ref{fig:exp3_bis}).
 
-On chauffe un premier cube à 30°C, où l'on va mesuré les températures des faces noires, métaliques et blanches. Puis dans un deuxième temps on chauffe un deuxiéme cube à 130°C, placé (perpendiculairement) au premier pour créer une zone pertubée devant le cube à 30°C. (Voir figure 9 et 10)
 
-TODO : Mettre figure 11 (faire plutôt un excel avec les 6 courbes sur le même graphe) du TP et dessiner les courbe correspondante (repérer les températures des différentes faces en fonction de la distance x (en pixel))
+![Surfaces de différentes émissivités (3 faces du cube multifaces) observées dans un envi
+ronnement uniforme (à gauche), puis perturbé par une source de rayonnement chaude et émissive (à
+droite), qui est la face noire du second cube multifaces](exp3.png){#fig:exp3}
 
-(TODO : Faire les observations sur les températures et expliqué pourquoi)
 
-TODO : Faire schéma des flux recueillis par la caméra dans les deux environnment
+
+![Observation du cube multiface dans un environnement uniforme (en haut) et dans un environnement perturbé (en bas)](exp3_bis.png){#fig:exp3_bis}
+
+
+TODO: Excel courbes
+
+![Courbe des profils de température dans un environnement uniforme (a gauche), dans un environnement perturbé (à droite)](courbe1.png){#fig:courbe1}
+
+
+D'après le profil des températures de chaque face en environnement uniforme (Figure \ref{fig:courbe1}), on peut établir un classement d'émissivité des faces. Par ordre croissant cela donne : face non polie, face noire puis face blanche. La température est le critère de classement, on remarque que la température est plus élevée pour la face blanche, cela s'explique par la plage de longueur d'onde de la caméra (entre 7 et 13 $\mu m$). Dans cette zone l'émissivité de la face blanche est plus élevée que celle de la face noire.
+
+
+Il est possible de remarquer que les profils de température sont différents dans la deuxième situation. En effet, la température observée le long de la face du cube décroit en fonction de sa distance au cube chaud. 
+
+Pour la face non polie, la pente de décroissance est plus importante que pour les pentes des faces blanches et noires, c'est-à-dire que la température de la surface décroit plus rapidement en fonction de la distance. C'est à dire que plus nous prenons des mesures de températures loin du cube chaud, moins les températures mesurées sont élevées.
+
+Ces observations pouvaient se prévoir car la face non polie est très peu émissive mais plutôt réflective, contrairement aux faces blanches et noires.
+
+
+On peut donc faire un classement de chaque face en fonction de leur réflectivité. Par ordre croissant cela donne : Face noire, face blanche puis face non polie.
+
+
+
+TODO : Faire schéma des flux recueillis par la caméra dans les deux environnment + légender photos
+
+![Environnement uniforme - La température est quasi constante dans la totalité de la surface](env_unif.jpeg){#fig:env_unif}
+
+![Environnement perturbé - La température varie par rapport à la distance de la source chaude](env_perturb.jpeg){#fig:env_perturb}
+
+
+TODO légender les images au dessus
+
+
+Nous pouvons ajouter que une image infrarouge ne donne pas directement une cartographie exacte de la température, mais plutôt une mesure du rayonnement thermique, qu'il faut corriger en fonction de l’émissivité pour obtenir la température réelle.
+
+La caméra infrarouge mesure donc une température apparente corps noir, mais la température vraie de la surface dépend de son émissivité et du rayonnement réfléchi par l’environnement.
+Il est ainsi possible de retrouver la vraie température en conaissant la température ambiante, la tempéraure mesurée et l'émissivité de la surface.
+
+TODO : conclusion
 
 
 
