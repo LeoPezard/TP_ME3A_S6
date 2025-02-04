@@ -225,9 +225,11 @@ la température ambiante est de ...°C, elle est mésurée avec le thermocouple 
 
 On chauffe un premier cube à 30°C, où l'on va mesuré les températures des faces noires, métaliques et blanches. Puis dans un deuxième temps on chauffe un deuxiéme cube à 130°C, placé (perpendiculairement) au premier pour créer une zone pertubée devant le cube à 30°C. (Voir figure 9 et 10)
 
-TODO : Mettre figure 11 du TP et dessiner les courbe correspondante
+TODO : Mettre figure 11 (faire plutôt un excel avec les 6 courbes sur le même graphe) du TP et dessiner les courbe correspondante (repérer les températures des différentes faces en fonction de la distance x (en pixel))
 
-TODO : Faire les observations sur les températures et expliqué pourquoi
+(TODO : Faire les observations sur les températures et expliqué pourquoi)
+
+TODO : Faire schéma des flux recueillis par la caméra dans les deux environnment
 
 
 
