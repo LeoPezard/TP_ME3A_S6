@@ -164,24 +164,33 @@ Inversement, si l'émissivité est faible (proche de 0), la température mesuré
 
 ### Travail à réaliser
 
-Pour commencer, un étalonnage de la caméra est nécéssaire, pour cela il faut utiliser un corps noir à température connue (affichage sur un régulateur).
+Pour commencer, un étalonnage de la caméra est nécessaire, pour cela il faut utiliser un corps noir à température connue (affichage sur un régulateur).
 
 Cet étalonnage est réalisé en placant le corps noir devant la caméra (Voir Figure \ref{fig:exp1}) et en vérifiant que la température mesurée par la caméra correspond bien à la température mesurée sur le régulateur.
 
 ![Schéma du montage pour l'étalonnage devant le corps noir de laboratoire ](exp1.png){#fig:exp1}
 
 
-Cette expérience permet d'obtenir la température du corps noir grâce à $T_{mes}$ ainsi que la vraie température donnée par les thermocouples. La température ambiante $T_{a}$ et l'équation (5) sont également nécéssaires.
+Cette expérience permet d'obtenir la température du corps noir grâce à $T_{mes}$ ainsi que la vraie température donnée par les thermocouples. La température ambiante $T_{a}$ et l'équation (5) sont également nécéssaires pour déternminer l'émissivité du corps noir.
 
-L'émissivité du corps noir est donc $\epsilon = \frac{T^{4}_{mes} - T^{4}_{a}}{T^{4} - T^{4}_{a}} = \frac{A-B}{C-D} \approx$
+$$\epsilon = \frac{T^{4}_{mes} - T^{4}_{a}}{T^{4} - T^{4}_{a}} = \frac{352.05^{4}-294.15^{4}}{353,21^{4}-294.15^{4}} \approx 0.97$$
 
-Cette émissivité est proche de 1 (émissivité d'un corps noir), l'erreur relative est de $\frac{\epsilon_{mes}-1}{1} \approx %$
+Cette émissivité est proche de 1 (émissivité d'un corps noir), l'écart relatif est de $\frac{\epsilon_{mes} - 1}{1} \approx 3$%
+
+Il est intéressant de mettre différents objets devant la caméra pour observer les variations de température au sein des objets et également de mettre en évidence leurs différences d'émissivité et de transmitivité.
+
+![Photo d'un camarade avec lunettes](adrien.jpeg){#fig:adrien width=60%}
 
 
-Dans notre cas (TODO : faire la mesure et observer paragraphe d'avant)
+![Photo de Baptiste](baptiste.jpeg){#fig:baptiste width=60%}
 
 
-TODO : Expérience de la figure 7 à droite du TP (dans notre compte rendu mettre la figure et la numérotée) 
+![Photo de Léo](leo.jpeg){#fig:leo width=60%}
+
+\
+
+
+TODO : photos au dessus
 
 
 Maintenant que la caméra est étalonnée, il est possible de faire la mesure sur des corps réels comme indiqué sur la Figure \ref{fig:exp2}.
@@ -190,30 +199,22 @@ Une plaque chauffante (Voir Figure \ref{fig:plaque}) sur laquelle sont placés d
 ![Schéma du montage pour la mesure sur un corps réel (plaque chauffante)](exp2.png){#fig:exp2}
 
 
-Pour obtenir les températures apparentes corps noires des différentes surfaces il faut utiliser la courbe d'étalonnage :
-
-![Courbe d'étalonnage](courbe.png){#fig:courbe}
-
-
-Pour chaque surface la tension $\Delta V$ est mesurée par la caméra infrarouge, on peut donc retouver $T_{mes}$ en retrouvant l'abscisse de la courbe correspondant à $\Delta V$. TODO : Remettre peut-être la formule correspondante.
-
-Pour calculer les émissivités des différentes surfaces on peut utiliser (la formule correspondante TODO : remmetre la formule) ou ( on peut comparer la Tmes précédente avec la température réelle mesurée avec les thermocouples).
+Pour calculer les émissivités des différentes surfaces on peut utiliser la formule (5).
 
 |Surface observée|Température T du thermocouple associé (°C)|Température $T_{mes} relevée par la caméra (°C)| Emissivité $\epsilon$|
 |:-----:|:-----:|:-----:|:-----:|
-|Noire|     |     |     |
-|Aluminium|     |     |     |
-|Aluminium + vernis|     |     |     |
-|Aluminium + scotch|     |     |     |
-
+|Aluminium| 38,89 | 24,9    | 0,20    |
+|Aluminium + vernis|38,92 | 37,1 |0,89 |
+|Aluminium + scotch|38,93  | 33,7 | 0,69 |
+|Noire| 38,92 |38,5 | 0,97 | 
 
 : Tableau des mesures et des émissivités calculées
 
 Pour résumer : 
 
-Les surfaces qui sont peintes en noir ou qui ont des propriétés similaires à celles d'un corps noir auront une émissivité proche de 1. Cela signifie qu'elles émettent presque toute l'énergie qu'elles reçoivent.
+Les surfaces qui sont peintes en noir ou qui ont des propriétés similaires à celles d'un corps noir auront une émissivité proche de 1. Cela signifie qu'elles émettent presque tout le flux qu'elles reçoivent.
 
-Les surfaces métalliques ou brillantes, en revanche, auront une émissivité plus faible, ce qui signifie qu'elles reflètent une grande partie de l'énergie incidente et émettent moins d'énergie, on remarque ici que le vernis est +/- émissif que l'adhésif.
+Les surfaces métalliques ou brillantes, en revanche, auront une émissivité plus faible, ce qui signifie qu'elles reflètent une grande partie du flux incident et émettent moins de chaleur, on remarque ici que le vernis est plus émissif que l'adhésif.
 
 ## Influence d’un environnement non uniforme sur l’observation d’objets non noirs : réflexions parasites
 
