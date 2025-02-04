@@ -303,7 +303,6 @@ On peut donc faire un classement de chaque face en fonction de leur réflectivit
 
 
 
-TODO : Faire schéma des flux recueillis par la caméra dans les deux environnment + légender photos
 
 \begin{figure}
     \centering
@@ -326,7 +325,7 @@ TODO : Faire schéma des flux recueillis par la caméra dans les deux environnme
 Dans la figure \ref{fig:env_unif}, la couleur de la surface est uniforme, cela indique que la température est quasiment la même sur toute cette surface du cube.
 
 
-Dans la figure \ref{fig:env_perturb},le flux de chaleur se propage dans la direction des flèches blanches.
+Dans la figure \ref{fig:env_perturb}, le flux de chaleur se propage dans la direction des flèches blanches.
 On peut observer différents niveaux de couleurs sur la face du cube observé.
 
 
