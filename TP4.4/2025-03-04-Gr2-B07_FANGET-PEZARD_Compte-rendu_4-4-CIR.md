@@ -1,7 +1,7 @@
 ---
-title : Compte rendu de TP - Caméra Infrarouge
+title : Compte rendu de TP - Sillage et traînée
 author : Baptiste Fanget - Pezard Léo - Mécanique Energétique 3A
-date : 04/02/2025
+date : 04/03/2025
 papersize : a4
 lang : fr 
 secnumdepth : 3
@@ -10,12 +10,44 @@ secnumdepth : 3
 # Préambule
 
 ## Introduction
+TODO : Mettre peut-être le premier paragraphe dans la partie introduction
+## Ecoulement autour d'un cylindre
 
-L’imagerie infrarouge est un outil essentiel permettant d'observer la chaleur émise par des objets, bien au-delà de ce que l’œil humain peut percevoir. Grâce à une caméra infrarouge, il est ainsi possible de repérer et étudier les changements de température d’une scène, avec des applications variées allant de l’industrie à la recherche scientifique, en passant par la thermographie des bâtiments.
 
-Ce TP a pour but de nous familiariser avec le fonctionnement de la caméra infrarouge et de comprendre comment elle capte et traduit le rayonnement thermique en images exploitables. À travers différentes expériences, nous observerons l’influence de l’émissivité et de la température sur les images obtenues. En utilisant des sources radiatives comme un corps noir ou des surfaces aux propriétés thermiques variées, nous verrons comment interpréter correctement ces images et ce qu’elles nous apprennent sur les objets observés.
+Ce TP a pour objectif de mieux comprendre l'écoulement de l'air autour et en aval d’un cylindre. A l'aide d'un tube de Pitot la vitesse de l’air est mesurée, on pourra également calculer la force de traînée qui agit sur le cylindre. L’écoulement autour du cylindre est influencé par le nombre de Reynolds (Re), qui dépend de la vitesse de l'air, du diamètre du cylindre et de la viscosité du fluide. Ce nombre est un indicateur clé pour savoir si l’écoulement est laminaire ou turbulent.
 
-## Matériel utilisé
+TODO : Mettre la formule de Reynolds (1)
+TODO : Mettre figure 1 du TP
+
+Lorsque Re est faible (lorsque l'inertie du fluide est faible par rapport aux effets visqueux), l'écoulement est symétrique de part et d'autre du cylindre. Mais à mesure que Re augmente, l'écoulement devient de plus en plus instable, et on observe la formation de tourbillons dans le sillage du cylindre. À partir de ReD ≳ 50, ces tourbillons commencent à se détacher du cylindre à une fréquence régulière, créant une structure tourbillonnaire très spécifique, connue sous le nom d’« allée de Bénard–von Kármán ».
+
+TODO : Mettre figure 2 du TP
+
+## Force et coefficient de traînée
+
+
+Ces tourbillons créent des forces variables sur le cylindre, appelées forces de traînée, qui oscillent au rythme de l’émission des tourbillons. Bien que ces forces fluctuent dans le temps, l’ingénieur se concentre souvent sur la moyenne de ces forces, particulièrement pour la traînée, qui est la composante de la force agissant dans la direction de l’écoulement.
+
+TODO : On peut mettre les figures 3 et 4 mais pas obligatoire 
+TODO : Mettre la formule du coefficient de traînée (5)
+
+## Mesure de la traînée
+
+
+L’un des moyens les plus directs pour mesurer ces forces est d'utiliser une balance aéro-dynamique, mais ici, nous recourons à une méthode indirecte : en mesurant le champ de vitesse autour du cylindre avec un tube de Pitot, puis en appliquant le théorème de conservation de la quantité de mouvement pour estimer la force de traînée.
+
+TODO : Pas forcément necessaire mais mettre la formule de la traînée T, (6)
+
+((Une autre partie de ce TP consiste à déterminer le coefficient de traînée (Cx), qui permet de quantifier l'efficacité de la forme du cylindre à générer de la traînée. Ce coefficient dépend fortement du nombre de Reynolds.))
+
+## Dispositif expérimentale
+
+
+Dans ce TP, nous utiliserons une soufflerie équipée de différents outils pour mesurer les vitesses et observer les trajectoires des particules de fluide dans le sillage du cylindre. Cela nous permettra de mesurer la traînée et d'analyser les résultats en fonction des paramètres d'écoulement.
+
+## Travail préparatoire
+
+
 
 ### Station d'imagerie et de mesure infrarouge
 
