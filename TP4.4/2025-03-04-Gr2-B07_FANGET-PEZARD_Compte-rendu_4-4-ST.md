@@ -11,17 +11,35 @@ secnumdepth : 3
 
 ## Introduction
 TODO : Mettre peut-être le premier paragraphe dans la partie introduction
+
 ## Ecoulement autour d'un cylindre
 
 
-Ce TP a pour objectif de mieux comprendre l'écoulement de l'air autour et en aval d’un cylindre. A l'aide d'un tube de Pitot la vitesse de l’air est mesurée, on pourra également calculer la force de traînée qui agit sur le cylindre. L’écoulement autour du cylindre est influencé par le nombre de Reynolds (Re), qui dépend de la vitesse de l'air, du diamètre du cylindre et de la viscosité du fluide. Ce nombre est un indicateur clé pour savoir si l’écoulement est laminaire ou turbulent.
+Ce TP a pour objectif de mieux comprendre l'écoulement de l'air autour et en aval d’un cylindre. A l'aide d'un tube de Pitot la vitesse de l’air est mesurée, on pourra également calculer la force de traînée qui agit sur le cylindre. L’écoulement autour du cylindre est influencé par le nombre de Reynolds $({Re})$, qui dépend de la vitesse de l'air $(U_{\infty})$, du diamètre du cylindre $(D)$ et de la viscosité du fluide $(\mu)$. Ce nombre est un indicateur clé pour savoir si l’écoulement est laminaire ou turbulent.
 
-TODO : Mettre la formule de Reynolds (1)
-TODO : Mettre figure 1 du TP
+$$Re_{D} = \frac{\rho D U_{\infty}}{\mu}$$
 
-Lorsque Re est faible (lorsque l'inertie du fluide est faible par rapport aux effets visqueux), l'écoulement est symétrique de part et d'autre du cylindre. Mais à mesure que Re augmente, l'écoulement devient de plus en plus instable, et on observe la formation de tourbillons dans le sillage du cylindre. À partir de ReD ≳ 50, ces tourbillons commencent à se détacher du cylindre à une fréquence régulière, créant une structure tourbillonnaire très spécifique, connue sous le nom d’« allée de Bénard–von Kármán ».
 
-TODO : Mettre figure 2 du TP
+![Evolution de l'écoulement autour d'un cylindre en fonction du nombre de Reynolds](ecoulement_reynolds.png){#fig:ecoulement}
+
+Lorsque Re est faible (lorsque l'inertie du fluide est faible par rapport aux effets visqueux), l'écoulement est symétrique de part et d'autre du cylindre. Mais à mesure que Re augmente, l'écoulement devient de plus en plus instable, et on observe la formation de tourbillons dans le sillage du cylindre. À partir de $Re_{D} \geq 50$, ces tourbillons commencent à se détacher du cylindre à une fréquence régulière, créant une structure tourbillonnaire très spécifique, connue sous le nom d’« allée de Bénard–von Kármán » (Voir Figure \ref{fig:regime_laminaire}).
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{regime_laminaire.png}
+        \caption{Régime laminaire $Re_{D} \approx 2.10^2$}
+        \label{fig:regime_laminaire}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{regime_turbulent.png}
+        \caption{Régime laminaire $Re_{D} \approx 2.10^2$}
+    \end{minipage}
+\end{figure}
+
 
 ## Force et coefficient de traînée
 
@@ -30,6 +48,12 @@ Ces tourbillons créent des forces variables sur le cylindre, appelées forces d
 
 TODO : On peut mettre les figures 3 et 4 mais pas obligatoire 
 TODO : Mettre la formule du coefficient de traînée (5)
+
+$$C_{x} = \frac{T}{\frac{1}{2}\rho U^{2}_{\infty} D L} = f(Re_{D})$$
+
+Evolution du coefficient de trainée $C_{x}$ en fonction du seul paramètre $Re_{D}$, dont il dépend est tracé en figure \ref{fig:Cx}
+
+![Evolution du coefficient de trainée Cx en fonction du nombre de Reynolds](Cx.png){#fig:Cx}
 
 ## Mesure de la traînée
 
@@ -40,12 +64,12 @@ TODO : Pas forcément necessaire mais mettre la formule de la traînée T, (6)
 
 ((Une autre partie de ce TP consiste à déterminer le coefficient de traînée (Cx), qui permet de quantifier l'efficacité de la forme du cylindre à générer de la traînée. Ce coefficient dépend fortement du nombre de Reynolds.))
 
-## Dispositif expérimentale
+## Dispositif expérimental
 
 
 Dans ce TP, nous utiliserons une soufflerie équipée de différents outils pour mesurer les vitesses et observer les trajectoires des particules de fluide dans le sillage du cylindre. Cela nous permettra de mesurer la traînée et d'analyser les résultats en fonction des paramètres d'écoulement.
 
-## Travail préparatoire
+<!-- ## Travail préparatoire
 
 
 
@@ -372,4 +396,4 @@ Ce TP nous a permis de mieux comprendre le fonctionnement et l'interprétation d
 
 Les expériences réalisées ont mis en évidence que les surfaces à haute émissivité, comme la peinture noire, permettent une mesure plus fiable de la température réelle, tandis que les surfaces réfléchissantes faussent la mesure en captant et en renvoyant le rayonnement de leur environnement. De plus, nous avons pu constater que des éléments comme le verre ou l'aluminium poli influencent fortement la captation du rayonnement infrarouge.
 
-Ces observations soulignent l'importance de bien comprendre les propriétés des matériaux lors de l'utilisation d'une caméra thermique, notamment dans des domaines comme l'industrie, le bâtiment ou la recherche. Ce TP nous a ainsi apporté une vision concrète des phénomènes thermiques liés au rayonnement infrarouge et de leur impact sur la mesure et l'analyse des températures.
+Ces observations soulignent l'importance de bien comprendre les propriétés des matériaux lors de l'utilisation d'une caméra thermique, notamment dans des domaines comme l'industrie, le bâtiment ou la recherche. Ce TP nous a ainsi apporté une vision concrète des phénomènes thermiques liés au rayonnement infrarouge et de leur impact sur la mesure et l'analyse des températures. -->
