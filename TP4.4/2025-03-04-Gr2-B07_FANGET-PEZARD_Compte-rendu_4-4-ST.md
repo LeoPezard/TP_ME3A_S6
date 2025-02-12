@@ -77,6 +77,8 @@ TODO : en dessous tu voulais dire quoi ?
 
 La soufflerie utilisée dans ce TP est une soufflerie Eiffel à veine fermée et circuit ouvert, avec une section d’essai de 0,2 × 0,3 $m^{2}$. L’air est mis en mouvement par un ventilateur en aval, et la vitesse de l’écoulement (1 à 15 m/s) est contrôlée par un régulateur. 
 
+TODO : photo de la soufflerie à faire en TP
+
 Des cylindres de différents diamètres peuvent être fixés au centre de la veine d’essai. Un dispositif de visualisation par filets de fumée permet d'observer les trajectoires des particules fluides. 
 
 Une sonde Pitot, reliée à un manomètre différentiel, permet de mesurer :
@@ -87,3 +89,45 @@ Une sonde Pitot, reliée à un manomètre différentiel, permet de mesurer :
 
 Ce dispositif nous permettra ainsi de mesurer la traînée et d'analyser les résultats en fonction des paramètres d'écoulement.
 
+# Expériences
+
+## Travail prépartoire
+
+1) La relation liant la vitesse à la différence entre pressions d'arrêt et statique mesurées par le tube de Pitot est la suivante :
+
+$$P_{atm}-P=\frac{\rho}{2}U^{2}$$
+$$ \Leftrightarrow U = \sqrt{\frac{2\cdot(P_{atm}-P)}{\rho}} $$
+
+2) Pour une vitesse d'écoulement $U_{\infty} = 1m/sec$, le nombre de Reynolds se calcule avec la relation suivante :
+
+$$ Re = \frac{\rho U_{\infty} D}{\mu}$$
+
+Avec $\rho$ la masse volumique du fluide, $\mu$ la viscosité dynamique du fluide, D le diamètre du cylindre.
+
+|Diamètre D| 2,5cm | 1mm|
+|:---:|:---:|:---:|
+|Reynolds| 1743 | 70 |
+
+Valeurs utilisées : $\rho_{air} = 1,29kg/m^{3} et \mu_{air} = 18,5\cdot10^{-6}Pa.s$
+
+On remarque donc que le cylindre avec le plus petit diamètre a un Reynolds plus faible donc ses effets visqueux plus marqués.
+
+Le cylindre avec le plus grand diamètre aura un Reynolds plus élevé, ce qui signifie que les forces d'inertie prédomineront sur les forces visqueuses.
+
+3) L'équation de conservation de la masse stationnaire si $\rho = cste$ est :
+
+
+$$ \int\int_{U^{4}_{i=1}S_{i}}\rho \vec{U}.\vec{n}dS = 0 $$
+
+TODO : finir question au dessus et continuer 4 et 5
+
+
+
+## Travail en séance
+
+### Visualisation
+
+
+### Calcul de la trainée
+
+# Conclusion
