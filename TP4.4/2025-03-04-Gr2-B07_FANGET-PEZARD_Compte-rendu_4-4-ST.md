@@ -108,7 +108,7 @@ Avec $\rho$ la masse volumique du fluide, $\mu$ la viscosité dynamique du fluid
 |:---:|:---:|:---:|
 |Reynolds| 1743 | 70 |
 
-Valeurs utilisées : $\rho_{air} = 1,29kg/m^{3} et \mu_{air} = 18,5\cdot10^{-6}Pa.s$
+Valeurs utilisées : $\rho_{air} = 1,29kg/m^{3} \, et \, \mu_{air} = 18,5\cdot10^{-6}Pa.s$
 
 On remarque donc que le cylindre avec le plus petit diamètre a un Reynolds plus faible donc ses effets visqueux plus marqués.
 
