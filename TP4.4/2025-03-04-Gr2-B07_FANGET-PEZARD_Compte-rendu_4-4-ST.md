@@ -119,7 +119,17 @@ Le cylindre avec le plus grand diamètre aura un Reynolds plus élevé, ce qui s
 
 $$ \int\int_{U^{4}_{i=1}S_{i}}\rho \vec{U}.\vec{n}dS = 0 $$
 
-TODO : finir question au dessus et continuer 4 et 5
+TODO : Mettre la même formule mais on multiplie par U infinie et on le met hors de l'intégrale
+
+4) Théorème de Bernoulli entre l'extérieur de la soufflerie et la surface S1 :
+
+$$ \P_{\infty}+\fract{
+TODO : Mettre  la formule p infinie + un demi de rho U infinie au carré = P atm + un demi de rho  U1 au carré
+Donc dire que P infine = Patm + un demi de rho (facteur de U1 au carré - U infine au carré)
+
+
+TODO : finir question 4 et 5
+
 
 
 
