@@ -114,23 +114,62 @@ On remarque donc que le cylindre avec le plus petit diamètre a un Reynolds plus
 
 Le cylindre avec le plus grand diamètre aura un Reynolds plus élevé, ce qui signifie que les forces d'inertie prédomineront sur les forces visqueuses.
 
-3) L'équation de conservation de la masse stationnaire si $\rho = cste$ est :
+3) Formulation du théorème de conservation de la masse pour le volume de contrôle défini à la figure \ref{fig:volume_controle} :
+
+![Volume de contrôle avec indication des valeurs de la composante longitudinale $U_{x}$ de la vitesse et de la pression p aux frontières](volume_controle.png){#fig:volume_controle}
+
+
+L'équation de conservation de la masse stationnaire si $\rho = cste$ est :
 
 
 $$ \int\int_{U^{4}_{i=1}S_{i}}\rho \vec{U}.\vec{n}dS = 0 $$
 
-TODO : Mettre la même formule mais on multiplie par U infinie et on le met hors de l'intégrale
+Une fois multiplié par la constante $U_{\infty}$, l'équation obtenue est : 
+
+$$ U_{\infty}\int\int_{U^{4}_{i=1}S_{i}}\rho \vec{U}.\vec{n}dS = 0 $$
+
 
 4) Théorème de Bernoulli entre l'extérieur de la soufflerie et la surface S1 :
 
-$$ \P_{\infty}+\fract{
-TODO : Mettre  la formule p infinie + un demi de rho U infinie au carré = P atm + un demi de rho  U1 au carré
-Donc dire que P infine = Patm + un demi de rho (facteur de U1 au carré - U infine au carré)
+$$ P_{\infty} + \frac{\rho}{2} U_{\infty}^{2} + \rho g z_{\infty} = P_{atm} + \frac{\rho}{2}U_{1}^{2} + \rho g z_{1}$$
+
+Les termes de pression hydrostatique $\rho g z$ sont négligés dans cette situation car l'altitude est la même le long de la soufflerie.
+
+Donc on en déduit : $P_{\infty} = P_{atm} + \frac{1}{2}\rho (U_{1}^{2}-U_{\infty}^{2})$
+
+5) Nos résultats obtenus dans les questions (3) et (4) sont : 
+
+Conservation du débit massique :
+
+$$ U_{\infty}\int\int_{U^{4}_{i=1}S_{i}}\rho \vec{U}.\vec{n}dS = 0 $$
+
+Relation de pression iddue de Bernoulli :
+$$P_{\infty} = P_{atm} + \frac{1}{2}\rho (U_{1}^{2}-U_{\infty}^{2})$$
+
+Ces équations doivent être injectées dans l'équation (8) de l'énoncé :
+
+$$
+T = \rho \left( \int_{S_1} U_{\infty}^2 \, dy - \int_{S_2} U_x(y)^2 \, dy  
+- \int_{S_3} U_{\infty} U_y(x) \, dx + \int_{S_4} U_{\infty} U_y(x) \, dx \right)
++ \int_{S_1} p_{\infty} \, dy - \int_{S_2} p(y) \, dy.
+$$
+
+Le but étant d'obenir l'équation (9) de l'énoncé : 
+
+$$
+T \simeq \sum_{i=1}^{N-1} \frac{\mathcal{F}_{i+1} + \mathcal{F}_i}{2} (y_{i+1} - y_i)  
+- \frac{1}{2} \rho U_{\infty}^2 (y_N - y_1).
+$$
 
 
-TODO : finir question 4 et 5
 
+Pour commencer, on remplace $P_{\infty}$ par son expression dans l'intégrale de pression $\int_{S_1} P_{\infty} \, dy = \int_{S_1} (P_{atm} + \frac{1}{2}\rho (U_{1}^{2}-U_{\infty}^{2})) \, dy$
 
+Puisque $P_{atm}$ est une constante, son intégrale sur $S_{1}$ devient simplement :
+
+$P_{atm}\int_{S_1}dy + \frac{\rho}{2} \int_{S_1}(U_{1}^{2}-U_{\infty}^{2}) \, dy$
+
+TODO : continuer la question 5
 
 
 ## Travail en séance
