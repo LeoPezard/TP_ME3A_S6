@@ -1,6 +1,6 @@
 ---
 title: Compte rendu de TP - Sillage et traînée
-author: Baptiste Fanget - Pezard Léo - Mécanique Energétique 3A
+author: Baptiste Fanget - Léo Pezard - Mécanique Energétique 3A
 date: 04/03/2025
 papersize: a4
 lang: fr 
@@ -22,7 +22,6 @@ $$Re_{D} = \frac{\rho D U_{\infty}}{\mu} \tag{1}$$
 
 ![Evolution de l'écoulement autour d'un cylindre en fonction du nombre de Reynolds](ecoulement_reynolds.png){#fig:ecoulement}
 
-\newpage
 
 Lorsque Re est faible (lorsque l'inertie du fluide est faible par rapport aux effets visqueux), l'écoulement est symétrique de part et d'autre du cylindre. Mais à mesure que Re augmente, l'écoulement devient de plus en plus instable, et on observe la formation de tourbillons dans le sillage du cylindre. À partir de $Re_{D} \geq 50$, ces tourbillons commencent à se détacher du cylindre à une fréquence régulière, créant une structure tourbillonnaire très spécifique, connue sous le nom d’« allée de Bénard–von Kármán » (Voir Figure \ref{fig:regime_laminaire}).
 
@@ -38,7 +37,7 @@ Lorsque Re est faible (lorsque l'inertie du fluide est faible par rapport aux ef
     \begin{minipage}{0.45\textwidth}
         \centering
         \includegraphics[width=\linewidth]{regime_turbulent.png}
-        \caption{Régime turbulent $Re_{D} \approx 2.10^2$}
+        \caption{Régime turbulent $Re_{D} \approx 10^4$}
         \label{fig:regime_turbulent}
     \end{minipage}
 \end{figure}
@@ -74,7 +73,7 @@ $$T = -\int\int_{U^{4}_{i=1}S_{i}}\rho U_{x}(\vec{U}.\vec{n})dS - \int\int_{U^{4
 
 La soufflerie utilisée dans ce TP est une soufflerie Eiffel à veine fermée et circuit ouvert, avec une section d’essai de 0,2 × 0,3 $m^{2}$. L’air est mis en mouvement par un ventilateur en aval, et la vitesse de l’écoulement (1 à 15 m/s) est contrôlée par un régulateur. 
 
-\ref{fig:dispositif} :
+Voir Figure \ref{fig:dispositif}.
 
 ![Soufflerie utilisée](dispositif.jpeg){#fig:dispositif}
 
@@ -180,7 +179,7 @@ On observe pour le cylindre de diamètre 2,5 cm que les troubillons sont d'envir
 Concernant le cylindre de diamètre 1mm, les tourbillons sont plus difficiles à observer, en effet ils n'ont pas vraiment une forme "ronde". On remarque que la distance entre les tourbillons est plus courte, il semble y avoir une fréquence d'émission plus importante que pour le premier cylindre.
 
 
-En comparaison avec les images de la \ref{fig:ecoulement}, nous voyons une similitude entre la photo (d) et l'écoulement pour le cylindre de diamètre 2,5cm avec un Reynolds de 1743 soit proche des 2000 de la figure.
+En comparaison avec les images de la figure \ref{fig:ecoulement}, nous voyons une similitude entre la photo (d) et l'écoulement pour le cylindre de diamètre 2,5cm avec un Reynolds de 1743 soit proche des 2000 de la figure.
 
 La fréquence d'émission est calculée pour chaque cylindre grâce à la formule suivante :
 
@@ -235,13 +234,25 @@ Les calculs ont été faits sur excel (voir Figure \ref{fig:calculs_excel})
 
 Au final, nous trouvons une force de traînée de 5,79 Newtons et Cx = 1,49.
 
+\newpage
+
 ![Données des calculs sur excel](calculs_excel.png){#fig:calculs_excel}
 
 Les profils des vitesses et vitesses déficitaires en fonction de la hauteur de la vanne sont tracées en Figure \ref{fig:vitesses}
 
-![Profil des vitesses](vitesses.png){#fig:vitesses}
+Il est donc possible de remarquer que la vitesse diminue en fonction de la position par rapport au cylindre.
+La vitesse de l'écoulement est quasiment égale à $U_{\infty}$ lorsque les mesures sont prises pour une hauteur assez différente que celle du cylindre.
+
+Le cylindre modifie donc la vitesse de l'écoulement sur une certaine plage de hauteurs avec un aspect symétrique (voir courbe Figure \ref{fig:vitesses}).
+L'écoulement est ralenti après être passé proche du cylindre. Ce ralentissement est lié aux tourbillons observés dans la première partie.
+
+En effet, les tourbillons générés par la séparation d'écoulement induisent des pertes d'énergie et une traînée accrue, réduisant ainsi la vitesse moyenne du fluide en aval du cylindre.
 
 \newpage
+
+
+![Profil des vitesses](vitesses.png){#fig:vitesses}
+
 
 **Détermination de la force de traînée**
 
@@ -252,7 +263,11 @@ En effet, le coefficient Cx reste constant dans une plage large de Reynolds. (Vo
 On peut donc alors retrouver T grâce à 
 $$Cx = \frac{T}{\frac{\rho}{2}U_{\infty}^{2}D} \rightarrow T = Cx \frac{\rho}{2}U_{\infty}^{2}D$$
 
-Donc par exemple, en gardant le même Cx que nous avons trouvé, $$T = 1,49\cdot \frac{1,2}{2}\cdot10^2 \cdot 2,5\cdot 10^{-2} = 2,235 N$$
+Donc par exemple, en gardant le même Cx que nous avons trouvé (car le Reynolds de l'écoulement à 10 m/sec reste dans l'ordre de grandeurs où Cx est constant), $$T = 1,49\cdot \frac{1,2}{2}\cdot10^2 \cdot 2,5\cdot 10^{-2} = 2,235 N$$
+
+La force de traînée est donc moins important pour une vitesse moins élevée, ce qui est logique car la force de traînée représente la force du fluide sur le cylindre.
+
+\newpage
 
 ![Coefficient de traînée en fonction du Reynolds](coeff.jpeg){#fig:coeff}
 
