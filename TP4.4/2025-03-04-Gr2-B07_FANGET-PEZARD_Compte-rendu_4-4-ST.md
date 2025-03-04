@@ -56,7 +56,6 @@ $$C_{x} = \frac{T}{\frac{1}{2} \rho U^{2}_{\infty} D L} = f(Re_{D}) \tag{2}$$
 
 L'évolution du coefficient de traînée $C_{x}$ en fonction du nombre de Reynolds $Re_{D}$ est tracée en figure \ref{fig:Cx}.
 
-\newpage
 
 ![Evolution du coefficient de trainée Cx en fonction du nombre de Reynolds](Cx.png){#fig:Cx}
 
@@ -70,14 +69,15 @@ On obtient ainsi l'équation reliant la trainée moyenne par unité de longueur 
 
 $$T = -\int\int_{U^{4}_{i=1}S_{i}}\rho U_{x}(\vec{U}.\vec{n})dS - \int\int_{U^{4}_{i=1}S_{i}} \rho \vec{n}.\vec{e_{x}}dS \tag{3}$$
 
-TODO : en dessous tu voulais dire quoi ?
-((Une autre partie de ce TP consiste à déterminer le coefficient de traînée (Cx), qui permet de quantifier l'efficacité de la forme du cylindre à générer de la traînée. Ce coefficient dépend fortement du nombre de Reynolds.))
 
 ## Dispositif expérimental
 
 La soufflerie utilisée dans ce TP est une soufflerie Eiffel à veine fermée et circuit ouvert, avec une section d’essai de 0,2 × 0,3 $m^{2}$. L’air est mis en mouvement par un ventilateur en aval, et la vitesse de l’écoulement (1 à 15 m/s) est contrôlée par un régulateur. 
 
-TODO : photo de la soufflerie à faire en TP
+\ref{fig:dispositif} :
+
+![Soufflerie utilisée](dispositif.jpeg){#fig:dispositif}
+
 
 Des cylindres de différents diamètres peuvent être fixés au centre de la veine d’essai. Un dispositif de visualisation par filets de fumée permet d'observer les trajectoires des particules fluides. 
 
@@ -143,7 +143,7 @@ Conservation du débit massique :
 
 $$ U_{\infty}\int\int_{U^{4}_{i=1}S_{i}}\rho \vec{U}.\vec{n}dS = 0 $$
 
-Relation de pression iddue de Bernoulli :
+Relation de pression issue de Bernoulli :
 $$P_{\infty} = P_{atm} + \frac{1}{2}\rho (U_{1}^{2}-U_{\infty}^{2})$$
 
 Ces équations doivent être injectées dans l'équation (8) de l'énoncé :
@@ -162,21 +162,104 @@ T \simeq \sum_{i=1}^{N-1} \frac{\mathcal{F}_{i+1} + \mathcal{F}_i}{2} (y_{i+1} -
 $$
 
 
+Lors de calculs effectués en séance de TP avec le professeur, le résultat final est :
 
-Pour commencer, on remplace $P_{\infty}$ par son expression dans l'intégrale de pression $\int_{S_1} P_{\infty} \, dy = \int_{S_1} (P_{atm} + \frac{1}{2}\rho (U_{1}^{2}-U_{\infty}^{2})) \, dy$
 
-Puisque $P_{atm}$ est une constante, son intégrale sur $S_{1}$ devient simplement :
+$$T = \int \int(\rho U(y)[U_{\infty} -U(y)]-\frac{\rho}{2}U_{\infty}^{2}+\Delta P(y))dS$$
 
-$P_{atm}\int_{S_1}dy + \frac{\rho}{2} \int_{S_1}(U_{1}^{2}-U_{\infty}^{2}) \, dy$
-
-TODO : continuer la question 5
 
 
 ## Travail en séance
 
 ### Visualisation
 
+Les tourbillons ont été observés dans l'écoulement après avoir placé un cylindre et de la fumée.
+
+On observe pour le cylindre de diamètre 2,5 cm que les troubillons sont d'environ de la taille du cylindre et espacés d'environ une dizaine de centimètres entre eux.
+
+Concernant le cylindre de diamètre 1mm, les tourbillons sont plus difficiles à observer, en effet ils n'ont pas vraiment une forme "ronde". On remarque que la distance entre les tourbillons est plus courte, il semble y avoir une fréquence d'émission plus importante que pour le premier cylindre.
+
+
+En comparaison avec les images de la \ref{fig:ecoulement}, nous voyons une similitude entre la photo (d) et l'écoulement pour le cylindre de diamètre 2,5cm avec un Reynolds de 1743 soit proche des 2000 de la figure.
+
+La fréquence d'émission est calculée pour chaque cylindre grâce à la formule suivante :
+
+$$f_{émission} = 0,198(1-\frac{19,7}{Re_{D}})\frac{U_{\infty}}{D}$$
+
+Pour le premier cylindre, le diamètre vaut 2,5cm, $Re_{D}$ vaut 1743 et $U_{\infty}$ vaut 1m/sec (vitesse de l'écoulement de la soufflerie).
+
+Ainsi $f_{émission} = 7,83 \text{ } sec^{-1}$
+La période d'émission est donc $\frac{1}{f_{émission}} \approx 0,128 \text{ } sec$.
+
+En multipliant par la vitesse du tourbillon $U_{convection} \approx 0,85U_{\infty}$ on obtient une distance de 0,108 m soit environ 10cm.
+
+Ce résultat est cohérent avec nos observations, nous observions un tourbillon toutes les dizaines de centimètres.
+
+
+Pour le second cylindre de diamètre 1mm, $Re_{D}$ vaut 70 et $U_{\infty}$ vaut toujours 1m/sec.
+
+Ainsi $f_{émission} \approx 142,277 \text{ } sec^{-1}$
+La période d'émission est donc $\frac{1}{f_{émission}} \approx 7\cdot 10^{-3} \text{ } sec$.
+
+En multipliant par la vitesse du tourbillon $U_{convection} \approx 0,85U_{\infty}$ on obtient $5,97 \cdot 10^{-3} m$ soit une distance d'environ 6mm entre chaque tourbillon.
+
+Ce résultat est cohérent car nous avons nous avons observé une distance entre les tourbillons de l'ordre du centimètre. Les diamètres des tourbillons de diamètre étaient supérieurs à celui de la tige (1mm).
+
 
 ### Calcul de la trainée
 
+Pour commencer, nous avons mesuré la vitesse à différentes hauteurs de la vanne, une vitesse de 16,08 m/sec en moyenne est retenue grâce au tube de Pitot. Donc $U_{\infty} = 16,08 m/sec.$
+
+Les valeurs des différences de pression ont été mesurées également à différentes hauteurs de la vanne, permettant d'obtenir un terme $\Delta P$, utile pour calculer la traînée par la suite.
+
+La force de traînée T est calculée grâce au travail préparatoire : 
+
+$$T = \int \int(\rho U(y)[U_{\infty} -U(y)]-\frac{\rho}{2}U_{\infty}^{2}+\Delta P(y))dS$$
+
+On définit la fonction F(y) telle que $F(y)= \rho U(y)[U_{\infty} -U(y)]-\frac{\rho}{2}U_{\infty}^{2}+\Delta P(y)$
+
+On a donc $T = \int \int F(y)dS$
+
+F(y) se calcule avec la méthode des trapèzes.
+Notons $y_{i}$ et $F_{i}$ les termes à la mesure i.
+L'intégrale se calcule comme la somme suivante :
+
+$$
+T \simeq \sum_{i=1}^{N-1} \frac{\mathcal{F}_{i+1} + \mathcal{F}_i}{2} (y_{i+1} - y_i)$$
+
+Le coefficeint de traînée $Cx$ se calcule avec la formule suivante : 
+
+$$Cx = \frac{T}{\frac{\rho}{2}U_{\infty}^{2}D}$$
+
+Les calculs ont été faits sur excel (voir Figure \ref{fig:calculs_excel})
+
+Au final, nous trouvons une force de traînée de 5,79 Newtons et Cx = 1,49.
+
+![Données des calculs sur excel](calculs_excel.png){#fig:calculs_excel}
+
+Les profils des vitesses et vitesses déficitaires en fonction de la hauteur de la vanne sont tracées en Figure \ref{fig:vitesses}
+
+![Profil des vitesses](vitesses.png){#fig:vitesses}
+
+\newpage
+
+**Détermination de la force de traînée**
+
+Si la vitesse d'entrée $U_{\infty}$ était différente (10 m/sec par exemple), on aurait pu retrouver la valeur de la force de trainée T à partir du  coefficient de traînée Cx.
+
+En effet, le coefficient Cx reste constant dans une plage large de Reynolds. (Voir Figure \ref{fig:coeff})
+
+On peut donc alors retrouver T grâce à 
+$$Cx = \frac{T}{\frac{\rho}{2}U_{\infty}^{2}D} \rightarrow T = Cx \frac{\rho}{2}U_{\infty}^{2}D$$
+
+Donc par exemple, en gardant le même Cx que nous avons trouvé, $$T = 1,49\cdot \frac{1,2}{2}\cdot10^2 \cdot 2,5\cdot 10^{-2} = 2,235 N$$
+
+![Coefficient de traînée en fonction du Reynolds](coeff.jpeg){#fig:coeff}
+
+
 # Conclusion
+
+
+Ce TP nous a permis d’étudier l’écoulement autour d’un cylindre et la traînée associée en exploitant les principes de la mécanique des fluides. L’analyse des régimes d’écoulement et de l’allée de Bénard-von Kármán a été menée via des mesures par sonde Pitot, confirmant les tendances théoriques du coefficient de traînée en fonction du nombre de Reynolds.  
+
+Les résultats, globalement cohérents avec la théorie, ont mis en évidence l’influence des effets visqueux et inertiels, malgré certaines incertitudes de mesure. Cette expérience renforce notre compréhension des phénomènes d’écoulement et des méthodes expérimentales essentielles en aérodynamique et hydrodynamique.
