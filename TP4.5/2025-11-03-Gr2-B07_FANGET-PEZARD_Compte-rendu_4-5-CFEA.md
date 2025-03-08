@@ -56,7 +56,7 @@ $$
 
 ## Dispositif expérimental
 
-L'étude est réalisée à l'aide d'un banc d'essai permettant de générer un écoulement d'air autour de surfaces chauffées et d'en mesurer les effets thermiques. Le montage expérimental comprend :
+L'étude est réalisée à l'aide d'un banc d'essai (voir Figure \ref{fig:dispositif}) permettant de générer un écoulement d'air autour de surfaces chauffées et d'en mesurer les effets thermiques. Le montage expérimental comprend :
 
 - **Un film chauffant** (résistance électrique) pris en sandwich entre **deux plaques de cuivre** de $3.8$ cm de large, $6.4$ cm de long et $2$ mm d'épaisseur.
 - **Un tube en Plexiglas** dans lequel circule l'air à différentes vitesses générées par un **ventilateur**.
@@ -65,6 +65,8 @@ L'étude est réalisée à l'aide d'un banc d'essai permettant de générer un �
 - **Un thermocouple de type K** placé sur la plaque pour mesurer la température de surface.
 
 Une deuxième configuration intègre une **ailette en cuivre** de **50 cm de long, 3 cm de large et 1 mm d'épaisseur**, permettant d'analyser son impact sur l'amélioration des échanges thermiques.
+
+![Dispositif expérimental](dispositif.png){#fig:dispositif}
 
 ## Effet des ailettes
 
