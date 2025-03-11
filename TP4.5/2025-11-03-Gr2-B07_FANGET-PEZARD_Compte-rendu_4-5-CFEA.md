@@ -130,11 +130,11 @@ Ainsi, voici nos coefficients d'échanges convectifs pour chaque vitesse :
 
 Voici nos graphiques de $P=f(S.\Delta T)$ pour différentes vitesses :
 
-![P = f(S.(T-To)) pour une vitesse de 6,52 m/sec](flux_v1.png){width=80%}
+![$P = f(S.\Delta T)$ pour une vitesse de 6,52 m/sec](flux_v1.png){width=80%}
 
-![P=f(S.(T-To)) pour une vitesse de 4,26 m/sec](flux_v2.png){width=80%}
+![$P = f(S.\Delta T)$ pour une vitesse de 4,26 m/sec](flux_v2.png){width=80%}
 
-![P=f(S.(T-To)) pour une vitesse de 3,52 m/sec](flux_v3.png){width=80%}
+![$P = f(S.\Delta T)$ pour une vitesse de 3,52 m/sec](flux_v3.png){width=80%}
 
 
 \newpage
@@ -150,7 +150,7 @@ Pour déterminer la dépendance du coefficient d'échange, $h$ à la vitesse $v$
 
 Pour tracer $Nu = f(Re)$ on a $Re = \frac{\rho U L}{\mu}$ et $Nu = \frac{h L}{k}$
 
-On utilise la longueur de la plaque $L = 6,8\cdot 10^{-2}m$ et en se référant aux tables à notre disposition on a pour l'air $\rho_{air} =1,16 \text{ } kg.m^{-3} , \mu_{air} = 184,6\cdot 10^{-7} \text{ } N.s.m^{-2}, k_{air} = 26,3\cdot 10^{-3} W.m^{-1}K^{-1}$$
+On utilise la longueur de la plaque $L = 6,8\cdot 10^{-2}m$ et en se référant aux tables à notre disposition on a pour l'air $\rho_{air} =1,16 \text{ } kg.m^{-3} , \mu_{air} = 184,6\cdot 10^{-7} \text{ } N.s.m^{-2}, k_{air} = 26,3\cdot 10^{-3} W.m^{-1}K^{-1}$
 
 |Vitesse (m/sec) | Re | Nu |
 |:----:|:----:|:---:|
@@ -173,28 +173,28 @@ Travaillons maintenant avec le dispositif grandes dimensions, constitué d'une a
 
 ### Mesures du profil stationnaire de température dans l'ailette
 
-Pour cela, nous chauffons à l'origine de la plaque et imposons une vitesse de 5,48 m/sec à l'écoulement, puis de m/sec.
+Pour cela, nous chauffons à l'origine de la plaque et imposons une vitesse de 5,48 m/sec à l'écoulement, puis de 3,25 m/sec.
 
 Nous obtenons un profil des températures le long de la plaque pour chaque vitesse.
 
 
 
-On remarque la forme d'une exponentielle décroissante dans les deux cas car : $T(x) = T_{\infty} + (T_0 - T_{\infty}) e^{-\frac{x}{L}}$
+On remarque la forme d'une exponentielle décroissante dans les deux cas car d'après l'énoncé : $T(x) = T_{\infty} + (T_0 - T_{\infty}) e^{-\frac{x}{L}}$
 
-D'où : $ln(\frac{T-T_{\infty}}{T_0-t_{\infty}}) \propto -\frac{x}{L}$
+D'où : $ln(\frac{T(x)-T_{\infty}}{T_0-t_{\infty}}) \propto -\frac{x}{L}$
 
 Ainsi, le tracé de la température le long de la plaque chauffante est tracé pour chaque vitesse (voir Figure \ref{fig:profil_temperatures})
 
-![Fonction T*(x) =  $ln(\frac{T-T_{\infty}}{T_{0}-T_{\infty}})$ en fonction de la distance par rapport à la plaque chauffante](profil_temperatures.png){#fig:profil_temperatures}
+![Fonction T*(x) =  $ln(\frac{T(x)-T_{\infty}}{T_{0}-T_{\infty}})$ en fonction de la distance par rapport à la plaque chauffante](profil_temperatures.png){#fig:profil_temperatures}
 
 
 ### Détermination de la longueur caractéristique
 
-Nous trouvons ainsi les coefficients $\frac{1}{L}$, pentes des courbes, nous donnant $L$, longueur caractéristique, pour chaque vitesse de l'écoulement. On obtient donc L = 6,98 cm pour une vitesse de 3,25 m/sec et L = 5,75 pour une vitesse de 5,48 m/sec.
+Nous trouvons ainsi les coefficients $\frac{1}{L}$, pentes des courbes, nous donnant $L$, longueur caractéristique, pour chaque vitesse de l'écoulement. On obtient donc L = 6,98 cm pour une vitesse de 3,25 m/sec et L = 5,75 cm pour une vitesse de 5,48 m/sec.
 
 On remarque donc que plus la vitesse est élevée, moins la longueur caractéristique est grande car il y a un plus grand flux d'air qui permet de diminuer la température de la surface (atteindre $T_{\infty}$ plus rapidement).
 
 
 # Conclusion
 
-Les expériences menées ont permis d’analyser l’influence de la vitesse d’écoulement sur le coefficient d’échange convectif hh et d’observer que hh suit une loi en racine de Reynolds, conformément aux modèles théoriques. L’ajout d’ailettes s’est révélé efficace pour améliorer le transfert thermique, en augmentant la surface d’échange et en favorisant la dissipation de chaleur. La diminution de la longueur caractéristique avec l’augmentation de la vitesse confirme que le flux thermique est mieux réparti à grande vitesse. Enfin, les résultats expérimentaux sont cohérents avec les prédictions théoriques, validant ainsi les modèles utilisés.
+Les expériences menées ont permis d’analyser l’influence de la vitesse d’écoulement sur le coefficient d’échange convectif h et d’observer que h suit une loi en racine de Reynolds, conformément aux modèles théoriques. L’ajout d’ailettes s’est révélé efficace pour améliorer le transfert thermique, en augmentant la surface d’échange et en favorisant la dissipation de chaleur. La diminution de la longueur caractéristique avec l’augmentation de la vitesse confirme que le flux thermique est mieux réparti à grande vitesse. Enfin, les résultats expérimentaux sont cohérents avec les prédictions théoriques, validant ainsi les modèles utilisés.
