@@ -37,7 +37,7 @@ Un spectre représente l’intensité lumineuse en fonction de la longueur d’o
 
 TODO : Mettre la figure 1 du TP
 
-## 1.2 Le rayonnement thermique
+## Le rayonnement thermique
 
 Le rayonnement thermique d’une surface est comparé à celui d’un corps noir, un émetteur parfait absorbant toute la lumière incidente. Son rayonnement dépend de la température T et de la longueur d’onde λ.
 
@@ -71,7 +71,7 @@ On définit aussi une température de luminance TL​, toujours inférieure à l
 
 TODO : mettre la figure 2 et surtout écrire les equations correctement et faire la mise en page
 
-## 1.3 Le pyromètre optique
+## Le pyromètre optique
 
 Un pyromètre optique mesure la température d’une source via un détecteur photoélectrique.
 
@@ -83,7 +83,7 @@ Un pyromètre optique mesure la température d’une source via un détecteur ph
 
 Les pyromètres à disparition de filament comparent la luminance d’une source à celle d’un filament de tungstène, ajusté jusqu’à disparition visuelle.
 
-## 1.4 Travaux préliminaires
+## Travaux préliminaires
 
 1)
 
