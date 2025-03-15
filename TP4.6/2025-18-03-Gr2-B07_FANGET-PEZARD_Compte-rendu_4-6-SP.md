@@ -9,48 +9,83 @@ secnumdepth: 3
 
 # Introduction
 
-## Contexte et objectif
+La spectrophotométrie et la pyrométrie sont deux techniques essentielles en physique permettant d’analyser les interactions entre la lumière et la matière. La spectrophotométrie repose sur l’absorption et la transmission de la lumière par un échantillon afin d’en déduire des informations telles que la concentration d’une substance ou ses propriétés optiques. La pyrométrie, quant à elle, est une méthode permettant de mesurer la température d’un objet en analysant le rayonnement qu’il émet.
 
-L'échange de chaleur entre un solide et un fluide environnant se fait principalement par convection. Ce transfert dépend de l'écoulement du fluide autour du solide et est caractérisé par un coefficient d'échange convectif $h$. 
+## Le spectre électromagnétique
 
-L'objectif de ce TP est d'étudier la variation de $h$ en fonction de la vitesse d'écoulement autour d'une plaque rectangulaire horizontale, ainsi que l'effet des ailettes pour améliorer ces échanges thermiques. Ce principe est largement utilisé dans des systèmes comme les radiateurs de microprocesseurs ou les convecteurs domestiques.
+Le rayonnement électromagnétique regroupe les ondes classées selon leur longueur d’onde λλ ou leur fréquence νν. Il se divise en plusieurs domaines :
 
-## Concepts théoriques clés
+Le spectre visible (380-780 nm, ~500 THz) : perçu par l’œil humain, il correspond aux couleurs visibles des objets éclairés.
+  
+Les rayonnements énergétiques (longueurs d’onde courtes, hautes fréquences) :
+    
+- Ultraviolets (UVA, UVB, UVC) : responsables des coups de soleil.
+    
+- Rayons X : utilisés en imagerie médicale.
+    
+- Rayons gamma : issus des réactions nucléaires et cosmiques.
+    
+Les rayonnements moins énergétiques (longueurs d’onde longues, basses fréquences) :
+    
+- Infrarouges : liés au rayonnement thermique.
+    
+- Micro-ondes : utilisées en télécommunications et cuisson.
+    
+- Ondes radio et hertziennes : utilisées pour la transmission d’informations.
 
-- **Convection forcée** : Transfert thermique par un fluide en mouvement imposé (ventilation). Le flux thermique convectif est donné par :  
-  $$
-  \Phi_{cv} = h \cdot S \cdot \Delta T
-  $$
-  où $S$ est la surface d'échange et $\Delta T$ la différence de température entre le fluide et le solide.
+Un spectre représente l’intensité lumineuse en fonction de la longueur d’onde. Ce TP étudiera le rayonnement thermique et celui issu de la désexcitation des atomes et molécules d’un gaz.
 
-- **Couche limite thermique** : Région proche de la paroi où la température évolue progressivement vers celle du fluide ambiant.
+TODO : Mettre la figure 1 du TP
 
-- **Nombre de Nusselt $Nu$** : Rapport entre transfert thermique par convection et par conduction, défini par :  
-  $$
-  Nu = \frac{h L}{k}
-  $$
-  où $L$ est une longueur caractéristique et $k$ la conductivité thermique du fluide.
+## Le rayonnement thermique
 
-- **Nombre de Reynolds $Re$** : Paramètre déterminant le régime d'écoulement (laminaire ou turbulent) :  
-  $$
-  Re = \frac{\rho U L}{\mu}
-  $$
-  où $\rho$ est la masse volumique du fluide, $U$ la vitesse d'écoulement, $L$ une longueur caractéristique et $\mu$ la viscosité dynamique du fluide.
+Le rayonnement thermique d’une surface est comparé à celui d’un corps noir, un émetteur parfait absorbant toute la lumière incidente. Son rayonnement dépend de la température T et de la longueur d’onde λ.
 
-- **Nombre de Prandtl $Pr$** : Rapport entre la diffusion thermique et la diffusion visqueuse, défini par :  
-  $$
-  Pr = \frac{\mu C_p}{k}
-  $$
-  où $C_p$ est la capacité calorifique du fluide.
+Loi de Planck
 
-Dans le cas d'une plaque plane en régime laminaire ($Re_L < 3 \cdot 10^5$), la relation entre ces nombres est :  
-$$
-Nu_L = 0.665 \cdot Re_L^{0.5} \cdot Pr^{1/3}
-$$
-Pour un écoulement turbulent ($Re_{T} > 5 \cdot 10^5 Pr > 0.5$) :  
-$$
-Nu_T = 0.035 \cdot Re_T^{4/5} \cdot Pr^{1/3}
-$$
+Elle décrit l’énergie rayonnée par un corps noir à température T :
+
+L0(λ,T)=C1λ5⋅1exp⁡(C2/λT)−1
+
+L0​(λ,T)=λ5C1​​⋅exp(C2​/λT)−11​
+
+avec C1​ et C2​ des constantes. Elle montre que plus un corps est chaud, plus il émet d’énergie et que son spectre présente un maximum d’intensité.
+
+Loi de Wien
+
+Elle donne la longueur d’onde où l’émission est maximale :
+
+λmax(μm)=2898T
+
+λmax​(μm)=T2898​
+
+Émissivité et température de luminance
+
+Un corps réel n’émet jamais autant qu’un corps noir et possède une émissivité ε inférieure à 1 :
+
+L(λ,T)=ε(λ,T)⋅L0(λ,T)
+
+L(λ,T)=ε(λ,T)⋅L0​(λ,T)
+
+On définit aussi une température de luminance TL​, toujours inférieure à la température réelle du corps. Si ε est constant, le corps est dit "gris".
+
+TODO : mettre la figure 2 et surtout écrire les equations correctement et faire la mise en page
+
+## Le pyromètre optique
+
+Un pyromètre optique mesure la température d’une source via un détecteur photoélectrique.
+
+- Monochromatique : mesure la luminance à une seule longueur d’onde, dépendant de l’émissivité ε.
+  
+- Bi-chromatique : compare la luminance à deux longueurs d’onde, évitant l’influence de ε.
+  
+- À large bande : mesure l’énergie totale émise.
+
+Les pyromètres à disparition de filament comparent la luminance d’une source à celle d’un filament de tungstène, ajusté jusqu’à disparition visuelle.
+
+## Travaux préliminaires
+
+1)
 
 ## Dispositif expérimental
 
