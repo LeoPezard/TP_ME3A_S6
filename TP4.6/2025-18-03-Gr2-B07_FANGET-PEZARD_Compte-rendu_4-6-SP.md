@@ -1,7 +1,7 @@
 ---
-title: Compte rendu de TP - Convection forcée et effet d'ailette
+title: Compte rendu de TP - Spectrophotométrie - Pyrométrie 
 author: Baptiste Fanget - Léo Pezard - Mécanique Energétique 3A
-date: 11/03/2025
+date: 18/03/2025
 papersize: a4
 lang: fr 
 secnumdepth: 3
