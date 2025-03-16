@@ -13,9 +13,9 @@ La spectrophotométrie et la pyrométrie sont deux techniques essentielles en ph
 
 ## Le spectre électromagnétique
 
-Le rayonnement électromagnétique regroupe les ondes classées selon leur longueur d’onde λλ ou leur fréquence νν. Il se divise en plusieurs domaines :
+Le rayonnement électromagnétique regroupe les ondes classées selon leur longueur d’onde $\lambda$ ou leur fréquence $\nu$. Il se divise en plusieurs domaines :
 
-Le spectre visible (380-780 nm, ~500 THz) : perçu par l’œil humain, il correspond aux couleurs visibles des objets éclairés.
+Le spectre visible (380-780 nm, $\approx$ 500 THz) : perçu par l’œil humain, il correspond aux couleurs visibles des objets éclairés.
   
 Les rayonnements énergétiques (longueurs d’onde courtes, hautes fréquences) :
     
@@ -35,39 +35,40 @@ Les rayonnements moins énergétiques (longueurs d’onde longues, basses fréqu
 
 Un spectre représente l’intensité lumineuse en fonction de la longueur d’onde. Ce TP étudiera le rayonnement thermique et celui issu de la désexcitation des atomes et molécules d’un gaz.
 
-TODO : Mettre la figure 1 du TP
+![Le spectre électromagnétique](spectres.png){#fig:spectres}
 
 ## Le rayonnement thermique
 
-Le rayonnement thermique d’une surface est comparé à celui d’un corps noir, un émetteur parfait absorbant toute la lumière incidente. Son rayonnement dépend de la température T et de la longueur d’onde λ.
+Le rayonnement thermique d’une surface est comparé à celui d’un corps noir, un émetteur parfait absorbant toute la lumière incidente. Son rayonnement dépend de la température T et de la longueur d’onde $\lambda$.
 
-Loi de Planck
+**Loi de Planck**
 
 Elle décrit l’énergie rayonnée par un corps noir à température T :
 
-L0(λ,T)=C1λ5⋅1exp⁡(C2/λT)−1
+$L_{0}(\lambda, T) = \frac{C_1}{\lambda^5} \cdot \frac{1}{\exp\left(\frac{C_2}{\lambda T}\right) - 1}$
 
-L0​(λ,T)=λ5C1​​⋅exp(C2​/λT)−11​
 
-avec C1​ et C2​ des constantes. Elle montre que plus un corps est chaud, plus il émet d’énergie et que son spectre présente un maximum d’intensité.
 
-Loi de Wien
+avec $C_1$​ et $C_2$​ des constantes. Elle montre que plus un corps est chaud, plus il émet d’énergie et que son spectre présente un maximum d’intensité.
+
+**Loi de Wien**
 
 Elle donne la longueur d’onde où l’émission est maximale :
 
-λmax(μm)=2898T
+$\lambda_{max}(\mu m)= \frac{2898}{T}$
 
-λmax​(μm)=T2898​
+**Émissivité et température de luminance :**
 
-Émissivité et température de luminance
+Un corps réel n’émet jamais autant qu’un corps noir et possède une émissivité $\epsilon$ inférieure à 1 :
 
-Un corps réel n’émet jamais autant qu’un corps noir et possède une émissivité ε inférieure à 1 :
+$L(\lambda ,T)= \epsilon (\lambda ,T) \cdot L^0(\lambda,T)$
 
-L(λ,T)=ε(λ,T)⋅L0(λ,T)
 
-L(λ,T)=ε(λ,T)⋅L0​(λ,T)
+On définit aussi une température de luminance $T_L$​, toujours inférieure à la température réelle du corps. Si $\epsilon$ est constant, le corps est dit "gris".
 
-On définit aussi une température de luminance TL​, toujours inférieure à la température réelle du corps. Si ε est constant, le corps est dit "gris".
+![La loi de Planck](planck.png){#fig:planck}
+
+\newpage
 
 TODO : mettre la figure 2 et surtout écrire les equations correctement et faire la mise en page
 
@@ -75,9 +76,9 @@ TODO : mettre la figure 2 et surtout écrire les equations correctement et faire
 
 Un pyromètre optique mesure la température d’une source via un détecteur photoélectrique.
 
-- Monochromatique : mesure la luminance à une seule longueur d’onde, dépendant de l’émissivité ε.
+- Monochromatique : mesure la luminance à une seule longueur d’onde, dépendant de l’émissivité $\epsilon$.
   
-- Bi-chromatique : compare la luminance à deux longueurs d’onde, évitant l’influence de ε.
+- Bi-chromatique : compare la luminance à deux longueurs d’onde, évitant l’influence de $\epsilon$.
   
 - À large bande : mesure l’énergie totale émise.
 
@@ -85,151 +86,78 @@ Les pyromètres à disparition de filament comparent la luminance d’une source
 
 ## Travaux préliminaires
 
-1)
+1) Loi de Planck : $L_{0}(\lambda, T) = \frac{C_1}{\lambda^5} \cdot \frac{1}{\exp\left(\frac{C_2}{\lambda T}\right) - 1}$
 
-## Dispositif expérimental
 
-L'étude est réalisée à l'aide d'un banc d'essai (voir Figure \ref{fig:dispositif}) permettant de générer un écoulement d'air autour de surfaces chauffées et d'en mesurer les effets thermiques. Le montage expérimental comprend :
+Avec $C_1 = 2hc^2$, $C_2 = \frac{hc}{k}$.
 
-- Un film chauffant (résistance électrique) pris en sandwich entre deux plaques de cuivre de $3.8$ cm de large, $6.4$ cm de long et $2$ mm d'épaisseur.
-- Un tube en Plexiglas dans lequel circule l'air à différentes vitesses générées par un ventilateur.
-- Une sonde à fil chaud permettant de mesurer la vitesse de l'écoulement.
-- Une alimentation en courant continu avec affichage de la tension et du courant appliqués à la résistance chauffante.
-- Un thermocouple de type K placé sur la plaque pour mesurer la température de surface.
+Pour trouver le maximum de la luminance on résout : $\frac{dL_O}{d \lambda} = 0$
 
-Une deuxième configuration intègre une ailette en cuivre de 50 cm de long, 3 cm de large et 1 mm d'épaisseur, permettant d'analyser son impact sur l'amélioration des échanges thermiques.
+$\rightarrow \frac{dL_O}{d \lambda} = C_1[-5 \lambda^{-6}\frac{1}{\exp{\frac{C_2}{\lambda T}}-1} + \lambda^{-5} \cdot \frac{\frac{C_2}{\lambda^{2} T}\exp{\frac{C_2}{\lambda T}}}{(\exp{\frac{C_2}{\lambda T}}-1)^{2}}] = 0$
 
-![Dispositif expérimental](dispositif.png){#fig:dispositif}
+$\rightarrow \frac{5}{\lambda^{6}\cdot \exp{\frac{C_2}{\lambda T}}-1} = \frac{C_2 \cdot \exp{\frac{C_2}{\lambda T}}}{\lambda^{7} T \cdot \exp{\frac{C_2}{\lambda T}}-1}^{2}$
 
-\newpage
 
+$\rightarrow \lambda = \frac{C_2 \exp\left(\frac{C_2}{\lambda T}\right)}{5T \left( \exp\left(\frac{C_2}{\lambda T}\right) - 1 \right)}$
 
-## Effet des ailettes
+Posons $x = \frac{C_2}{\lambda T}$, alors :
 
-L'ajout d'ailettes est une technique courante pour augmenter les échanges de chaleur entre un solide et un fluide. En augmentant la surface d'échange, elles permettent une meilleure dissipation thermique. Le principe repose sur deux phénomènes :
+$\rightarrow \lambda = \frac{C_2 e^x}{5 (e^x - 1) T}$
 
-1. **Augmentation de la surface d'échange** : Plus la surface est grande, plus le flux thermique total $\Phi$ est important.
-2. **Conduction et convection combinées** : La chaleur est transférée par conduction le long de l'ailette, puis dissipée par convection.
+En multipliant par $x$:
 
-La température d'une ailette suit une décroissance exponentielle donnée par :  
-$$
-T(x) = T_{\infty} + (T_0 - T_{\infty}) e^{-\frac{x}{L}}
-$$
-où :
+$5 (e^x - 1) = x e^x$
 
-- $T(x)$ est la température à une distance $x$ de la base de l'ailette.
-- $T_{\infty}$ est la température du fluide ambiant.
-- $T_0$ est la température de la base de l'ailette.
-- $L$ est la longueur caractéristique de l'ailette :  
-  $$
-  L = \sqrt{\frac{k S}{h P}}
-  $$
-  avec $k$ la conductivité thermique du matériau, $S$ la section de l'ailette et $P$ son périmètre.
+Ainsi, la longueur d'onde maximale $\lambda_{\text{max}}$ vérifie :
 
-Le flux total évacué par l'ailette est donné par :  
-$$
-\Phi = h P L (T_0 - T_{\infty})
-$$
-Cette expression permet d'évaluer l'efficacité des ailettes en fonction du coefficient d'échange convectif $h$, de la conductivité thermique $k$ et de la géométrie de l'ailette.
+$x_{\text{max}} = \frac{C_2}{\lambda_{\text{max}} T} \approx 4.9651$
 
+$\lambda_{\text{max}} = \frac{C_2}{4.9651 T}$
 
+Avec $C_2 = 1.4388 \times 10^{-2}$, on obtient :
 
-# Expériences
+$\lambda_{\text{max}} = \frac{1.4388 \times 10^{-2}}{4.9651 T} = \frac{2898}{T} \quad \text{(en µm)}$
 
-## Détermination des coefficients d'échange convectifs h
 
-### Procédure à suivre
+2) Déplacement du spectre d'émission
 
- Afin de déterminer le coefficier d'échange convectif $h$, on fixe une vitesse d'écoulement $v$ sur le ventilateur. Un thermocouple nous permet d'obtenir la température $T_0$ à la sortie (une fois la température stabilisée).
+Lorsque la température d'un objet augmente, son spectre d'émission se décale vers de plus petites longueurs d'onde car :
 
-Une tension est ensuite imposée sur la résistance dans la plaque chauffante, créant ainsi une puissance $P$. Cette puissance sera utilisée ainsi que la surface de la plaque chauffante $S$ pour déterminer le coefficient d'échange convectif $h$ grâce à la formule : 
+$\lambda_{\text{max}} \propto \frac{1}{T}$
 
-$$
-  P = UI = \Phi_{cv} = h \cdot S \cdot \Delta T
-$$
 
-Les différences de température sont prises lorsque une tension est appliquée à la résistance, permettant d'obtenir le terme $\Delta T$.
+3) Apparition des couleurs visibles
 
-On obtient $h$ avec nos mesures $P = f(S.\Delta T)$, ainsi $h$ est le coefficient directeur de la droite.
+Lorsque la température d'un objet augmente petit à petit, la première couleur visible est le rouge, car il émet d'abord dans l'infrarouge. Ensuite, la longueur d'onde diminue pour tendre vers le bleu.
 
-$$\rightarrow h = \frac{\Phi_{cv}}{S \cdot \Delta T}$$
+4) Relation entre luminance et émissivité
 
-Ainsi, voici nos coefficients d'échanges convectifs pour chaque vitesse :
+$L(\lambda, T) = \varepsilon(\lambda, T) \cdot L_0(\lambda, T)$
 
-|Vitesse (m/sec) | Coefficient d'échange convectif $h$ (W/m².°C)|
-|:----:|:----:|
-|6,52|96,25|
-|4,26|76,65|
-|3,52 |70,44 |
+$\Rightarrow L(\lambda, T) = L_0(\lambda, T_L) \cdot \exp\left(-\frac{C_2}{\lambda T}\right)$
 
+$\Rightarrow \exp\left(-\frac{C_2}{\lambda T_L}\right) = \varepsilon(\lambda, T) \cdot \exp\left(-\frac{C_2}{\lambda T}\right)$
 
-Voici nos graphiques de $P=f(S.\Delta T)$ pour différentes vitesses :
+En appliquant $\ln$ :
 
-![$P = f(S.\Delta T)$ pour une vitesse de 6,52 m/sec](flux_v1.png){width=80%}
+$-\frac{C_2}{\lambda T_L} = -\frac{C_2}{\lambda T} + \ln(\varepsilon(\lambda, T))$
 
-![$P = f(S.\Delta T)$ pour une vitesse de 4,26 m/sec](flux_v2.png){width=80%}
+$\Rightarrow \frac{1}{T_L} = \frac{1}{T} - \frac{1}{C_2} \ln(\varepsilon)$
 
-![$P = f(S.\Delta T)$ pour une vitesse de 3,52 m/sec](flux_v3.png){width=80%}
+Avec : $A.N. \text{  } \frac{1}{T_L} = 6,73 \times 10^{-4} \ \text{K}^{-1}$ $\Rightarrow T_L = 1488 \ \text{K}$
 
+$A.N. \text{  } \frac{1}{T_L} =  8,03 \times 10^{-4} \ \text{K}^{-1}$ $\Rightarrow T_L = 1245 \ \text{K}$
 
-\newpage
+On en conclut que plus l’émissivité est faible, plus la température de luminance $T_L$ est supérieure à la température réelle $T$.
+Un pyromètre monochromatique est très sensible à l’émissivité.
 
-### Dépendance du coefficient d'échange
 
-Pour déterminer la dépendance du coefficient d'échange, $h$ à la vitesse $v$, on trace $h = f(v)$.
+5) Nouvelle expression de la luminance
 
-![Coefficient d'échange en fonction de la vitesse](h_f(v).png){#fig:h_v width=80%}
+$L(\lambda, T) = \varepsilon(\lambda, T) \exp\left(-\frac{C_2}{\lambda T}\right)$
 
+$v_{\lambda_1} = K(\lambda_1) \varepsilon(\lambda_1) \exp\left(-\frac{C_2}{\lambda_1 T}\right)$
 
-### Nu en fonction du Reynolds
+Avec :
 
-Pour tracer $Nu = f(Re)$ on a $Re = \frac{\rho U L}{\mu}$ et $Nu = \frac{h L}{k}$
-
-On utilise la longueur de la plaque $L = 6,8\cdot 10^{-2}m$ et en se référant aux tables à notre disposition on a pour l'air $\rho_{air} =1,16 \text{ } kg.m^{-3} , \mu_{air} = 184,6\cdot 10^{-7} \text{ } N.s.m^{-2}, k_{air} = 26,3\cdot 10^{-3} W.m^{-1}K^{-1}$
-
-|Vitesse (m/sec) | Re | Nu |
-|:----:|:----:|:---:|
-|6,52| 27860  | 248,86  |
-|4,26| 18203| 198,18  |
-|3,52 |15041 | 182,13  |
-
-Nous avons des nombres de Reynolds inférieurs à $3\cdot 10^{5}$  donc le régime est Laminaire.
-
-La théorie montre que dans ce type d'écoulements, $Nu = 0,665\cdot Re_{L}^{0,5} \cdot Pr^{\frac{1}{3}}$
-
-Donc $Nu$ évolue en fonction de la racine du Reynolds, nos graphiques (Figure \ref{fig:h_v} et \ref{fig:Nu_Re}) de $h = f(v)$ et $Nu = f(Re)$ démontrent bien cette évolution car avec un profil de puissance nous obtenons une puissance proche de 0,5 dans les deux cas.
-
-![Nombre de Nusselt en fonction du nombre de Reynolds](Nu_f(Re).png){#fig:Nu_Re width=80%}
-
-
-## Profils d'ailette
-
-Travaillons maintenant avec le dispositif grandes dimensions, constitué d'une ailette de 50cm de long à l'extrémité de deux plaques de cuivres rectangulaires prenant en sandwich un film chauffant.
-
-### Mesures du profil stationnaire de température dans l'ailette
-
-Pour cela, nous chauffons à l'origine de la plaque et imposons une vitesse de 5,48 m/sec à l'écoulement, puis de 3,25 m/sec.
-
-Nous obtenons un profil des températures le long de la plaque pour chaque vitesse.
-
-
-
-On remarque la forme d'une exponentielle décroissante dans les deux cas car d'après l'énoncé : $T(x) = T_{\infty} + (T_0 - T_{\infty}) e^{-\frac{x}{L}}$
-
-D'où : $ln(\frac{T(x)-T_{\infty}}{T_0-t_{\infty}}) \propto -\frac{x}{L}$
-
-Ainsi, le tracé de la température le long de la plaque chauffante est tracé pour chaque vitesse (voir Figure \ref{fig:profil_temperatures})
-
-![Fonction T*(x) =  $ln(\frac{T(x)-T_{\infty}}{T_{0}-T_{\infty}})$ en fonction de la distance par rapport à la plaque chauffante](profil_temperatures.png){#fig:profil_temperatures}
-
-
-### Détermination de la longueur caractéristique
-
-Nous trouvons ainsi les coefficients $\frac{1}{L}$, pentes des courbes, nous donnant $L$, longueur caractéristique, pour chaque vitesse de l'écoulement. On obtient donc L = 6,98 cm pour une vitesse de 3,25 m/sec et L = 5,75 cm pour une vitesse de 5,48 m/sec.
-
-On remarque donc que plus la vitesse est élevée, moins la longueur caractéristique est grande car il y a un plus grand flux d'air qui permet de diminuer la température de la surface (atteindre $T_{\infty}$ plus rapidement).
-
-
-# Conclusion
-
-Les expériences menées ont permis d’analyser l’influence de la vitesse d’écoulement sur le coefficient d’échange convectif h et d’observer que h suit une loi en racine de Reynolds, conformément aux modèles théoriques. L’ajout d’ailettes s’est révélé efficace pour améliorer le transfert thermique, en augmentant la surface d’échange et en favorisant la dissipation de chaleur. La diminution de la longueur caractéristique avec l’augmentation de la vitesse confirme que le flux thermique est mieux réparti à grande vitesse. Enfin, les résultats expérimentaux sont cohérents avec les prédictions théoriques, validant ainsi les modèles utilisés.
+$K(\lambda_{1}) = R \cdot S_{\lambda_{1}} \cdot T_{\rho_{\lambda_{1}}} \cdot d\lambda_{1} \cdot T_{0\lambda} \cdot \Omega \cdot S \cdot \tau_{1\lambda}$
