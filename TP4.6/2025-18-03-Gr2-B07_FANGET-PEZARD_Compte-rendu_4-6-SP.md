@@ -15,7 +15,7 @@ La spectrophotométrie et la pyrométrie sont deux techniques essentielles en ph
 
 Le rayonnement électromagnétique regroupe les ondes classées selon leur longueur d’onde $\lambda$ ou leur fréquence $\nu$. Il se divise en plusieurs domaines :
 
-Le spectre visible (380-780 nm, $\approx$ 500 THz) : perçu par l’œil humain, il correspond aux couleurs visibles des objets éclairés.
+Le spectre visible (380-780 nm) : perçu par l’œil humain, il correspond aux couleurs visibles des objets éclairés.
   
 Les rayonnements énergétiques (longueurs d’onde courtes, hautes fréquences) :
     
@@ -61,7 +61,7 @@ $\lambda_{max}(\mu m)= \frac{2898}{T}$
 
 Un corps réel n’émet jamais autant qu’un corps noir et possède une émissivité $\epsilon$ inférieure à 1 :
 
-$L(\lambda ,T)= \epsilon (\lambda ,T) \cdot L^0(\lambda,T)$
+$L(\lambda ,T)= \epsilon (\lambda ,T) \cdot L_0(\lambda,T)$
 
 
 On définit aussi une température de luminance $T_L$​, toujours inférieure à la température réelle du corps. Si $\epsilon$ est constant, le corps est dit "gris".
@@ -90,9 +90,9 @@ Les pyromètres à disparition de filament comparent la luminance d’une source
 
 Avec $C_1 = 2hc^2$, $C_2 = \frac{hc}{k}$.
 
-Pour trouver le maximum de la luminance on résout : $\frac{dL_O}{d \lambda} = 0$
+Pour trouver le maximum de la luminance on résout : $\frac{dL_0}{d \lambda} = 0$
 
-$\rightarrow \frac{dL_O}{d \lambda} = C_1[-5 \lambda^{-6}\frac{1}{\exp{\frac{C_2}{\lambda T}}-1} + \lambda^{-5} \cdot \frac{\frac{C_2}{\lambda^{2} T}\exp{\frac{C_2}{\lambda T}}}{(\exp{\frac{C_2}{\lambda T}}-1)^{2}}] = 0$
+$\rightarrow \frac{dL_0}{d \lambda} = C_1[-5 \lambda^{-6}\frac{1}{\exp{\frac{C_2}{\lambda T}}-1} + \lambda^{-5} \cdot \frac{\frac{C_2}{\lambda^{2} T}\exp{\frac{C_2}{\lambda T}}}{(\exp{\frac{C_2}{\lambda T}}-1)^{2}}] = 0$
 
 $\rightarrow \frac{5}{\lambda^{6}\cdot \exp{\frac{C_2}{\lambda T}}-1} = \frac{C_2 \cdot \exp{\frac{C_2}{\lambda T}}}{\lambda^{7} T \cdot \exp{\frac{C_2}{\lambda T}}-1}^{2}$
 
@@ -205,7 +205,9 @@ Le spectre est mixte :
 
 ### Identification des raies spectrales de la lampe à décharge  
 
-Nous observons pour le spectre de la lampe à décharge (Voir figure \ref{fig:sodium}). Il est possible de remarquer différentes raies à différentes longueurs d'ondes. On compare avec le spectre théorique (Figure \ref{fig:sodium_th}) et on remarque que il y a une raie à environ 590 nm et plusieurs raies au delà de 700 nm. Ces différentes raies sont dues à la réflexion de la petite raie du spectre théorique (entourée sur la figure) qui se réfléchit sur les parois du tube autour de la lampe. Ce rayonnement vient donc chauffer le tube et explique ainsi les différentes raies observées au delà de 700 nm.
+Nous observons le spectre de la lampe à décharge (Voir figure \ref{fig:sodium}). Il est possible de remarquer différentes raies à différentes longueurs d'ondes. On compare avec le spectre théorique (Figure \ref{fig:sodium_th}) et on remarque que il y a une raie à environ 590 nm, présente sur le spectre obtenu. 
+
+Il y a également plusieurs raies au delà de 700 nm. Ces différentes raies sont dues à la réflexion de la petite raie du spectre théorique (entourée sur la figure) qui se réfléchit sur les parois du tube autour de la lampe. Ce rayonnement vient donc chauffer le tube et explique ainsi les différentes raies observées au delà de 700 nm.
 
 \begin{figure}
     \centering
@@ -271,7 +273,6 @@ Lorsque la température du filament augmente, le spectre s’intensifie et le ma
 
 L’utilisation de ces filtres permet d’analyser la composition spectrale des sources lumineuses en éliminant certaines longueurs d’onde et en mettant en évidence les parties dominantes du spectre.
 
-\newpage
 
 ## Pyrométrie
 
@@ -286,6 +287,8 @@ Ce protocole permet d’établir une corrélation entre l’intensité lumineuse
 
 Nous prenons donc des mesures de tension, courant, permettant d'avoir la résistance du fil de tungstène et par la suite la température du fil donné par : 
 $T = -0,053*(\rho_0*R(T)/R_0)^{2}+36,1*(\rho_0*R(T)/R_0)+125$
+
+Avec $\rho_{0} = 5,65 \mu\Omega \cdot \text{cm et } R_{0} = 1,65 \Omega$
 
 Cela nous permet de tracer ln(V) en fonction de l'inverse de la température (voir Figure \ref{fig:courbe1})
 
@@ -304,6 +307,8 @@ Notre résultat est donc cohérent avec la théorie donnée par l'équation $v_{
 
 Ces mesures ont été faites avec un pyrométre monochromatique, utile lorsqu'on utilise la même source de luminosité.
 
+\newpage 
+
 La deuxième mesure est faite avec un pyromètre bichromatique, il calcule le logarithme du quotient des tensions.
 
 Donc, une fois appliqué à la formule $v_{\lambda} = K(\lambda) \varepsilon(\lambda) \exp\left(-\frac{C_2}{\lambda T}\right)$, on obtient :
@@ -319,6 +324,7 @@ Cette pente est donc $C_{2}\cdot(\frac{1}{\lambda_1}- \frac{1}{\lambda_2})$
 
 En mesure bichromatique l'émissivité n'influe plus donc on peut étudier tous types de sources, sans recalibrer le dispositif. Elle est donc plus précise pour mesurer une température.
 
+\newpage
 
 # Conclusion
 
@@ -331,7 +337,7 @@ Ce travail a permis d'explorer la spectrophotométrie et la pyrométrie pour ana
 
 ![Spectre de la lampe basse consommation](basse_conso.jpeg){#fig:basse_conso}
 
-![Spectre de la bougie](bougie.jpeg){#fig:bougie}
+![Spectre de la bougie, on remarque que le rayonnement thermique est bien représenté](bougie.jpeg){#fig:bougie}
 
 ![Spectre de la lampe à filaments](filaments.jpeg){#fig:filaments}
 
@@ -339,8 +345,8 @@ Ce travail a permis d'explorer la spectrophotométrie et la pyrométrie pour ana
 
 ![Spectre de la lampe à décharge](sodium.jpeg){#fig:decharge}
 
-![Spectre de la lumière du soleil](soleil.jpeg){#fig:soleil}
+![Spectre de la lumière du soleil, lumière blanche à toutes les longueurs d'onde](soleil.jpeg){#fig:soleil}
 
-![Spectre du laser](laser.jpeg){#fig:laser}
+![Spectre du laser, raie précise dans une certaine plage de longueurs d'ondes](laser.jpeg){#fig:laser}
 
 
