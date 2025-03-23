@@ -347,6 +347,6 @@ Ce travail a permis d'explorer la spectrophotométrie et la pyrométrie pour ana
 
 ![Spectre de la lumière du soleil, lumière blanche à toutes les longueurs d'onde](soleil.jpeg){#fig:soleil}
 
-![Spectre du laser, raie précise dans une certaine plage de longueurs d'ondes](laser.jpeg){#fig:laser}
+![Spectre du laser, raie précise dans unekn  certaine plage de longueurs d'ondes](laser.jpeg){#fig:laser}
 
 
