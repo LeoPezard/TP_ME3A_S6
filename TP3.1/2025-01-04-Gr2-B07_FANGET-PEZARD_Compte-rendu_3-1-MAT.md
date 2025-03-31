@@ -94,7 +94,7 @@ Voici la liste des appareils permettant d’analyser le fonctionnement du moteur
   - La tension et l’intensité appliquées ne doivent pas dépasser respectivement **47 V** et **2,5 A**.  
 
 
-![Photo du banc de charge du TP](banc_charge.png){#fig:banc_charge}
+![Photo du banc de charge du TP / Éléments du moteur](banc_charge.png){#fig:banc_charge}
 
 ### Notations utilisées  
 
@@ -110,6 +110,39 @@ Les mesures sont réalisées pour deux tensions d’alimentation différentes :
 
 
 # Expériences
+
+## Expérience à vide
+
+Pour une analyse optimale des pertes dues au couple résistant, il est essentiel d’estimer les pertes constantes et les pertes Joule du moteur asynchrone, c'est-à-dire celles qui lui sont directement attribuées. Les mesures correspondantes seront effectuées sans application de couple résistant.
+
+Dans cette phase, les pertes fer sont supposées équivalentes aux pertes mécaniques. De plus, la résistance de chaque enroulement est fixée à 2 $\Omega$.
+
+On calcule la puissance absorbée ou puissance active électrique : $P_a = \sqrt(3)\cdot U \cdot I \cdot cos(\phi)$
+
+Pertes par effet Joule au stator : $P_{JS} = \frac{3}{2} \cdot R \cdot I^2 = \frac{3}{2} \cdot 2r \cdot I^2$ avec r la résistance d'un enroulement = $2 \Omega$
+
+Pertes constantes $P_C = P_a - P_{JS}$
+
+TODO : Tableau a insérer 
+
+Les valeurs ne sont pas cohérentes avec les valeurs nominales théoriques car ici la plaque signalétique donne des valeurs quand le rendement est au maximum, c'est à dire en charge, or les mesures effectuées ici sont à vide.
+
+
+## Expérience avec charge
+
+Cette section porte sur l’étude des paramètres influencés directement par le couple résistant appliqué au moteur. Le banc d’essais permet d’ajuster le freinage avec une précision de 5 %, en fonction de la charge résistive.
+
+Toutes les valeurs de ces paramètres seront consignées dans un tableau, en distinguant deux configurations : 230 V et 400 V, chacune ayant une limite de freinage spécifique, fixée respectivement à 5 $N\cdot m$ et 10 $N \cdot m$.
+
+On relève différentes grandeurs disponibles, avec ces grandeurs on calcule TODO : mettre les valeurs à calculer et/ou les formules
+
+TODO : Tableau à insérer
+
+On calcule par la suite la puissance utile $P_u$, le glissement g et le rendement du moteur $\eta$ : 
+
+Pour le couple .........
+
+$P_u = $ 
 
 
 # Conclusion
