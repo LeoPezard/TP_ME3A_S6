@@ -51,10 +51,42 @@ Les conditions atmosphériques de départ sont les suivantes :
 
 À partir de ces données, plusieurs grandeurs caractéristiques ont été calculées :
 
-- **Pression partielle de vapeur d’eau (Pv)** : calculée à l’aide de la formule fournie dans le fascicule.
-- **Teneur en humidité (r)** : déterminée à partir de Pv.
-- **Enthalpie spécifique de l’air humide (h)** : calculée en fonction de la température et de l’humidité.
-- **Volume spécifique (v)** : obtenu également à partir des données psychrométriques.
+**Pression partielle de vapeur d’eau (Pv)**
+
+$P_v = P_{vs} - 6,666 \cdot 10^{-4} \cdot P_{atm} \cdot (\Theta - \Theta_h)$
+
+Après calcul : $P_v = 1599 -6,666 \cdot 10^{-4} \cdot 101300 \cdot (20-14) \Rightarrow P_v = 1193,84 \text{ Pa}$
+
+
+**Teneur en humidité (r)** calculée avec la relation $r= 0,622 \cdot \frac{P_v}{P_{atm}-P_v}$
+
+On obtient donc $r = 7,418 \cdot 10^{-3} \text{kg}_{\text{vapeur}} \text{/} \text{kg}_{\text{air sec}}$
+
+
+**Enthalpie spécifique de l’air humide (h)** 
+
+
+Formule fournie dans le fascicule :  
+
+$$h = \Theta + r \times (2490 + 1{,}96 \times \Theta)$$
+
+Après calcul :  
+$$h = 20 + 0{,}007418 \times (2490 + 1{,}96 \times 20)$$
+
+On obtient :  
+$$h = 38{,}76 \ \text{kJ} / \text{kg}_{\text{air sec}}$$
+
+
+**Volume spécifique (v)** 
+
+Formule du fascicule :  
+$$v = 462 \times (0{,}622 + r) \times \frac{\Theta_K}{P_{\text{atmo}}}$$
+
+Après calcul :  
+$$v = 462 \times (0{,}622 + 0{,}007418) \times \frac{293{,}15}{101300}$$
+
+On trouve ainsi :  
+$$v = 0{,}842 \ \text{m}^3 / \text{kg}_{\text{air sec}}$$
 
 Ces calculs permettent de mieux appréhender les échanges thermiques entre l’air et l’eau, notamment l’énergie transférée par évaporation.
 
