@@ -55,7 +55,15 @@ Les conditions atmosphériques de départ sont les suivantes :
 
 $P_v = P_{vs} - 6,666 \cdot 10^{-4} \cdot P_{atm} \cdot (\Theta - \Theta_h)$
 
-Après calcul : $P_v = 1599 -6,666 \cdot 10^{-4} \cdot 101300 \cdot (20-14) \Rightarrow P_v = 1193,84 \text{ Pa}$
+Avec : 
+
+- $P_v$ la pression partielle de l’eau dans l’air en mbar
+- $P_{vs}$la pression de saturation de la vapeur d’eau à la température du bulbe humide $\Theta_h$ en mbar.
+- $P_{atm}$ la pression totale de l’air (pression atmosphérique : 1013,25 mbar);
+- $\Theta$ la température sèche de l’air en °C ;
+- $\Theta_h$ la température du bulbe humide en °C.
+
+Après calcul : $P_v = 1599 -6,666 \cdot 10^{-4} \cdot 101325 \cdot (20-14) \Rightarrow \boxed{P_v = 1193,84 \text{ Pa}}$
 
 
 **Teneur en humidité (r)** calculée avec la relation $r= 0,622 \cdot \frac{P_v}{P_{atm}-P_v}$
@@ -74,7 +82,7 @@ Après calcul :
 $$h = 20 + 0{,}007418 \times (2490 + 1{,}96 \times 20)$$
 
 On obtient :  
-$$h = 38{,}76 \ \text{kJ} / \text{kg}_{\text{air sec}}$$
+$$\boxed{h = 38{,}76 \ \text{kJ} / \text{kg}_{\text{air sec}}}$$
 
 
 **Volume spécifique (v)** 
@@ -86,13 +94,14 @@ Après calcul :
 $$v = 462 \times (0{,}622 + 0{,}007418) \times \frac{293{,}15}{101300}$$
 
 On trouve ainsi :  
-$$v = 0{,}842 \ \text{m}^3 / \text{kg}_{\text{air sec}}$$
+$$\boxed{v = 0{,}842 \ \text{m}^3 / \text{kg}_{\text{air sec}}}$$
 
 Ces calculs permettent de mieux appréhender les échanges thermiques entre l’air et l’eau, notamment l’énergie transférée par évaporation.
 
 ## Utilisation du diagramme psychrométrique
 
 En complément des calculs, le **diagramme psychrométrique** a été utilisé afin de vérifier la cohérence des résultats. Ce diagramme permet de :
+
 - Repérer le point d’état de l’air à partir de la température sèche (20°C) et de la température de bulbe humide (14°C).
 - Lire directement les valeurs d’enthalpie, d’humidité absolue et de volume spécifique.
 
