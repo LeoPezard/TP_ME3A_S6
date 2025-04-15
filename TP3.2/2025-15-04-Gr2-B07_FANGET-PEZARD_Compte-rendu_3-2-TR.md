@@ -1,10 +1,8 @@
 ---
-title: Compte rendu de TP - Tour de refroidissement
-author: Baptiste Fanget - Léo Pezard - Mécanique Energétique 3A
-date: 15/04/2025
 papersize: a4
-lang: fr 
+lang: fr
 secnumdepth: 3
+toc-depth: 2
 ---
 
 # Introduction
