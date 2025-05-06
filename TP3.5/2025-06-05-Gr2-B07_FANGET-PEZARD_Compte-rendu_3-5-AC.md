@@ -43,6 +43,29 @@ L’ensemble du montage permet de générer, capter, et analyser les ondes sonor
 
 # Expériences
 
+## Mesure de la vitesse du son dans l'air
+
+Le montage réalisé est composé d'un générateur 40kHz, d'un émetteur et récepteur (transducteurs ultrasonores) et enfin d'un oscilloscope pour visualiser les signaux d'émission et de réception. 
+
+L'oscilloscope est réglé ........ pour distinguer correctement les deux signaux. 
+
+Ainsi on peut observer l'évolution du signal d'émission en fonction de la distance d : TODO : Commmenter
+
+TODO : Faire un graphe de delta t en fonction de d et/ou un tableau des valeurs (Mettre le premier curseur au moment où la pulsation est émise et mettre le deuxième lorsqu'elle est reçue)
+
+On observe une (courbe affine???), le coefficent directeur de cette droite permet de calculer la vitesse expérimentale du son dans l'air. TODO : Calcul
+On note ici que la température de la pièce est de .... °C
+
+On sait que la vitesse du son dans l'air pour une température de 20°C est de 340 m/s.
+
+Erreur relative : TODO : Calcul
+Cette erreur peut provenir de la température de la pièce qui n'est pas forcément à 20°C mais également de l'interprétation graphique de delta t en fonction de la distance.
+
+### Echantillon intercalé entre l'émetteur et le récepteur
+
+
+## Niveaux acoustiques, atténuation, traitement du signal
+
 
 # Conclusion
 
