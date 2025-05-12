@@ -37,6 +37,9 @@ Deux faisceaux laser cohérents se croisent dans un volume de mesure, créant un
 
 Le système CA-1350 permet de reproduire le principe du LDV en laboratoire. Le faisceau laser est scindé en deux à l’aide d’un séparateur optique, puis recombiné après passage par une lentille pour créer un volume d’interférences. Un disque acrylique rotatif, sur lequel sont fixées des particules de poussière, traverse ce volume. La lumière diffusée est captée, convertie en signal électrique, puis analysée sur un oscilloscope pour en extraire la fréquence de modulation, donc la vitesse.
 
+## Observation des franges d’interférence
+
+Avant de passer aux mesures, une phase de familiarisation avec les franges est proposée sur un banc optique annexe, utilisant un laser rouge à 635 nm. Un disque de verre gravé de trois réseaux différents permet d’observer plusieurs interfranges en variant le pas du réseau. Cette observation se fait sans déplacer la platine, selon des consignes de sécurité strictes.
 
 # Expériences
 
