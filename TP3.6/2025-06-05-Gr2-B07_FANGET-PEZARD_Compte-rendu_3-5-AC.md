@@ -5,40 +5,37 @@ secnumdepth: 3
 ---
 
 
-# Introduction
+# Introduction et principes généraux
 
-Ce TP vise à étudier les phénomènes acoustiques à travers des expériences concrètes de mesure, d’analyse et de modélisation du son, en lien avec les notions physiques et numériques abordées en cours.
+La mesure de la vitesse des fluides est essentielle en mécanique des fluides pour mieux comprendre les phénomènes d'écoulement. Parmi les méthodes optiques disponibles, la vélocimétrie laser Doppler (LDV), développée dès 1964, est l’une des plus répandues en recherche et en industrie. Elle repose sur l’utilisation de particules traceuses en suspension dans un fluide transparent, permettant une mesure locale non intrusive des vitesses, allant de quelques m/s à plusieurs centaines de m/s. L’objectif de ce TP est de se familiariser avec les bases expérimentales de cette méthode.
 
-## Contexte et Objectif
+## Présentation du banc de vélocimétrie laser
 
-L'acoustique joue un rôle essentiel dans de nombreux domaines, notamment l’ingénierie du son, l’architecture, les télécommunications et le traitement du signal.  
-Dans ce contexte, ce TP a pour objectif :
+Le banc utilisé est composé d’un ensemble optique et électronique permettant de générer, focaliser et analyser des faisceaux lasers. Il inclut une diode laser verte, des éléments optiques pour diviser et orienter le faisceau, un disque tournant servant de support de particules, et un détecteur optoélectronique relié à un oscilloscope pour visualiser le signal. Ce dispositif permet de mettre en œuvre un anémomètre laser Doppler (ALD).
 
-- De comprendre les bases de la propagation des ondes sonores dans différents milieux,
-- De mesurer et analyser des signaux acoustiques à l’aide de capteurs et d’outils numériques,
-- De modéliser des phénomènes comme la réverbération, les interférences ou l’effet Doppler,
-- De mettre en œuvre un protocole expérimental pour valider des hypothèses acoustiques.
+## Consignes de sécurité liées à l’utilisation du laser
 
-## Notions Clefs
+Le laser utilisé étant de classe IIIb, des précautions strictes doivent être respectées pour éviter tout dommage oculaire. Le port de lunettes de protection adaptées est obligatoire. Il est également recommandé de :
 
-- **Onde sonore** : vibration mécanique se propageant dans un milieu (air, solide, liquide) sous forme de variation de pression.
-- **Fréquence** : nombre d’oscillations d’une onde par seconde, mesurée en hertz (Hz), perçue comme la hauteur d’un son.
-- **Spectre** : représentation fréquentielle d’un signal, utilisée pour analyser les composantes harmoniques d’un son.
-- **Réverbération** : persistance d’un son dans un espace fermé due aux réflexions successives sur les parois.
-- **Effet Doppler** : variation apparente de la fréquence d’une onde sonore perçue par un observateur en mouvement relatif par rapport à la source.
+    éviter toute exposition directe ou réflexions du faisceau,
 
-## Dispositif Expérimental
+    garder une distance suffisante (plus de 20 cm),
 
-Le dispositif expérimental mis en place pour ce TP d'acoustique comprend les éléments suivants :
+    ne pas aligner les yeux avec la hauteur du faisceau,
 
-- **Source sonore** : un haut-parleur émettant des signaux sinusoïdaux ou complexes à différentes fréquences.
-- **Capteurs** : microphones calibrés permettant de capter les ondes sonores avec précision.
-- **Carte d’acquisition** : interface permettant de numériser les signaux analogiques enregistrés par les microphones.
-- **Logiciel d’analyse** : utilisé pour visualiser les formes d’ondes, effectuer des transformées de Fourier, et extraire des caractéristiques comme la fréquence fondamentale ou les harmoniques.
-- **Environnement contrôlé** : expérience réalisée dans une enceinte réduisant les interférences extérieures.
+    retirer les objets réfléchissants comme montres ou bijoux.
 
-L’ensemble du montage permet de générer, capter, et analyser les ondes sonores afin d’en étudier les propriétés physiques et spectrales.
+## Principe physique : effet Doppler optique
 
+Le fondement théorique de la LDV repose sur l’effet Doppler : une particule en mouvement modifie la fréquence de la lumière qu’elle réfléchit. La fréquence détectée dépend de la vitesse de la particule et de la géométrie du dispositif. Toutefois, comme la fréquence optique est très élevée (∼10¹⁴ Hz), une mesure directe est impossible. Pour pallier cela, une méthode à franges d’interférences est utilisée.
+
+## Principe de la vélocimétrie à franges
+
+Deux faisceaux laser cohérents se croisent dans un volume de mesure, créant un réseau de franges stationnaires. Lorsqu’une particule traverse ce réseau, elle diffuse un signal lumineux modulé dont la fréquence dépend de sa vitesse perpendiculaire aux franges. Cette méthode permet une mesure précise, indépendante de l’orientation du détecteur, ce qui constitue un avantage majeur.
+
+## Dispositif expérimental utilisé
+
+Le système CA-1350 permet de reproduire le principe du LDV en laboratoire. Le faisceau laser est scindé en deux à l’aide d’un séparateur optique, puis recombiné après passage par une lentille pour créer un volume d’interférences. Un disque acrylique rotatif, sur lequel sont fixées des particules de poussière, traverse ce volume. La lumière diffusée est captée, convertie en signal électrique, puis analysée sur un oscilloscope pour en extraire la fréquence de modulation, donc la vitesse.
 
 
 # Expériences
