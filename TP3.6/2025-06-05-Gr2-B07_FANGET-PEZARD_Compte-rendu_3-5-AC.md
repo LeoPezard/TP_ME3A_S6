@@ -43,6 +43,12 @@ Avant de passer aux mesures, une phase de familiarisation avec les franges est p
 
 # Expériences
 
+## Mise en place du module de convergence des faisceaux
+
+### Lentille de mise en faisceaux parallèles
+
+On choisit la lentille numéro 1 
+
 ## Mesure de la vitesse du son dans l'air
 
 ### Calcul de la vitesse du son 
