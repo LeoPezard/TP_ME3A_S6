@@ -17,17 +17,17 @@ Le banc utilisé est composé d’un ensemble optique et électronique permettan
 
 Le laser utilisé étant de classe IIIb, des précautions strictes doivent être respectées pour éviter tout dommage oculaire. Le port de lunettes de protection adaptées est obligatoire. Il est également recommandé de :
 
-    éviter toute exposition directe ou réflexions du faisceau,
+- éviter toute exposition directe ou réflexions du faisceau,
 
-    garder une distance suffisante (plus de 20 cm),
+- garder une distance suffisante (plus de 20 cm),
 
-    ne pas aligner les yeux avec la hauteur du faisceau,
+- ne pas aligner les yeux avec la hauteur du faisceau,
 
-    retirer les objets réfléchissants comme montres ou bijoux.
+- retirer les objets réfléchissants comme montres ou bijoux.
 
 ## Principe physique : effet Doppler optique
 
-Le fondement théorique de la LDV repose sur l’effet Doppler : une particule en mouvement modifie la fréquence de la lumière qu’elle réfléchit. La fréquence détectée dépend de la vitesse de la particule et de la géométrie du dispositif. Toutefois, comme la fréquence optique est très élevée (∼10¹⁴ Hz), une mesure directe est impossible. Pour pallier cela, une méthode à franges d’interférences est utilisée.
+Le fondement théorique de la LDV repose sur l’effet Doppler : une particule en mouvement modifie la fréquence de la lumière qu’elle réfléchit. La fréquence détectée dépend de la vitesse de la particule et de la géométrie du dispositif. Toutefois, comme la fréquence optique est très élevée ($\approx 10^{14}$ Hz), une mesure directe est impossible. Pour pallier cela, une méthode à franges d’interférences est utilisée.
 
 ## Principe de la vélocimétrie à franges
 
